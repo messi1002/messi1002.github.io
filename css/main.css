@@ -1996,7 +1996,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #857198;
+  background: #9c6f21;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3203,6 +3203,12 @@ img:hover {
   font-size: 24px;
   font-weight: 400;
   font-family: 'Damion', "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+* {
+  cursor: url("https://www.xdxlb.com/images/yuyuyu.ico"), auto !important;
+}
+:active {
+  cursor: url("https://www.xdxlb.com/images/yuyuyu.ico"), auto !important;
 }
 #heart {
   animation: heartAnimate 1.33s ease-in-out infinite;
