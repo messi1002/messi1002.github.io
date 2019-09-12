@@ -123,7 +123,8 @@
 <meta property="og:image" content="http://messi1002.top/2019/05/07/阿里云CentOS7安装Nginx/1557158155111.png">
 <meta property="og:image" content="http://messi1002.top/2019/05/07/阿里云CentOS7安装Nginx/1557194159064.png">
 <meta property="og:image" content="http://messi1002.top/2019/05/07/阿里云CentOS7安装Nginx/1557197327108.png">
-<meta property="og:updated_time" content="2019-09-07T03:34:43.739Z">
+<meta property="og:image" content="http://messi1002.top/2019/05/07/阿里云CentOS7安装Nginx/1568203752990.png">
+<meta property="og:updated_time" content="2019-09-11T13:22:37.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云CentOS7安装Nginx">
 <meta name="twitter:description" content="1.准备工作①添加安全组规则 服务器的安全组默认未设置任何自定义放行规则，这将会导致无法访问实例端口，若需访问需要添加安全组规则放行对应的端口。   放行 8079 端口 (之后会将 Nginx 的默认端口修改为 8079)：   ②设置防火墙 防火墙是系统的第一道防线，其作用是防止非法用户的进入。服务器的防火墙默认未设置任何自定义放行规则，这将会导致无法访问实例端口，若需访问需要防火墙放行对应的">
@@ -444,7 +445,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  571
+                  637
                 </span>
               
 
@@ -495,7 +496,7 @@
 
 <p><img src="./1556957763093.png" alt="Alt text"><br><img src="./1557156936010.png" alt="Alt text"></p>
 <hr>
-<h3 id="2-安装-Nginx"><a href="#2-安装-Nginx" class="headerlink" title="2.安装 Nginx"></a>2.安装 Nginx</h3><blockquote>
+<h3 id="2-yum安装Nginx"><a href="#2-yum安装Nginx" class="headerlink" title="2.yum安装Nginx"></a>2.yum安装Nginx</h3><blockquote>
 <p><strong>Nginx 是一个高性能的 HTTP 和反向代理服务器。</strong></p>
 </blockquote>
 <h4 id="①下载和安装"><a href="#①下载和安装" class="headerlink" title="①下载和安装"></a>①下载和安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm # 将nginx添加到yum源的repo中</span><br><span class="line">yum repolist # 查看yum源的repo</span><br><span class="line">yum install nginx # yum源安装nginx</span><br></pre></td></tr></table></figure>
@@ -526,10 +527,13 @@
 <ul>
 <li>如果出现上图内容 说明配置成功</li>
 </ul>
+<h4 id="⑤安装后的目录结构"><a href="#⑤安装后的目录结构" class="headerlink" title="⑤安装后的目录结构"></a>⑤安装后的目录结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">查看刚安装的所有目录：rpm -ql nginx</span><br><span class="line">启动nginx：/usr/sbin/nginx</span><br><span class="line">主配置文件：/etc/nginx/nginx.conf    </span><br><span class="line">首页的html网页所在路径：/usr/share/nginx/html</span><br><span class="line">缓存目录：/var/cache/nginx/fastcgi_temp</span><br><span class="line">代理目录：/var/cache/nginx/proxy_temp</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><img src="./1568203752990.png" alt="Alt text"></p>
 <hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#106;&#121;&#x6d;&#101;&#x73;&#115;&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x77;&#106;&#121;&#x6d;&#101;&#x73;&#115;&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#119;&#106;&#x79;&#x6d;&#101;&#x73;&#115;&#105;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#119;&#106;&#x79;&#x6d;&#101;&#x73;&#115;&#105;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 
       
@@ -676,7 +680,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -698,7 +702,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①添加安全组规则"><span class="nav-number">1.1.</span> <span class="nav-text">①添加安全组规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②设置防火墙"><span class="nav-number">1.2.</span> <span class="nav-text">②设置防火墙</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-Nginx"><span class="nav-number">2.</span> <span class="nav-text">2.安装 Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①下载和安装"><span class="nav-number">2.1.</span> <span class="nav-text">①下载和安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②启动"><span class="nav-number">2.2.</span> <span class="nav-text">②启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③修改默认端口"><span class="nav-number">2.3.</span> <span class="nav-text">③修改默认端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④验证配置"><span class="nav-number">2.4.</span> <span class="nav-text">④验证配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">3.</span> <span class="nav-text">附录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①添加安全组规则"><span class="nav-number">1.1.</span> <span class="nav-text">①添加安全组规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②设置防火墙"><span class="nav-number">1.2.</span> <span class="nav-text">②设置防火墙</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-yum安装Nginx"><span class="nav-number">2.</span> <span class="nav-text">2.yum安装Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①下载和安装"><span class="nav-number">2.1.</span> <span class="nav-text">①下载和安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②启动"><span class="nav-number">2.2.</span> <span class="nav-text">②启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③修改默认端口"><span class="nav-number">2.3.</span> <span class="nav-text">③修改默认端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④验证配置"><span class="nav-number">2.4.</span> <span class="nav-text">④验证配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤安装后的目录结构"><span class="nav-number">2.5.</span> <span class="nav-text">⑤安装后的目录结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">3.</span> <span class="nav-text">附录</span></a></li></ol></div>
             
 
           </div>
@@ -785,7 +789,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.2k字</span>
+  <span class="post-count">博客全站共19.9k字</span>
 </div>
 <!-- 
 
