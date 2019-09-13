@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://messi1002.top/2019/09/12/JavaWeb开发总结/1562896118142.png">
 <meta property="og:image" content="http://messi1002.top/2019/09/12/JavaWeb开发总结/1563441995129.png">
 <meta property="og:image" content="http://messi1002.top/2019/09/12/JavaWeb开发总结/1563442009700.png">
-<meta property="og:updated_time" content="2019-09-12T09:27:36.197Z">
+<meta property="og:updated_time" content="2019-09-12T14:29:05.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaWeb开发总结">
 <meta name="twitter:description" content="1.开发环境①开发必备 Java 版本：JDK8 Web 服务器：Tomcat9（运行后端）、Nginx（前端请求转发和搭建图片服务器） 工程框架：Spring Boot 2.0 操作数据库：Spring Boot Jpa（优先） / Mybatis 其他：Lombok 插件、JSON（fastjson / jackson）  ②数据库 MySQL（主 db） Redis（处理缓存） MongoD">
@@ -482,7 +482,7 @@
 <li>Redis（处理缓存）</li>
 <li>MongoDB （特殊需求使用）</li>
 </ul>
-<h4 id="③编译器-amp-构建工具-amp-测试工具"><a href="#③编译器-amp-构建工具-amp-测试工具" class="headerlink" title="③编译器 &amp; 构建工具 &amp; 测试工具"></a>③编译器 &amp; 构建工具 &amp; 测试工具</h4><ul>
+<h4 id="③编译器-amp-构建工具-amp-测试工具"><a href="#③编译器-amp-构建工具-amp-测试工具" class="headerlink" title="③编译器&amp;构建工具&amp;测试工具"></a>③编译器&amp;构建工具&amp;测试工具</h4><ul>
 <li>IDEA</li>
 <li>maven（优先） / gradle</li>
 <li>Postman </li>
@@ -517,17 +517,17 @@
 </ul>
 </li>
 </ul>
-<h4 id="②common-层"><a href="#②common-层" class="headerlink" title="②common 层"></a>②common 层</h4><ul>
+<h4 id="②common层"><a href="#②common层" class="headerlink" title="②common层"></a>②common层</h4><ul>
 <li>ResultEnum 类：用于存放前端请求的响应 / 执行结果<ul>
 <li>注意枚举类定义格式 私有变量名不能定义为 name</li>
 </ul>
 </li>
 </ul>
-<h4 id="③controller-层"><a href="#③controller-层" class="headerlink" title="③controller 层"></a>③controller 层</h4><ul>
+<h4 id="③controller层"><a href="#③controller层" class="headerlink" title="③controller层"></a>③controller层</h4><ul>
 <li>调用 service 层方法</li>
 <li>提供对外暴露的接口</li>
 </ul>
-<h4 id="④model-层"><a href="#④model-层" class="headerlink" title="④model 层"></a>④model 层</h4><ul>
+<h4 id="④model层"><a href="#④model层" class="headerlink" title="④model层"></a>④model层</h4><ul>
 <li>ResultDTO 类：统一使用此类将数据封装好返回给前端</li>
 <li>关于使用 DTO：从数据库中查出的是一个完整的对象，而大多数时候只会用到某些字段，这时候需要DTO。</li>
 </ul>
@@ -629,7 +629,7 @@
 <p><img src="./1563850702962.png" alt="Alt text"></p>
 <hr>
 <h3 id="5-前后端交互"><a href="#5-前后端交互" class="headerlink" title="5.前后端交互"></a>5.前后端交互</h3><h4 id="①交互流程"><a href="#①交互流程" class="headerlink" title="①交互流程"></a>①交互流程</h4><p>1.通过原型图确定产品功能（明确每个细节）<br>2.后端撰写 API 文档及建表<br>3.前后端按照 API 文档各自开发<br>4.测试</p>
-<h4 id="②API-文档"><a href="#②API-文档" class="headerlink" title="②API 文档"></a>②API 文档</h4><ul>
+<h4 id="②API文档"><a href="#②API文档" class="headerlink" title="②API文档"></a>②API文档</h4><ul>
 <li><a href="https://www.showdoc.cc/" target="_blank" rel="noopener">ShowDoc</a></li>
 <li>举例：</li>
 </ul>
@@ -646,12 +646,12 @@
 <h3 id="6-关于团队协作（git）"><a href="#6-关于团队协作（git）" class="headerlink" title="6.关于团队协作（git）"></a>6.关于团队协作（git）</h3><blockquote>
 <p>GitHub 客户端每次只能 commit 一个文件，不利于版本回滚和团队协作，所以尽量使用 git 命令行。</p>
 </blockquote>
-<h4 id="①git-同步流程"><a href="#①git-同步流程" class="headerlink" title="①git 同步流程"></a>①git 同步流程</h4><ol>
+<h4 id="①git同步流程"><a href="#①git同步流程" class="headerlink" title="①git同步流程"></a>①git同步流程</h4><ol>
 <li>一般开发完成、但还没有测试的文件都会被提交到暂存区</li>
 <li>将暂存区的文件（测试好的）提交到本地仓库</li>
 <li>通过 git push 提交修改到远程仓库</li>
 </ol>
-<h4 id="②git-常用命令"><a href="#②git-常用命令" class="headerlink" title="②git 常用命令"></a>②git 常用命令</h4><ul>
+<h4 id="②git常用命令"><a href="#②git常用命令" class="headerlink" title="②git常用命令"></a>②git常用命令</h4><ul>
 <li>git add 文件名：将本地某个文件添加到暂存区</li>
 <li>git add *：将本地所有文件添加到暂存区</li>
 <li>git commit -m “本次提交说明（自定义）”：将暂存区文件提交到本地仓库</li>
@@ -665,12 +665,12 @@
 <li>git checkout name：进入分支</li>
 <li>通过两种方式克隆仓库：<ul>
 <li>Clone with SSH：git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:messi1002/leetcode.git</li>
-<li>Clone with HTTPS：<br>git clone <a href="https://github.com/messi1002/leetcode.git" target="_blank" rel="noopener">https://github.com/messi1002/leetcode.git</a></li>
+<li>Clone with HTTPS：git clone <a href="https://github.com/messi1002/leetcode.git" target="_blank" rel="noopener">https://github.com/messi1002/leetcode.git</a></li>
 </ul>
 </li>
 </ul>
 <p><img src="./1563441995129.png" alt="Alt text"><br><img src="./1563442009700.png" alt="Alt text"></p>
-<h4 id="③git-高级操作"><a href="#③git-高级操作" class="headerlink" title="③git 高级操作"></a>③git 高级操作</h4><ul>
+<h4 id="③git高级操作"><a href="#③git高级操作" class="headerlink" title="③git高级操作"></a>③git高级操作</h4><ul>
 <li>git stash save “注释”：将工作区和暂存区的新内容暂时保存在栈中</li>
 <li>git stash list：显示缓存堆栈中的内容</li>
 <li>git stash pop：将缓存堆栈中的第一个 stash 内容恢复到工作区后删除</li>
@@ -702,7 +702,7 @@
 <hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <a href="mailto:&#119;&#106;&#121;&#109;&#x65;&#x73;&#115;&#105;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;" target="_blank" rel="noopener">&#119;&#106;&#121;&#109;&#x65;&#x73;&#115;&#105;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#x79;&#109;&#x65;&#115;&#x73;&#x69;&#x40;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#x79;&#109;&#x65;&#115;&#x73;&#x69;&#x40;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;</a></li>
 </ul>
 
       
@@ -915,7 +915,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-开发环境"><span class="nav-number">1.</span> <span class="nav-text">1.开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①开发必备"><span class="nav-number">1.1.</span> <span class="nav-text">①开发必备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②数据库"><span class="nav-number">1.2.</span> <span class="nav-text">②数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③编译器-amp-构建工具-amp-测试工具"><span class="nav-number">1.3.</span> <span class="nav-text">③编译器 &amp; 构建工具 &amp; 测试工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-框架分层"><span class="nav-number">2.</span> <span class="nav-text">2.框架分层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①总览"><span class="nav-number">2.1.</span> <span class="nav-text">①总览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②common-层"><span class="nav-number">2.2.</span> <span class="nav-text">②common 层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③controller-层"><span class="nav-number">2.3.</span> <span class="nav-text">③controller 层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④model-层"><span class="nav-number">2.4.</span> <span class="nav-text">④model 层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-代码规范"><span class="nav-number">3.</span> <span class="nav-text">3.代码规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①注释"><span class="nav-number">3.1.</span> <span class="nav-text">①注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②注解"><span class="nav-number">3.2.</span> <span class="nav-text">②注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③配置文件"><span class="nav-number">3.3.</span> <span class="nav-text">③配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④pom-xml（maven）"><span class="nav-number">3.4.</span> <span class="nav-text">④pom.xml（maven）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤其他"><span class="nav-number">3.5.</span> <span class="nav-text">⑤其他</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装插件"><span class="nav-number">4.</span> <span class="nav-text">4.安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①Lombok"><span class="nav-number">4.1.</span> <span class="nav-text">①Lombok</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②Alibaba-Java-Coding-Guidelines"><span class="nav-number">4.2.</span> <span class="nav-text">②Alibaba Java Coding Guidelines</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③Grep-Console"><span class="nav-number">4.3.</span> <span class="nav-text">③Grep Console</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-前后端交互"><span class="nav-number">5.</span> <span class="nav-text">5.前后端交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①交互流程"><span class="nav-number">5.1.</span> <span class="nav-text">①交互流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②API-文档"><span class="nav-number">5.2.</span> <span class="nav-text">②API 文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③RESTful-API"><span class="nav-number">5.3.</span> <span class="nav-text">③RESTful API</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-关于团队协作（git）"><span class="nav-number">6.</span> <span class="nav-text">6.关于团队协作（git）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①git-同步流程"><span class="nav-number">6.1.</span> <span class="nav-text">①git 同步流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②git-常用命令"><span class="nav-number">6.2.</span> <span class="nav-text">②git 常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③git-高级操作"><span class="nav-number">6.3.</span> <span class="nav-text">③git 高级操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-入门博客汇总"><span class="nav-number">7.</span> <span class="nav-text">7.入门博客汇总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">8.</span> <span class="nav-text">附录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-开发环境"><span class="nav-number">1.</span> <span class="nav-text">1.开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①开发必备"><span class="nav-number">1.1.</span> <span class="nav-text">①开发必备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②数据库"><span class="nav-number">1.2.</span> <span class="nav-text">②数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③编译器-amp-构建工具-amp-测试工具"><span class="nav-number">1.3.</span> <span class="nav-text">③编译器&amp;构建工具&amp;测试工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-框架分层"><span class="nav-number">2.</span> <span class="nav-text">2.框架分层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①总览"><span class="nav-number">2.1.</span> <span class="nav-text">①总览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②common层"><span class="nav-number">2.2.</span> <span class="nav-text">②common层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③controller层"><span class="nav-number">2.3.</span> <span class="nav-text">③controller层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④model层"><span class="nav-number">2.4.</span> <span class="nav-text">④model层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-代码规范"><span class="nav-number">3.</span> <span class="nav-text">3.代码规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①注释"><span class="nav-number">3.1.</span> <span class="nav-text">①注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②注解"><span class="nav-number">3.2.</span> <span class="nav-text">②注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③配置文件"><span class="nav-number">3.3.</span> <span class="nav-text">③配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④pom-xml（maven）"><span class="nav-number">3.4.</span> <span class="nav-text">④pom.xml（maven）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤其他"><span class="nav-number">3.5.</span> <span class="nav-text">⑤其他</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装插件"><span class="nav-number">4.</span> <span class="nav-text">4.安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①Lombok"><span class="nav-number">4.1.</span> <span class="nav-text">①Lombok</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②Alibaba-Java-Coding-Guidelines"><span class="nav-number">4.2.</span> <span class="nav-text">②Alibaba Java Coding Guidelines</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③Grep-Console"><span class="nav-number">4.3.</span> <span class="nav-text">③Grep Console</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-前后端交互"><span class="nav-number">5.</span> <span class="nav-text">5.前后端交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①交互流程"><span class="nav-number">5.1.</span> <span class="nav-text">①交互流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②API文档"><span class="nav-number">5.2.</span> <span class="nav-text">②API文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③RESTful-API"><span class="nav-number">5.3.</span> <span class="nav-text">③RESTful API</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-关于团队协作（git）"><span class="nav-number">6.</span> <span class="nav-text">6.关于团队协作（git）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①git同步流程"><span class="nav-number">6.1.</span> <span class="nav-text">①git同步流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②git常用命令"><span class="nav-number">6.2.</span> <span class="nav-text">②git常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③git高级操作"><span class="nav-number">6.3.</span> <span class="nav-text">③git高级操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-入门博客汇总"><span class="nav-number">7.</span> <span class="nav-text">7.入门博客汇总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">8.</span> <span class="nav-text">附录</span></a></li></ol></div>
             
 
           </div>
@@ -946,7 +946,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共22.4k字</span>
+  <span class="post-count">博客全站共23k字</span>
 </div>
 <!-- 
 
