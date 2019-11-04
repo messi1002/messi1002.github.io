@@ -122,7 +122,11 @@
 <meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1558768523032.png">
 <meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1558705596214.png">
 <meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1558758414242.png">
-<meta property="og:updated_time" content="2019-09-12T03:35:19.960Z">
+<meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1572876290523.png">
+<meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1572876599187.png">
+<meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1572872409055.png">
+<meta property="og:image" content="http://messi1002.top/2019/05/25/在命令行中使用SSH免密登录服务器/1572876039692.png">
+<meta property="og:updated_time" content="2019-11-04T14:13:08.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在命令行中使用SSH免密登录服务器">
 <meta name="twitter:description" content="1.生成公钥和私钥 打开命令行 输入 ssh-keygen -t rsa 然后连续按三个回车(第一个回车表示不重命名文件 第二、三个回车表示不设置密码)    最后在 C 盘找到生成的公钥和私钥    2.将公钥写入服务器 ps：需要服务器的防火墙放行 22 端口。   在命令行使用密码登录服务器    将生成的公匙内容粘贴到 authorized_keys 文件中    退出服务器 重新连接时">
@@ -443,7 +447,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  179
+                  248
                 </span>
               
 
@@ -507,9 +511,22 @@
 </ul>
 <p><img src="./1558758414242.png" alt="Alt text"></p>
 <hr>
+<h3 id="3-解决WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><a href="#3-解决WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED" class="headerlink" title="3.解决WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"></a>3.解决WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h3><ul>
+<li>重置服务器之后再配置 SSH 连接时 会报这个错误：远程主机标识已更改！</li>
+</ul>
+<p><img src="./1572876290523.png" alt="Alt text"></p>
+<ul>
+<li>这时需要将电脑上的旧连接信息删除（根据服务器IP）</li>
+</ul>
+<p><img src="./1572876599187.png" alt="Alt text"><br><img src="./1572872409055.png" alt="Alt text"></p>
+<ul>
+<li>删除后重新连接即可</li>
+</ul>
+<p><img src="./1572876039692.png" alt="Alt text"></p>
+<hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#x79;&#109;&#x65;&#115;&#x73;&#x69;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#x79;&#109;&#x65;&#115;&#x73;&#x69;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#119;&#x6a;&#121;&#109;&#x65;&#x73;&#115;&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#119;&#x6a;&#121;&#109;&#x65;&#x73;&#115;&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
 </ul>
 
       
@@ -734,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-生成公钥和私钥"><span class="nav-number">1.</span> <span class="nav-text">1.生成公钥和私钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将公钥写入服务器"><span class="nav-number">2.</span> <span class="nav-text">2.将公钥写入服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">3.</span> <span class="nav-text">附录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-生成公钥和私钥"><span class="nav-number">1.</span> <span class="nav-text">1.生成公钥和私钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将公钥写入服务器"><span class="nav-number">2.</span> <span class="nav-text">2.将公钥写入服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-解决WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><span class="nav-number">3.</span> <span class="nav-text">3.解决WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +782,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.5k字</span>
+  <span class="post-count">博客全站共24.6k字</span>
 </div>
 <!-- 
 
