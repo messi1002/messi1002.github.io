@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://messi1002.top/"/>
-  <updated>2020-01-08T06:22:27.453Z</updated>
+  <updated>2020-01-08T09:36:00.474Z</updated>
   <id>http://messi1002.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL入门之进阶知识</title>
+    <link href="http://messi1002.top/2020/01/08/MySQL%E5%85%A5%E9%97%A8%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/"/>
+    <id>http://messi1002.top/2020/01/08/MySQL入门之进阶知识/</id>
+    <published>2020-01-08T09:36:00.000Z</published>
+    <updated>2020-01-08T09:36:00.474Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL入门之基础知识</title>
+    <link href="http://messi1002.top/2020/01/08/MySQL%E5%85%A5%E9%97%A8%E4%B9%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>http://messi1002.top/2020/01/08/MySQL入门之基础知识/</id>
+    <published>2020-01-08T09:35:49.000Z</published>
+    <updated>2020-01-08T09:35:49.952Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计算机网络之图解HTTP</title>
@@ -153,8 +183,8 @@
   
   <entry>
     <title>《MySQL必知必会》之创建、更新和删除数据</title>
-    <link href="http://messi1002.top/2020/01/08/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E4%B9%8B%E5%88%9B%E5%BB%BA%E3%80%81%E6%9B%B4%E6%96%B0%E5%92%8C%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE/"/>
-    <id>http://messi1002.top/2020/01/08/《MySQL必知必会》之创建、更新和删除数据/</id>
+    <link href="http://messi1002.top/2020/01/08/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E4%B9%8B%E6%93%8D%E7%BA%B5%E8%A1%A8%E5%8F%8A%E6%95%B0%E6%8D%AE/"/>
+    <id>http://messi1002.top/2020/01/08/《MySQL必知必会》之操纵表及数据/</id>
     <published>2020-01-08T06:02:20.000Z</published>
     <updated>2020-01-08T06:02:20.887Z</updated>
     
@@ -183,8 +213,8 @@
   
   <entry>
     <title>《MySQL必知必会》之数据过滤、分组和排序</title>
-    <link href="http://messi1002.top/2020/01/08/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E4%B9%8B%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E3%80%81%E5%88%86%E7%BB%84%E5%92%8C%E6%8E%92%E5%BA%8F/"/>
-    <id>http://messi1002.top/2020/01/08/《MySQL必知必会》之数据过滤、分组和排序/</id>
+    <link href="http://messi1002.top/2020/01/08/%E3%80%8AMySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A%E3%80%8B%E4%B9%8B%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E3%80%81%E6%8E%92%E5%BA%8F%E5%92%8C%E5%88%86%E7%BB%84/"/>
+    <id>http://messi1002.top/2020/01/08/《MySQL必知必会》之数据过滤、排序和分组/</id>
     <published>2020-01-08T06:01:51.000Z</published>
     <updated>2020-01-08T06:01:51.636Z</updated>
     
@@ -228,8 +258,8 @@
   
   <entry>
     <title>LeetCode题解之数据过滤、分组和排序（MySQL）</title>
-    <link href="http://messi1002.top/2020/01/08/LeetCode%E9%A2%98%E8%A7%A3%E4%B9%8B%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E3%80%81%E5%88%86%E7%BB%84%E5%92%8C%E6%8E%92%E5%BA%8F%EF%BC%88MySQL%EF%BC%89/"/>
-    <id>http://messi1002.top/2020/01/08/LeetCode题解之数据过滤、分组和排序（MySQL）/</id>
+    <link href="http://messi1002.top/2020/01/08/LeetCode%E9%A2%98%E8%A7%A3%E4%B9%8B%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E3%80%81%E6%8E%92%E5%BA%8F%E5%92%8C%E5%88%86%E7%BB%84%EF%BC%88MySQL%EF%BC%89/"/>
+    <id>http://messi1002.top/2020/01/08/LeetCode题解之数据过滤、排序和分组（MySQL）/</id>
     <published>2020-01-08T06:00:47.000Z</published>
     <updated>2020-01-08T06:00:47.783Z</updated>
     
@@ -283,47 +313,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Spring入门之IOC</title>
-    <link href="http://messi1002.top/2019/12/22/Spring%E5%85%A5%E9%97%A8%E4%B9%8BIOC/"/>
-    <id>http://messi1002.top/2019/12/22/Spring入门之IOC/</id>
-    <published>2019-12-22T10:49:42.000Z</published>
-    <updated>2019-12-22T10:49:42.512Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java进制转换及位运算</title>
-    <link href="http://messi1002.top/2019/12/20/Java%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    <id>http://messi1002.top/2019/12/20/Java进制转换及位运算/</id>
-    <published>2019-12-20T13:17:40.000Z</published>
-    <updated>2019-12-24T08:37:49.764Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-进制"><a href="#1-进制" class="headerlink" title="1.进制"></a>1.进制</h3><h4 id="①进制相关"><a href="#①进制相关" class="headerlink" title="①进制相关"></a>①进制相关</h4><ul><li>在线进制转换工具：<a href="https://tool.lu/hexconvert/" target="_blank" rel="noopener">https://tool.lu/hexconvert/</a> </li><li>进位制是一种记数方式，亦称进位计数法或位值计数法。它是人们为计数和运算方便而约定的计数系统。</li><li>把一个数表示成 a 与 10 的 n 次幂相乘的形式（1 ≤ |a| &lt; 10，n 为整数），这种记数的方法叫做科学记数法。</li><li>使用的数字符号的数目称为这种进位制的基数或底数。</li><li>位权：一个数码在不同的位置上所代表的值不同、且不同的进位制，处于同一数位上的权也是不同的。<ul><li>例如：十进制第 2 位的位权为 10，第 3 位的位权为 100、而二进制第 2 位的位权为 2，第 3 位的位权为 4。</li></ul></li></ul><h4 id="②进制转换"><a href="#②进制转换" class="headerlink" title="②进制转换"></a>②进制转换</h4><table><thead><tr><th align="left">进位制</th><th align="left">基本数字</th><th align="left">进位规则</th><th align="left">应用</th><th align="left">标志的开头</th></tr></thead><tbody><tr><td align="left">二进制</td><td align="left">0 ~ 1</td><td align="left">二进一</td><td align="left">计算机内部采用二进制，其运算简单，简化了计算机结构</td><td align="left">0b / 0B</td></tr><tr><td align="left">八进制</td><td align="left">0 ~ 7</td><td align="left">八进一</td><td align="left">适用于12位和36位计算机系统</td><td align="left">0</td></tr><tr><td align="left">十进制</td><td align="left">0 ~ 9</td><td align="left">十进一</td><td align="left">日常生活中使用</td><td align="left">无</td></tr><tr><td align="left">十六进制</td><td align="left">0 ~ 9和A、B、C、D、E、F(15)</td><td align="left">十六进一</td><td align="left">长度短</td><td align="left">0x / 0X</td></tr></tbody></table><ul><li>进制表：</li></ul><p>​​​​<img src="./1576673576872.png" alt="Alt text"></p><ul><li>十进制转换为 二 / 八 / 十六 进制<ul><li>对于整数：采用重复相除权再倒看余数的方法</li><li>对于小数：采用重复相乘权再正看 “余数” 的方法</li></ul></li></ul><p><img src="./1576675506811.png" alt="Alt text"><br><img src="./1576676122913.png" alt="Alt text"><br><img src="./1577091709770.png" alt="Alt text"></p><ul><li>二 / 八 / 十六进制采用科学计数法按对应权展开可得十进制数：</li></ul><p><img src="./1577091995315.png" alt="Alt text"><br><img src="./1577092028399.png" alt="Alt text"></p><h4 id="③JDK-内置的进制转换"><a href="#③JDK-内置的进制转换" class="headerlink" title="③JDK 内置的进制转换"></a>③JDK 内置的进制转换</h4><p><img src="./1576672455340.png" alt="Alt text"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> object.base;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2018/10/08</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: JDK内置的进制转换</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">javaSystem</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="comment">// 10进制转换为其他进制</span></span><br><span class="line">        <span class="comment">// 10进制转换为2进制：1100</span></span><br><span class="line">        System.out.println(Integer.toBinaryString(<span class="number">12</span>));</span><br><span class="line">        <span class="comment">// 10进制转换为8进制：14</span></span><br><span class="line">        System.out.println(Integer.toOctalString(<span class="number">12</span>));</span><br><span class="line">        <span class="comment">// 10进制转换为16进制：14</span></span><br><span class="line">        System.out.println(Integer.toHexString(<span class="number">20</span>));</span><br><span class="line">    </span><br><span class="line">        <span class="comment">// 其他进制转换为10进制</span></span><br><span class="line">        <span class="comment">// 2进制转换为10进制：1*2^2+1*2^0=5</span></span><br><span class="line">        System.out.println(Integer.parseInt(<span class="string">"0101"</span>,<span class="number">2</span>));</span><br><span class="line">        System.out.println(Integer.valueOf(<span class="string">"0101"</span>,<span class="number">2</span>).toString());</span><br><span class="line">        <span class="comment">// 8进制转换为10进制：1*8^2+2*8^1+3*8^0=83</span></span><br><span class="line">        System.out.println(Integer.parseInt(<span class="string">"0123"</span>,<span class="number">8</span>));</span><br><span class="line">        System.out.println(Integer.valueOf(<span class="string">"0123"</span>,<span class="number">8</span>).toString());</span><br><span class="line">        <span class="comment">// 16进制转换为10进制：15*16^3+15*16^2+15*16^1+15*16^0=65535</span></span><br><span class="line">        System.out.println(Integer.parseInt(<span class="string">"FFFF"</span>,<span class="number">16</span>));</span><br><span class="line">        System.out.println(Integer.valueOf(<span class="string">"FFFF"</span>,<span class="number">16</span>).toString());</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 打印为十进制数字123</span></span><br><span class="line">        System.out.println(<span class="number">123</span>);</span><br><span class="line">        <span class="comment">// 打印为十进制数字5(其中0101是2进制数字，0b标识0101为2进制)</span></span><br><span class="line">        System.out.println(<span class="number">0b0101</span>);</span><br><span class="line">        <span class="comment">// 打印为十进制数字5(其中0101是2进制数字，0B标识0101为2进制)</span></span><br><span class="line">        System.out.println(<span class="number">0B0101</span>);</span><br><span class="line">        <span class="comment">// 打印为十进制数字83(其中123是8进制数字，0标识123为8进制)</span></span><br><span class="line">        System.out.println(<span class="number">0123</span>);</span><br><span class="line">        <span class="comment">// 打印为十进制数字291(其中123是16进制数字，0x标识123为16进制)</span></span><br><span class="line">        System.out.println(<span class="number">0x123</span>);</span><br><span class="line">        <span class="comment">// 打印为十进制数字291(其中123是16进制数字，0X标识123为16进制)</span></span><br><span class="line">        System.out.println(<span class="number">0X123</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="2-二进制数据的表示方法"><a href="#2-二进制数据的表示方法" class="headerlink" title="2.二进制数据的表示方法"></a>2.二进制数据的表示方法</h3><blockquote><p>ps：Java 中整型（int型）是 32 位的。</p></blockquote><h4 id="①原码"><a href="#①原码" class="headerlink" title="①原码"></a>①原码</h4><ul><li>原码表示法：最高位为符号位，其余位表示数值的大小。<ul><li>使用 0 表示正数、1 表示负数</li><li>[+1]原 = 0000 0001</li><li>[-1]原 = 1000 0001</li></ul></li><li>优点：表达简单明了、易于理解 </li><li>缺点：<ul><li>有歧义（0 既可以用 00 表示，也可以用 10 表示）</li><li>当两个操作数的符号不同时，运算十分复杂</li></ul></li></ul><p><img src="./1577096989867.png" alt="Alt text"></p><h4 id="②反码"><a href="#②反码" class="headerlink" title="②反码"></a>②反码</h4><ul><li>正数的反码是其本身 <ul><li>[+1] = [00000001]原 = [00000001]反</li></ul></li><li>负数的反码等于原码除符号位外按位取反 <ul><li>[-1] = [10000001]原 = [11111110]反</li></ul></li></ul><h4 id="③补码"><a href="#③补码" class="headerlink" title="③补码"></a>③补码</h4><ul><li>正数的补码是其本身<ul><li>[+1] = [00000001]原 = [00000001]反 = [00000001]补</li></ul></li><li>负数的补码等于反码加 1<ul><li>[-1] = [10000001]原 = [11111110]反 = [11111111]补</li></ul></li></ul><h4 id="④原码、补码和反码之间的关系"><a href="#④原码、补码和反码之间的关系" class="headerlink" title="④原码、补码和反码之间的关系"></a>④原码、补码和反码之间的关系</h4><ul><li>因为原码表示法对于零的表示有歧义且其减法运算复杂，所以引入了补码表示法。虽然补码表示法在一定程度上解决了这两个问题，但是其在计算补码的过程中引进了减法操作。<ul><li>解决方法：引进反码表示法。先由原码计算出反码，再由反码计算出补码，即可消除直接通过原码求补码时引入的减法操作。</li></ul></li><li>在计算机中，数据都是以补码的形式存储的。</li><li>0 的反码和补码都为零</li></ul><hr><h3 id="3-位运算"><a href="#3-位运算" class="headerlink" title="3.位运算"></a>3.位运算</h3><blockquote><p>ps：程序中所有的数在内存中都是以二进制的形式存储的，位运算是直接对二进制位进行的位操作。<br>二进制位运算的优点：计算方便，速度快，被支持面广。</p></blockquote><h4 id="①运算符"><a href="#①运算符" class="headerlink" title="①运算符"></a>①运算符</h4><table><thead><tr><th align="left">运算</th><th align="left">功能</th><th align="left">举例</th><th align="left">应用/规律</th></tr></thead><tbody><tr><td align="left">按位与(&amp;)</td><td align="left">两位全为1，结果才为1</td><td align="left">6(00000110) &amp; 3(00000011) = 2(00000010)</td><td align="left">a.清零(若要将一个单元清零，只要与一个各位都为0的数值相与即可) b.取一个数中的指定位(找一个数，对应x要取的位，该数的对应位为1，其余位为0，此数与x进行与运算即可得到x中的指定位)</td></tr><tr><td align="left">按位或(|)</td><td align="left">只要有一个为1，结果就为1</td><td align="left">6(00000110) | 3(00000011) = 7(00000111)</td><td align="left">用来对一个数据的某些位置1(找一个数，对应x要置1的位，该数的对应位为1，其余位为0，此数与x进行或运算即可使x中的某些位置1)</td></tr><tr><td align="left">异或运算(^)</td><td align="left">两个相应位为”异”，则该位结果为1，否则为0</td><td align="left">6(00000110) ^ 3(00000011) = 5(00000101)</td><td align="left">a.与0相异或，可保留原值 b.使特定位翻转(找一个数，对应x要翻转的位，该数的对应位为1，其余位为0，此数与x对应位异或即可)</td></tr><tr><td align="left">取反运算(~)</td><td align="left">对一个二进制数按位取反，0变1，1变0</td><td align="left">~6(00000110) = -7(11111001)</td><td align="left">补码(11111001)-1 -&gt; 得到反码(11111000)，除符号位外各位取反 -&gt; 得到原码-7(10000111)</td></tr><tr><td align="left">左移运算(&lt;&lt;)</td><td align="left">将一个数的各二进制位全部左移指定的位数，右边补0</td><td align="left">3(00000011) &lt;&lt; 2 = 12(00001100)</td><td align="left">若左移时舍弃的高位不包含1，则每左移一位，相当于该数乘以2</td></tr><tr><td align="left">右移运算(&gt;&gt;)</td><td align="left">将一个数的各二进制位全部右移指定的位数，正数左补0，负数左补1</td><td align="left">3(00000011) &gt;&gt; 1 = 1(00000001)</td><td align="left">若操作数为正数，则每右移一位，相当于该数除以2</td></tr><tr><td align="left">无符号右移运算(&gt;&gt;&gt;)</td><td align="left">将一个数的各二进制位全部右移指定的位数，左边补0</td><td align="left">3(00000011) &gt;&gt;&gt; 1 = 1(00000001)</td><td align="left">若操作数为正数，则每右移一位，相当于该数除以2</td></tr></tbody></table><h4 id="②两个变量交换值的方法"><a href="#②两个变量交换值的方法" class="headerlink" title="②两个变量交换值的方法"></a>②两个变量交换值的方法</h4><ul><li>借助第三个变量来实现<ul><li>C = A、A = B、B = C</li></ul></li><li>利用加减法实现两个变量的交换<ul><li>A = A + B、B = A - B、A = A - B</li></ul></li><li>用位异或运算来实现（效率最高）<ul><li>原理：利用一个数异或本身等于 0 和异或运算符合交换律</li><li>举例：A = A ^ B、B = A ^ B、A = A ^ B</li></ul></li></ul><hr><h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul><li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li><li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#109;&#x65;&#x73;&#x73;&#105;&#64;&#x31;&#54;&#51;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#109;&#x65;&#x73;&#x73;&#105;&#64;&#x31;&#54;&#51;&#46;&#99;&#111;&#x6d;</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-进制&quot;&gt;&lt;a href=&quot;#1-进制&quot; class=&quot;headerlink&quot; title=&quot;1.进制&quot;&gt;&lt;/a&gt;1.进制&lt;/h3&gt;&lt;h4 id=&quot;①进制相关&quot;&gt;&lt;a href=&quot;#①进制相关&quot; class=&quot;headerlink&quot; title=&quot;①进制相关&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="http://messi1002.top/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://messi1002.top/tags/Java/"/>
     
   </entry>
   
