@@ -108,18 +108,20 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.题目相关①题目及示例 ②相关标签 数组 二分查找   ③题目地址 35. 搜索插入位置 — 力扣网   2.解题方法①顺序查找 根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。 时间复杂度：O(n) 空间复杂度：O(1)  ②二分查找 结论： 每次判断 nums[mid] 和 t">
 <meta name="keywords" content="二分查找法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[LeetCode] 35.搜索插入位置（Easy）C语言题解">
 <meta property="og:url" content="http://messi1002.top/2019/06/04/LeetCode-35-搜索插入位置（Easy）C语言题解/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.题目相关①题目及示例 ②相关标签 数组 二分查找   ③题目地址 35. 搜索插入位置 — 力扣网   2.解题方法①顺序查找 根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。 时间复杂度：O(n) 空间复杂度：O(1)  ②二分查找 结论： 每次判断 nums[mid] 和 t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-21T10:16:46.203Z">
+<meta property="og:image" content="http://messi1002.top/2019/06/04/LeetCode-35-搜索插入位置（Easy）C语言题解/1582280358807.png">
+<meta property="og:updated_time" content="2020-02-21T17:51:45.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 35.搜索插入位置（Easy）C语言题解">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.题目相关①题目及示例 ②相关标签 数组 二分查找   ③题目地址 35. 搜索插入位置 — 力扣网   2.解题方法①顺序查找 根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。 时间复杂度：O(n) 空间复杂度：O(1)  ②二分查找 结论： 每次判断 nums[mid] 和 t">
+<meta name="twitter:image" content="http://messi1002.top/2019/06/04/LeetCode-35-搜索插入位置（Easy）C语言题解/1582280358807.png">
 
 
 
@@ -436,7 +438,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  564
                 </span>
               
 
@@ -452,7 +454,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -473,7 +475,56 @@
       
 
       
-        
+        <h3 id="1-题目相关"><a href="#1-题目相关" class="headerlink" title="1.题目相关"></a>1.题目相关</h3><h4 id="①题目及示例"><a href="#①题目及示例" class="headerlink" title="①题目及示例"></a>①题目及示例</h4><p><img src="./1582280358807.png" alt="Alt text"></p>
+<h4 id="②相关标签"><a href="#②相关标签" class="headerlink" title="②相关标签"></a>②相关标签</h4><ul>
+<li>数组</li>
+<li>二分查找 </li>
+</ul>
+<h4 id="③题目地址"><a href="#③题目地址" class="headerlink" title="③题目地址"></a>③题目地址</h4><ul>
+<li><a href="https://leetcode-cn.com/problems/search-insert-position/" target="_blank" rel="noopener">35. 搜索插入位置 — 力扣网</a></li>
+</ul>
+<hr>
+<h3 id="2-解题方法"><a href="#2-解题方法" class="headerlink" title="2.解题方法"></a>2.解题方法</h3><h4 id="①顺序查找"><a href="#①顺序查找" class="headerlink" title="①顺序查找"></a>①顺序查找</h4><ul>
+<li>根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。</li>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<h4 id="②二分查找"><a href="#②二分查找" class="headerlink" title="②二分查找"></a>②二分查找</h4><ul>
+<li>结论：<ul>
+<li>每次判断 nums[mid] 和 target 之间的大小：</li>
+<li>若 nums[mid] = target，则直接返回下标。</li>
+<li>若 nums[mid] &lt; target，则 left = mid + 1。</li>
+<li>若 nums[mid] &gt; target，则 right = mid - 1。</li>
+<li>查找结束后返回 left，该值为插入位置。</li>
+</ul>
+</li>
+<li>这道题的难点是如果数组中不包含值和 target 相等的元素，那么我们要返回什么呢？上文的结论是返回 left，那么我们是如何得到的呢？</li>
+<li>此时我们可以想象程序在最后一次循环中会做什么：<ul>
+<li>已知程序结束循环的条件是 <code>left &gt; right</code>，所以我们可以确定在最后一次循环中有：<code>right == left</code> -&gt; <code>mid == (right + left) / 2 == right == left</code>，此时存在两种情况：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">    <span class="comment">// left &gt; right，之后退出循环。</span></span><br><span class="line">    left = mid + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[right + 1] &gt; target。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">    <span class="comment">// right &lt; left，之后退出循环。</span></span><br><span class="line">    right = mid - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[mid] &gt; target。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据上述证明可知，返回 left 是正确的。</li>
+<li>时间复杂度：O(log n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<hr>
+<h3 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3.代码详解"></a>3.代码详解</h3><h4 id="①暴力解法"><a href="#①暴力解法" class="headerlink" title="①暴力解法"></a>①暴力解法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &gt;= target) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> numsSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②二分查找-1"><a href="#②二分查找-1" class="headerlink" title="②二分查找"></a>②二分查找</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = numsSize - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="comment">// int mid = (left + right) / 2;</span></span><br><span class="line">        <span class="comment">// int mid = left + (right - left) / 2;</span></span><br><span class="line">        <span class="keyword">int</span> mid = (left + right) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#x79;&#109;&#101;&#x73;&#115;&#105;&#64;&#49;&#x36;&#x33;&#46;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x77;&#x6a;&#x79;&#109;&#101;&#x73;&#115;&#105;&#64;&#49;&#x36;&#x33;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
+</ul>
+
       
     </div>
     
@@ -589,8 +640,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -676,6 +736,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目相关"><span class="nav-number">1.</span> <span class="nav-text">1.题目相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①题目及示例"><span class="nav-number">1.1.</span> <span class="nav-text">①题目及示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②相关标签"><span class="nav-number">1.2.</span> <span class="nav-text">②相关标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③题目地址"><span class="nav-number">1.3.</span> <span class="nav-text">③题目地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题方法"><span class="nav-number">2.</span> <span class="nav-text">2.解题方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①顺序查找"><span class="nav-number">2.1.</span> <span class="nav-text">①顺序查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②二分查找"><span class="nav-number">2.2.</span> <span class="nav-text">②二分查找</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-代码详解"><span class="nav-number">3.</span> <span class="nav-text">3.代码详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①暴力解法"><span class="nav-number">3.1.</span> <span class="nav-text">①暴力解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②二分查找-1"><span class="nav-number">3.2.</span> <span class="nav-text">②二分查找</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -700,7 +776,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.1k字</span>
+  <span class="post-count">博客全站共29.2k字</span>
 </div>
 <!-- 
 
