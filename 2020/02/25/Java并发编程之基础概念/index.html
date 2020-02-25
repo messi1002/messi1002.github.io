@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #FFF0F5; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #FFF0F5    /*上边框颜色*/
+        border-left-color: #FFF0F5    /*左边框颜色*/
+    }
+</style>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "920d2bdc"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="Tf84R3xwmljr68UBv4sBuanemXFwaqAqPW7F6kR2zIo">
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="BprGp7tx04">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/w.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/w.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java并发编程,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="wjy's blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1.进程和线程①与操作系统的关系 一个操作系统可以拥有多个进程（process） 一个进程可以拥有多个线程（thread） 即操作系统是包含多个进程的容器，而每个进程又都是容纳多个线程的容器。   ②进程定义 Oracle 的官方定义： 进程：使用 fork 系统调用创建的 UNIX 环境（包括文件描述符、用户 ID 、CPU 使用时间、存储器、IO 设备、内存等），它被设置为运行程序。 线程：在">
+<meta name="keywords" content="Java并发编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java并发编程之基础概念">
+<meta property="og:url" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/index.html">
+<meta property="og:site_name" content="wjy&#39;s blog">
+<meta property="og:description" content="1.进程和线程①与操作系统的关系 一个操作系统可以拥有多个进程（process） 一个进程可以拥有多个线程（thread） 即操作系统是包含多个进程的容器，而每个进程又都是容纳多个线程的容器。   ②进程定义 Oracle 的官方定义： 进程：使用 fork 系统调用创建的 UNIX 环境（包括文件描述符、用户 ID 、CPU 使用时间、存储器、IO 设备、内存等），它被设置为运行程序。 线程：在">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653441280.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582626838174.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582627116360.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582627170456.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582627247395.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582636089900.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582628395824.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653407376.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653374893.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653345934.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653313196.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582086357063.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653247372.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653213782.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653108706.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653143245.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653156676.png">
+<meta property="og:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653175803.png">
+<meta property="og:updated_time" content="2020-02-25T18:06:26.015Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java并发编程之基础概念">
+<meta name="twitter:description" content="1.进程和线程①与操作系统的关系 一个操作系统可以拥有多个进程（process） 一个进程可以拥有多个线程（thread） 即操作系统是包含多个进程的容器，而每个进程又都是容纳多个线程的容器。   ②进程定义 Oracle 的官方定义： 进程：使用 fork 系统调用创建的 UNIX 环境（包括文件描述符、用户 ID 、CPU 使用时间、存储器、IO 设备、内存等），它被设置为运行程序。 线程：在">
+<meta name="twitter:image" content="http://messi1002.top/2020/02/25/Java并发编程之基础概念/1582653441280.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://messi1002.top/2020/02/25/Java并发编程之基础概念/">
+
+
+
+
+
+  <title>Java并发编程之基础概念 | wjy's blog</title>
+  
+
+
+
+
+
+
+
+
+  <script src="/js/src/photoswipe.js?v=5.1.4"></script>
+<script src="/js/src/photoswipe-ui-default.js?v=5.1.4"></script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/messi1002" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wjy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">行到水穷处，坐看云起时。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-旅行">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>
+            
+            旅行
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/02/25/Java并发编程之基础概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="围巾一">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/favicon.ico">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java并发编程之基础概念</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-25T12:30:32+08:00">
+                2020-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  19
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-进程和线程"><a href="#1-进程和线程" class="headerlink" title="1.进程和线程"></a>1.进程和线程</h3><h4 id="①与操作系统的关系"><a href="#①与操作系统的关系" class="headerlink" title="①与操作系统的关系"></a>①与操作系统的关系</h4><ul>
+<li>一个操作系统可以拥有多个进程（process）</li>
+<li>一个进程可以拥有多个线程（thread）</li>
+<li>即操作系统是包含多个进程的容器，而每个进程又都是容纳多个线程的容器。</li>
+</ul>
+<p><img src="./1582653441280.png" alt="Alt text"></p>
+<h4 id="②进程定义"><a href="#②进程定义" class="headerlink" title="②进程定义"></a>②进程定义</h4><ul>
+<li>Oracle 的官方定义：<ul>
+<li>进程：使用 fork 系统调用创建的 UNIX 环境（包括文件描述符、用户 ID 、CPU 使用时间、存储器、IO 设备、内存等），它被设置为运行程序。</li>
+<li>线程：在进程上下文中执行的一系列指令</li>
+</ul>
+</li>
+<li>通俗理解进程：<ul>
+<li>进程指的是程序的一次执行。在用户下达运行程序的命令后，就会产生进程。没有运行的程序占用的空间大部分是磁盘空间，将程序运行起来时就变成了一个进程。</li>
+<li>比喻：进程是对代码的实例化</li>
+<li>在任务管理器中可以查看正在运行的进程：</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1582626838174.png" alt="Alt text"></p>
+<ul>
+<li>总结进程：进程是程序的真正运行实例，是资源分配的基本单位。内存、CPU 等资源都是以进程为单位进行分配的。</li>
+</ul>
+<h4 id="③线程定义"><a href="#③线程定义" class="headerlink" title="③线程定义"></a>③线程定义</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/2/18</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 创建100个线程，用任务管理器可以看到Java线程数量的变化。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Create100Threads</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 新建100个线程</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    <span class="comment">// 睡眠10s</span></span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">10000</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>程序运行前：</li>
+</ul>
+<p><img src="./1582627116360.png" alt="Alt text"></p>
+<ul>
+<li>程序运行过程：</li>
+</ul>
+<p><img src="./1582627170456.png" alt="Alt text"></p>
+<ul>
+<li>程序运行结束：</li>
+</ul>
+<p><img src="./1582627247395.png" alt="Alt text"></p>
+<ul>
+<li>通俗理解线程：<ul>
+<li>线程是 CPU 的基本调度单位，每个线程执行的都是进程代码的某个片段。</li>
+<li>进程是线程的容器，让线程利用进程中的资源执行代码。进程的线程数量若是大于 1，则是多线程的情况，多个线程帮助同一进程执行代码。</li>
+</ul>
+</li>
+</ul>
+<h4 id="④两者的异同"><a href="#④两者的异同" class="headerlink" title="④两者的异同"></a>④两者的异同</h4><ol>
+<li>起源不同<ul>
+<li>回顾操作系统的历史，先有进程后有线程。</li>
+<li>由于处理器的速度往往比外设（键盘、硬盘等）快，所以为了提高 CPU 的利用率，才诞生了线程，目的是提高程序的执行效率。</li>
+</ul>
+</li>
+<li>概念不同<ul>
+<li>进程是具有独立功能的程序运行起来的一个活动，是一个实例，也是系统分配资源和调度的独立单位。</li>
+<li>线程是 CPU 的基本调度单位</li>
+</ul>
+</li>
+<li>内存共享方式不同<ul>
+<li>对于进程而言，每个进程都会被操作系统分配到一定的内存，不同进程之间的内存通常是不共享的。例如：浏览器无法访问正在播放的 qq 音乐，它们之间想要通讯的话，需要使用进程间通讯 RPC。</li>
+<li>线程与线程之间服务于同一个进程，需要合作，所以两个线程之间通讯很容易，可以共享由操作系统分配给其父进程的相同内存块。</li>
+</ul>
+</li>
+<li>拥有的资源不用<ul>
+<li>线程本身是进程的一部分，拥有的资源一定少于进程。</li>
+<li>不同的线程之间共享的内容：①进程代码段（重点）、②进程的公有数据（利用这些共享的数据，线程很容易实现互相通讯）、③进程打开的文件描述符、④信号的处理器、⑤进程的当前目录、⑥进程用户 ID 与进程组 ID</li>
+<li>不同的线程之间独有的内容：①线程 ID、②寄存器组的值、③线程的堆栈（重点）、④错误返回码、⑤线程的信号屏蔽码</li>
+</ul>
+</li>
+<li>进程和线程的数量不同<ul>
+<li>进程只有一个，线程可以有多个。</li>
+<li>一个进程至少拥有一个线程，否则没有办法执行。</li>
+</ul>
+</li>
+<li>开销不同<ul>
+<li>因为进程和线程本身不是一个数量级的东西，所以线程始终比进程更轻量级。</li>
+<li>线程的创建、终止时间比进程短。</li>
+<li>同一进程内的线程切换时间比进程切换时间短</li>
+<li>同一进程的各个线程间共享内存和文件资源，可以不通过内核进行通信。而进程间想要通信，需要借助内核帮忙。</li>
+</ul>
+</li>
+<li>相同点：从生命周期 / 状态上来看，进程和线程从创建到结束都有就绪、等待、运行等状态。</li>
+</ol>
+<h4 id="⑤Java-语言和多线程的关系"><a href="#⑤Java-语言和多线程的关系" class="headerlink" title="⑤Java 语言和多线程的关系"></a>⑤Java 语言和多线程的关系</h4><ul>
+<li>Java 语言的显著优势：在设计之初就支持多线程（当时大部分编程语言不支持多线程）。</li>
+<li>Java 语言可以将我们创建的线程一对一映射到操作系统的内核线程中。而有些语言的线程是虚拟线程，不会在操作系统中对应的建立线程。</li>
+</ul>
+<p><img src="./1582636089900.png" alt="Alt text"></p>
+<ul>
+<li>JVM 自动启动线程：即使在代码中不显式的创建线程，在运行 main 函数时，JVM 也会自动地启动其他线程，这些线程都有特定的含义。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/2/18</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 即使在代码中不显式的创建线程，在运行main函数时，JVM也会自动地启动其他线程。</span></span><br><span class="line"><span class="comment"> * 并且这些线程都有特定的含义和作用。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAndThreads</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello Threads!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="./1582628395824.png" alt="Alt text"></p>
+<ul>
+<li>Signal Dispatcher：把操作系统发来的信号分发给适当的处理程序，用于连接操作系统和应用程序。</li>
+<li>Finalizer：负责对象的 finalize() 方法。在每个对象结束的时候，可能会实现 finalize() 方法，主要是为了处理该方法。但是随着 Java 语言的发展，不再推荐使用该方法。</li>
+<li>Reference Handler：和 GC、引用相关的线程。将每一个对象的引用记录在案，以便配合 GC 进行垃圾回收。</li>
+<li>main：主线程，用户程序的主入口，编写的代码从这里开始执行。</li>
+<li>以上线程都是 JVM 自动创建的，由此可以看出 Java 语言和多线程息息相关。</li>
+</ul>
+<hr>
+<h3 id="2-多线程"><a href="#2-多线程" class="headerlink" title="2.多线程"></a>2.多线程</h3><h4 id="①定义"><a href="#①定义" class="headerlink" title="①定义"></a>①定义</h4><ul>
+<li>多线程：在单个进程中运行多个线程</li>
+<li>多线程程序：如果一个程序允许运行两个或两个以上的线程，那么它就是多线程程序。<ul>
+<li>现在绝大部分的程序都是多线程程序。例如：在浏览器中可以同时打开几个网页、同时下载几个文件，以及服务端可以同时处理多个请求。</li>
+</ul>
+</li>
+<li>每个线程拥有自己的独立资源（ID、堆栈等），进程的内存空间对每个线程敞开，每个线程都可以到进程的内存空间中获取想要的资源并且互相通信。</li>
+<li>相互独立的任务：没必要使用多线程</li>
+<li>数据和资源共享的任务：需要使用多线程，并且要考虑线程的同步，确保线程的安全。</li>
+</ul>
+<h4 id="②多线程实例"><a href="#②多线程实例" class="headerlink" title="②多线程实例"></a>②多线程实例</h4><ul>
+<li>多线程实例：抢火车票</li>
+<li>最开始在火车站买火车票，是全国统一进行放票。假设全国使用同一个服务器（类比为一个进程）进行放票，而多个售票窗口就可以类比为多个线程。不同的线程之间互相配合或竞争。</li>
+</ul>
+<p><img src="./1582653407376.png" alt="Alt text"></p>
+<ul>
+<li>不断迭代后：<ul>
+<li>增加放票时间段（分散压力），不同的车次有自己的放票时间。</li>
+<li>增加候补功能</li>
+<li>增加买票限制</li>
+</ul>
+</li>
+<li>以上都是为了减少服务器的并发压力</li>
+</ul>
+<h4 id="③为什么需要多线程？"><a href="#③为什么需要多线程？" class="headerlink" title="③为什么需要多线程？"></a>③为什么需要多线程？</h4><ol>
+<li>提高 CPU 的利用率（最主要的目的）<ul>
+<li>目前大部分 CPU 都是两核或者两核以上，如果不发挥多线程的优势，始终使用单线程，就会浪费计算资源。多线程程序可以充分发挥多核 CPU 的优势，提高计算机的运行效率。</li>
+<li>①提高了处理速度（CPU 的运行效率远远超过内存、磁盘、外设等） </li>
+<li>②避免了无效等待（在读取磁盘 IO 的时候，CPU 没有必要等待，而应该去做其他的事情。）</li>
+<li>③提高了用户体验：避免卡顿、缩短等待时间（并行处理，提高性能，例如 Tomcat 服务器用多个线程去接收 HTTP 请求，可以同时服务于多个用户。）</li>
+</ul>
+</li>
+<li>便于编程建模（简化任务）<ul>
+<li>将大任务拆解为 A、B、C、D 并建立模型，类似的任务都可以使用模型处理。然后用多线程分别执行这 4 个任务，就简单很多。因为每个子任务的目的明确、功能单一。</li>
+</ul>
+</li>
+<li>计算机性能定律：摩尔定律失效，阿姆达尔定律登上舞台。<ul>
+<li>摩尔定律：当价格不变时，集成电路上可容纳的晶体管数目约每隔 18 个月便会增加一倍，意味着 CPU 的性能可以提高一倍。这个定律告诉我们长期以来 CPU 的性能都是以指数型快速增长的。但是，近年来陷入了瓶颈。</li>
+<li>阿姆达尔定律：处理器（CPU）越多，程序的执行速度就越快。但是执行速度也有上限，取决于程序中串行部分的比例，并行的比例越高，多处理器的效果越明显。对于串行任务，无论有多少 CPU 资源，都没有办法提高速度。</li>
+<li>并行比例与提升速度的关系：</li>
+</ul>
+</li>
+</ol>
+<p><img src="./1582653374893.png" alt="Alt text"></p>
+<ul>
+<li>在未来，CPU 的性能的提升速度放缓了，这就要求我们把程序中更多可并行的部分并行化，以提高程序的性能。</li>
+</ul>
+<h4 id="④什么场景中会用到多线程？"><a href="#④什么场景中会用到多线程？" class="headerlink" title="④什么场景中会用到多线程？"></a>④什么场景中会用到多线程？</h4><ol>
+<li>执行耗时任务（IO、磁盘读写、网络通信等）新开线程，不但不会影响主程序的运行，也不会因为耗时任务执行时间过慢而影响其他任务的运行。</li>
+<li>为了同时做多件不同的事：①使用浏览器的同时听音乐、②后台定时任务等</li>
+<li>提高工作效率、处理能力<ul>
+<li>①Tomcat 可以同时并行处理多个线程进来的请求</li>
+<li>②下载文件时可以选择线程数，多线程并行下载（每个线程都去和服务器通信，都去做独立的下载任务，并且把下载的任务进行分割，最后再把下载到的文件拼接起来），以提高下载效率。</li>
+<li>③NIO：将 IO 操作升级为多线程操作，提高了 IO 的处理能力。</li>
+</ul>
+</li>
+<li>需要同时有很大并发量的时候（比如进行服务器承受压力的能力的测试时，需要多线程并行请求）</li>
+</ol>
+<h4 id="⑤多线程的局限"><a href="#⑤多线程的局限" class="headerlink" title="⑤多线程的局限"></a>⑤多线程的局限</h4><ol>
+<li>性能问题：上下文切换带来的消耗<ul>
+<li>线程之间切换时会有上下文切换，会保存一些 CPU 所需要的数据，如当前运行到哪一行代码等。</li>
+</ul>
+</li>
+<li>异构化任务很难高效并行<ul>
+<li>每个任务之间的结构都不一样，很难总结为多个任务的拆解。</li>
+</ul>
+</li>
+<li>带来线程安全问题：包括数据安全问题（例如 <code>i++</code> 总数不一致）以及线程带来的活跃性问题（线程饥饿、死锁等）<ul>
+<li>线程饥饿：某个线程想要执行任务，但是被其他线程强先，这个线程始终没有事干。</li>
+<li>死锁：两个线程相互拥有对方所需要的资源但都不肯放手，于是陷入无穷等待。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="3-串行、并行、并发"><a href="#3-串行、并行、并发" class="headerlink" title="3.串行、并行、并发"></a>3.串行、并行、并发</h3><h4 id="①串行、并行、并发"><a href="#①串行、并行、并发" class="headerlink" title="①串行、并行、并发"></a>①串行、并行、并发</h4><ul>
+<li>串行：大家排队一个个来<ul>
+<li>左图：线程 A -&gt; B -&gt; C 依次执行</li>
+<li>右图：将数据一位一位发送</li>
+</ul>
+</li>
+<li>并行：大家一起来<ul>
+<li>左图：线程 A / B / C 同时执行</li>
+<li>右图：将 8 个数据一次性发送出去</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1582653345934.png" alt="Alt text"></p>
+<ul>
+<li>并发（Concurrency）：单核就能实现并发、属于逻辑上的同时运行（由于处理器的处理速度很快，所以线程之间的切换肉眼是感知不到的，感觉它是在同时执行多个程序，实际某一时间只有一个程序执行（单处理器））。<ul>
+<li>在物理层面并发就是串行，只不过是在多个程序上快速的来回切换而不是一个个依次执行，所以在用户看来相当于三个程序同时执行。</li>
+</ul>
+</li>
+<li>并行（Parallelism）：多核处理器，物理上的同时运行，多个处理器都在同时执行任务。</li>
+</ul>
+<p><img src="./1582653313196.png" alt="Alt text"><br><img src="./1582086357063.png" alt="Alt text"></p>
+<ul>
+<li>并行是真正的 “同时” 运行：在同一时刻，有多个任务同时执行。<ul>
+<li>单核处理器是无法实现并行的，因为单核处理器无法在同一时刻执行多个任务。</li>
+</ul>
+</li>
+<li>并发可以对应到两个不同的概念</li>
+<li>①形容多个任务的执行状态：<ul>
+<li>两个或多个任务可以在重叠的时间段（不是指真正重叠的同一时刻，而是一段时间内交替运行）内启动，运行和完成。</li>
+<li>并行（两个线程同时执行）一定是并发，两者是包含关系。</li>
+<li>并发 + 多核 + 同一时刻执行同一段代码 = 并行</li>
+<li>并发：不同的线程交替给一个 CPU 执行（蓝色竖线：CPU 的时间片）</li>
+<li>并行：多个线程同时被多个 CPU 执行</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1582653247372.png" alt="Alt text"><br><img src="./1582653213782.png" alt="Alt text"></p>
+<ul>
+<li>②对 “并发性” 的简称：<ul>
+<li>如果一个程序具有并发性，指的是程序不同的部分可以无序或同时执行，且不影响最终的执行结果。</li>
+<li>在不同核心数的计算机上的表现不同：</li>
+<li>在多核 CPU 上，可以并行执行并发性程序。</li>
+<li>在单核 CPU 上，可以并发执行并发性程序，串行执行非并发性程序。</li>
+<li>此时，并行和并发的概念并不在同一维度上。并发指的是并发性，并行指的是多个程序在同一时刻同时执行。一个程序如果想要并发 / 并行执行，前提条件是它具有并发性。并发性是并发执行和并行执行的前提条件和必要条件。如果一个程序可以并行执行，就代表它一定具有并发性。</li>
+</ul>
+</li>
+</ul>
+<h4 id="②是什么让并发和并行成为可能？"><a href="#②是什么让并发和并行成为可能？" class="headerlink" title="②是什么让并发和并行成为可能？"></a>②是什么让并发和并行成为可能？</h4><ol>
+<li>CPU 升级<ul>
+<li>CPU 之前一直遵循摩尔定律，性能提升的很快，它的处理速度远远比其他部件快。但是每个 CPU 同一时刻只能执行一个指令，出于这个原因，操作系统开发出了新的技术，可以让用户同时运行多个进程或者多个线程。</li>
+</ul>
+</li>
+<li>操作系统的升级<ul>
+<li>升级之后将 CPU 完美的调度了起来，即便是单核 CPU，也能让不同的进程使用时间片的方式（抢占式的方式）不停地切换。</li>
+<li>抢占式多任务处理：现代 CPU 最主要的一种处理方式，即操作系统有权利中断正在执行的任务。</li>
+<li>诞生多核处理器后，操作系统可以自动检测 CPU 核心的数量，为每个核心分配不同的任务，以实现真正地同一时刻运行多个程序。</li>
+</ul>
+</li>
+<li>编程语言的升级<ul>
+<li>Java 语言诞生之前，很多编程语言不支持多线程。随着 Java 的诞生，多线程编程开始逐渐火热并且发展成熟。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="4-高并发"><a href="#4-高并发" class="headerlink" title="4.高并发"></a>4.高并发</h3><h4 id="①定义-1"><a href="#①定义-1" class="headerlink" title="①定义"></a>①定义</h4><ul>
+<li>高并发：同时有很多个请求发送给服务器系统，服务器会并行处理。</li>
+<li>高并发场景：天猫双十一、春晚微信摇一摇、12306 卖火车票</li>
+<li>一般将系统的承受能力设计为目前系统访问量的十倍比较合适</li>
+</ul>
+<h4 id="②高并发和多线程的异同？"><a href="#②高并发和多线程的异同？" class="headerlink" title="②高并发和多线程的异同？"></a>②高并发和多线程的异同？</h4><ul>
+<li>高并发：指大量的请求同时到达服务器所带来的结果（结果指服务器需要同时处理很多请求），它是一种状态。系统需要应对高并发这种状态所带来的后果，如果处理不当，会导致请求的响应速度慢、无响应甚至服务器死机。</li>
+<li>多线程并不意味着高并发，多线程编程是一种编程方式，是一种解决方案，不仅可以解决高并发所带来的线程安全问题 / 性能问题，还可以提高硬件的利用率，以便获取到更多的资源，从而解决高并发带来的服务器死机、响应慢等问题。<ul>
+<li>多线程编程是我们应对高并发场景的一种重要的解决方案。</li>
+</ul>
+</li>
+<li>高并发并不一定要通过多线程的方式解决<ul>
+<li>例如：解决数据库的高并发问题可以利用 Redis 缓存层（可能带来缓存不一致的问题，但不会带来线程安全问题）</li>
+</ul>
+</li>
+<li>总结：高并发并不意味着多线程（例如：Redis 底层是用单线程处理的）。高并发是一种状态，作为服务器开发者，最好用多线程的方式解决，这样可以提高 CPU 等资源的利用率，加快用户的响应速度。但是在场景不同，资源不同的情况下，也可以选择其他的解决方案。</li>
+</ul>
+<h4 id="③高并发有哪些指标？"><a href="#③高并发有哪些指标？" class="headerlink" title="③高并发有哪些指标？"></a>③高并发有哪些指标？</h4><ul>
+<li>QPS（Queries Per Second）：每秒钟的查询（请求）数</li>
+<li>PV（Page View）：24 小时内的页面点击量（综合浏览量）</li>
+<li>UV（Unique Visitor）：24 小时内访问的用户数量（根据 Cookie）、UV &lt;= PV</li>
+<li>并发连接数：某个时刻服务器所接受的请求的数目。<ul>
+<li>对于同一个用户而言，可以同时产生很多个会话 / 连接，所以数目 &gt; 同时在线的用户数量。</li>
+<li>对服务器来说，这个连接有一个上限</li>
+</ul>
+</li>
+<li>服务器平均请求等待时间：服务器处理一个请求所花费的时间</li>
+</ul>
+<hr>
+<h3 id="5-同步与异步、阻塞与非阻塞"><a href="#5-同步与异步、阻塞与非阻塞" class="headerlink" title="5.同步与异步、阻塞与非阻塞"></a>5.同步与异步、阻塞与非阻塞</h3><h4 id="①同步与异步"><a href="#①同步与异步" class="headerlink" title="①同步与异步"></a>①同步与异步</h4><ul>
+<li>同步与异步：被调用方是否主动告诉调用方结果。<ul>
+<li>同步与异步是被调用方（即服务端）的行为，而不是调用方的行为。</li>
+<li>同步：在没有得到结果之前，服务端不返回任何结果。</li>
+<li>异步：调用在发出之后，服务端会立刻返回，告诉调用方 “我收到你的请求了，我会马上处理的”，等服务器处理完成以后，会再次告诉调用方 “我已经处理完了”。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1582653108706.png" alt="Alt text"><br><img src="./1582653143245.png" alt="Alt text"><br><img src="./1582653156676.png" alt="Alt text"><br><img src="./1582653175803.png" alt="Alt text"></p>
+<h4 id="②阻塞与非阻塞"><a href="#②阻塞与非阻塞" class="headerlink" title="②阻塞与非阻塞"></a>②阻塞与非阻塞</h4><ul>
+<li>站在线程状态的角度：阻塞指当前线程不能继续执行，需要等待一段时间或者被唤醒。</li>
+<li>站在线程发出请求的角度：我是调用方，我调用一个东西后，在返回结果前是否还能做其他事情。</li>
+<li>阻塞与非阻塞是调用方的行为，而不是被调用方的行为。<ul>
+<li>阻塞：调用一个东西后，返回结果前什么也不做。</li>
+<li>非阻塞：调用一个东西后，返回结果前做其他事情。</li>
+</ul>
+</li>
+</ul>
+<h4 id="③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞"><a href="#③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞" class="headerlink" title="③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞"></a>③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞</h4><ul>
+<li>同步不一定是阻塞，阻塞也不一定是同步。</li>
+<li>异步不一定是非阻塞，非阻塞也不一定是异步。</li>
+<li>同步阻塞：（被调用方）执行完成后才返回结果、（调用方）在返回结果前什么也不做。</li>
+<li>同步非阻塞：（被调用方）执行完成后才返回结果、（调用方）在返回结果前做其他事情，不时地检查一下被调用方是否返回结果。</li>
+<li>异步阻塞：调用方在发出请求之后，被调用方会立刻告诉调用方已经收到请求，当被调用方处理完成以后，会再次告诉调用方已经处理完了、但是（调用方）在返回结果前什么也不做。</li>
+<li>异步非阻塞：调用方在发出请求之后，被调用方会立刻告诉调用方已经收到请求，当被调用方处理完成以后，会再次告诉调用方已经处理完了、（调用方）在返回结果前做其他事情，等待被调用方主动返回结果。</li>
+</ul>
+<hr>
+<h3 id="6-常见面试问题"><a href="#6-常见面试问题" class="headerlink" title="6.常见面试问题"></a>6.常见面试问题</h3><h4 id="①进程和线程的异同？"><a href="#①进程和线程的异同？" class="headerlink" title="①进程和线程的异同？"></a>①进程和线程的异同？</h4><ul>
+<li>不同：起源、概念、内存共享方式、拥有的资源、数量、开销</li>
+<li>相同：生命周期（状态）</li>
+<li>具体见 <strong>1.进程和线程——④两者的异同</strong></li>
+</ul>
+<h4 id="②并行和并发的异同？"><a href="#②并行和并发的异同？" class="headerlink" title="②并行和并发的异同？"></a>②并行和并发的异同？</h4><ul>
+<li>都在形容一个程序的运行状态时：并行一定是并发。</li>
+<li>并发也可以形容一个程序的属性，即程序是否具有并发性。若是程序没有并发性，表示程序只能串行执行。</li>
+</ul>
+<h4 id="③多线程就是高并发吗？有什么反例？"><a href="#③多线程就是高并发吗？有什么反例？" class="headerlink" title="③多线程就是高并发吗？有什么反例？"></a>③多线程就是高并发吗？有什么反例？</h4><ul>
+<li>高并发指服务器同时接受很多请求，受到极大压力。</li>
+<li>多线程是针对高并发的一个解决方案，可以使用多线程将这个压力迅速化解。</li>
+<li>反例：Redis 本身是单线程的，但是同样可以支持高并发的场景。</li>
+<li>应对高并发时，不仅可以通过多线程的方式解决，也可以从整体架构、缓存层的设计、MQ 队列等地方着手解决。</li>
+</ul>
+<h4 id="④多线程可以提高程序的执行效率，你知不知道有哪些弊端？"><a href="#④多线程可以提高程序的执行效率，你知不知道有哪些弊端？" class="headerlink" title="④多线程可以提高程序的执行效率，你知不知道有哪些弊端？"></a>④多线程可以提高程序的执行效率，你知不知道有哪些弊端？</h4><ol>
+<li>性能问题（上下文切换、保存 CPU cache）</li>
+<li>异构化任务或不能并行执行的任务用多线程反而不如用单线程合适</li>
+<li>线程安全问题</li>
+</ol>
+<h4 id="⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？"><a href="#⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？" class="headerlink" title="⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？"></a>⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？</h4><ul>
+<li>同步、异步指的是被调用方在调用结束后是否主动返回结果</li>
+<li>阻塞、非阻塞指的是调用方在调用后是否可以去做其他事情</li>
+<li>具体见 <strong>5.同步与异步、阻塞与非阻塞</strong></li>
+</ul>
+<h4 id="⑥在单核-CPU-上运行多线程程序有意义吗？"><a href="#⑥在单核-CPU-上运行多线程程序有意义吗？" class="headerlink" title="⑥在单核 CPU 上运行多线程程序有意义吗？"></a>⑥在单核 CPU 上运行多线程程序有意义吗？</h4><ul>
+<li>有意义，虽然在单核 CPU 上执行真正的并行是不可能的，因为只有一个处理器，但是对于应用程序而言，我们不知道它未来会运行在单核 CPU 还是多核 CPU 上，所以在编写时肯定以多核 CPU 为准。其次，对于多线程程序，当其中一个线程执行缓慢或者被阻塞时，其他线程可以利用这些时间（如读取磁盘的时间）做其他事情，让程序保持高效运转。</li>
+<li>如果 CPU 被挤满，并不是说在单核 CPU 上运行多线程程序没有意义，而是说线程的数量设置不合理，应该减少线程的数量。</li>
+</ul>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#109;&#101;&#x73;&#x73;&#105;&#64;&#49;&#54;&#51;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#109;&#101;&#x73;&#x73;&#105;&#64;&#49;&#54;&#51;&#46;&#99;&#x6f;&#109;</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    围巾一
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://messi1002.top/2020/02/25/Java并发编程之基础概念/" title="Java并发编程之基础概念">http://messi1002.top/2020/02/25/Java并发编程之基础概念/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java并发编程/" rel="tag"><i class="fa fa-tag"></i> Java并发编程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/20/Synchronized关键字/" rel="next" title="Synchronized关键字">
+                <i class="fa fa-chevron-left"></i> Synchronized关键字
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDM2Ni8xNjg5Mw=="></div>
+    </div>
+
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/favicon.ico" alt="围巾一">
+            
+              <p class="site-author-name" itemprop="name">围巾一</p>
+              <p class="site-description motion-element" itemprop="description">明天又是新的一天了。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/messi1002" target="_blank" title="Github">
+                      
+                        <i class="fa fa-fw fa-github"></i>Github</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/user/5bd6dd37f265da0ac962eb50" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>掘金</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程和线程"><span class="nav-number">1.</span> <span class="nav-text">1.进程和线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①与操作系统的关系"><span class="nav-number">1.1.</span> <span class="nav-text">①与操作系统的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②进程定义"><span class="nav-number">1.2.</span> <span class="nav-text">②进程定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③线程定义"><span class="nav-number">1.3.</span> <span class="nav-text">③线程定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④两者的异同"><span class="nav-number">1.4.</span> <span class="nav-text">④两者的异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤Java-语言和多线程的关系"><span class="nav-number">1.5.</span> <span class="nav-text">⑤Java 语言和多线程的关系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多线程"><span class="nav-number">2.</span> <span class="nav-text">2.多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①定义"><span class="nav-number">2.1.</span> <span class="nav-text">①定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②多线程实例"><span class="nav-number">2.2.</span> <span class="nav-text">②多线程实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③为什么需要多线程？"><span class="nav-number">2.3.</span> <span class="nav-text">③为什么需要多线程？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④什么场景中会用到多线程？"><span class="nav-number">2.4.</span> <span class="nav-text">④什么场景中会用到多线程？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤多线程的局限"><span class="nav-number">2.5.</span> <span class="nav-text">⑤多线程的局限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-串行、并行、并发"><span class="nav-number">3.</span> <span class="nav-text">3.串行、并行、并发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①串行、并行、并发"><span class="nav-number">3.1.</span> <span class="nav-text">①串行、并行、并发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②是什么让并发和并行成为可能？"><span class="nav-number">3.2.</span> <span class="nav-text">②是什么让并发和并行成为可能？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-高并发"><span class="nav-number">4.</span> <span class="nav-text">4.高并发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①定义-1"><span class="nav-number">4.1.</span> <span class="nav-text">①定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②高并发和多线程的异同？"><span class="nav-number">4.2.</span> <span class="nav-text">②高并发和多线程的异同？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③高并发有哪些指标？"><span class="nav-number">4.3.</span> <span class="nav-text">③高并发有哪些指标？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-同步与异步、阻塞与非阻塞"><span class="nav-number">5.</span> <span class="nav-text">5.同步与异步、阻塞与非阻塞</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①同步与异步"><span class="nav-number">5.1.</span> <span class="nav-text">①同步与异步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②阻塞与非阻塞"><span class="nav-number">5.2.</span> <span class="nav-text">②阻塞与非阻塞</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞"><span class="nav-number">5.3.</span> <span class="nav-text">③同步阻塞、同步非阻塞、异步阻塞、异步非阻塞</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-常见面试问题"><span class="nav-number">6.</span> <span class="nav-text">6.常见面试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①进程和线程的异同？"><span class="nav-number">6.1.</span> <span class="nav-text">①进程和线程的异同？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②并行和并发的异同？"><span class="nav-number">6.2.</span> <span class="nav-text">②并行和并发的异同？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③多线程就是高并发吗？有什么反例？"><span class="nav-number">6.3.</span> <span class="nav-text">③多线程就是高并发吗？有什么反例？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④多线程可以提高程序的执行效率，你知不知道有哪些弊端？"><span class="nav-number">6.4.</span> <span class="nav-text">④多线程可以提高程序的执行效率，你知不知道有哪些弊端？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？"><span class="nav-number">6.5.</span> <span class="nav-text">⑤什么是同步？什么是异步？什么是阻塞？什么是非阻塞？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑥在单核-CPU-上运行多线程程序有意义吗？"><span class="nav-number">6.6.</span> <span class="nav-text">⑥在单核 CPU 上运行多线程程序有意义吗？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">7.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">围巾一</span>
+
+  
+</div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共47.1k字</span>
+</div>
+<!-- 
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-md"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
