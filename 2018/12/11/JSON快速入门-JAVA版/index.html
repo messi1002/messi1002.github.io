@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #FFF0F5; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #FFF0F5    /*上边框颜色*/
+        border-left-color: #FFF0F5    /*左边框颜色*/
+    }
+</style>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "920d2bdc"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="Tf84R3xwmljr68UBv4sBuanemXFwaqAqPW7F6kR2zIo">
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="BprGp7tx04">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/w.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/w.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JSON,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="wjy's blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="org.json、gson 等 jar 包的下载：链接：https://pan.baidu.com/s/1sjMDVajQgR-ihFvAZ54ymg提取码：dt84  1.了解 JSON 它的全称为 JavaScript Object Notation。              ①优点 JSON 是一种与开发语言无关的、轻量级的数据交换格式。| 它采用完全独立于编程语言的文本格式来存储和表示">
+<meta name="keywords" content="JSON">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON快速入门(JAVA版)">
+<meta property="og:url" content="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/index.html">
+<meta property="og:site_name" content="wjy&#39;s blog">
+<meta property="og:description" content="org.json、gson 等 jar 包的下载：链接：https://pan.baidu.com/s/1sjMDVajQgR-ihFvAZ54ymg提取码：dt84  1.了解 JSON 它的全称为 JavaScript Object Notation。              ①优点 JSON 是一种与开发语言无关的、轻量级的数据交换格式。| 它采用完全独立于编程语言的文本格式来存储和表示">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/1.jpg">
+<meta property="og:updated_time" content="2020-03-01T22:18:57.801Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSON快速入门(JAVA版)">
+<meta name="twitter:description" content="org.json、gson 等 jar 包的下载：链接：https://pan.baidu.com/s/1sjMDVajQgR-ihFvAZ54ymg提取码：dt84  1.了解 JSON 它的全称为 JavaScript Object Notation。              ①优点 JSON 是一种与开发语言无关的、轻量级的数据交换格式。| 它采用完全独立于编程语言的文本格式来存储和表示">
+<meta name="twitter:image" content="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/">
+
+
+
+
+
+  <title>JSON快速入门(JAVA版) | wjy's blog</title>
+  
+
+
+
+
+
+
+
+
+  <script src="/js/src/photoswipe.js?v=5.1.4"></script>
+<script src="/js/src/photoswipe-ui-default.js?v=5.1.4"></script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/messi1002" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">wjy's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">行到水穷处，坐看云起时。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-旅行">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>
+            
+            旅行
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="围巾一">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/favicon.ico">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JSON快速入门(JAVA版)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T23:20:10+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaWeb/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaWeb</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>org.json、gson 等 jar 包的下载：<br>链接：<a href="https://pan.baidu.com/s/1sjMDVajQgR-ihFvAZ54ymg" target="_blank" rel="noopener">https://pan.baidu.com/s/1sjMDVajQgR-ihFvAZ54ymg</a><br>提取码：dt84</p>
+</blockquote>
+<h3 id="1-了解-JSON"><a href="#1-了解-JSON" class="headerlink" title="1.了解 JSON"></a>1.了解 JSON</h3><blockquote>
+<p>它的全称为 <strong>JavaScript Object Notation</strong>。            </p>
+</blockquote>
+<h4 id="①优点"><a href="#①优点" class="headerlink" title="①优点"></a>①优点</h4><ul>
+<li><strong>JSON 是一种与开发语言无关的、轻量级的数据交换格式。</strong><br>| 它采用完全独立于编程语言的文本格式来存储和表示数据。<br>| 最初来自 JS，后来几乎每种常用语言都有处理 JSON 的 API，它支持多种服务器端语言，便于服务器端的解析。</li>
+<li><strong>JSON 是行业内使用最为广泛的数据传输格式。</strong><br>| 调用服务端 API 时会使用 JSON 作为返回格式。</li>
+<li><strong>JSON 是数据存储的一种格式，格式简单、易于读写、占用带宽小。</strong><br>| 它易于易于程序的解析和生成，并能有效的提升网络传输效率。</li>
+</ul>
+<h4 id="②缺点"><a href="#②缺点" class="headerlink" title="②缺点"></a>②缺点</h4><ul>
+<li>要求字符集必须是 Unicode，受约束性强。</li>
+</ul>
+<h4 id="③实例"><a href="#③实例" class="headerlink" title="③实例"></a>③实例</h4><ul>
+<li><strong>{ }：标识一个 JSON 对象(即结构体)。</strong><br>| { } 中包含键值对结构，key 必须是 String 类型，value 为任何基本类型、对象或数组，多个键值对之间用逗号分隔。            </li>
+<li><strong>[]：数组 Array，用逗号分隔元素。</strong><br>| 在 Java 中，可用集合、string[] 等定义。</li>
+<li><strong>元素基本类型：String、number、true、false、null。</strong><br>| <strong>JSON 中的数字没有浮点数、整数 … 之分。但在 Java 中，JSONObject 的 put 方法会自动区分不同的数字格式。这是一种 JSON 原生数据格式到 Java 数据格式的映射关系。</strong><br>| 标准 JSON 中不支持任何形式的注释。<br>| JSON 中没有日期 / 时间数据格式。</li>
+</ul>
+<p><img src="1.jpg" alt="Alt text"></p>
+<hr>
+<h3 id="2-org-json-包的使用"><a href="#2-org-json-包的使用" class="headerlink" title="2.org.json 包的使用"></a>2.org.json 包的使用</h3><h4 id="①使用-JSONObject-构建-JSON-对象"><a href="#①使用-JSONObject-构建-JSON-对象" class="headerlink" title="①使用 JSONObject 构建 JSON 对象"></a>①使用 JSONObject 构建 JSON 对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.json.JSONException;</span><br><span class="line"><span class="keyword">import</span> org.json.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/10 16:34</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 使用JSONObject构建JSON对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        JSONObject messi = <span class="keyword">new</span> JSONObject();</span><br><span class="line">        Object null1 = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            messi.put(<span class="string">"name"</span>, <span class="string">"messi"</span>);</span><br><span class="line">            <span class="comment">// put方法具有替代性，第二次赋值会代替第一次赋值。</span></span><br><span class="line">            messi.put(<span class="string">"name"</span>, <span class="string">"梅西"</span>);</span><br><span class="line">            messi.put(<span class="string">"age"</span>, <span class="number">31.8</span>);</span><br><span class="line">            <span class="comment">// JSON中用String类型代替日期类型。</span></span><br><span class="line">            messi.put(<span class="string">"birthday"</span>, <span class="string">"1987-06-24"</span>);</span><br><span class="line">            messi.put(<span class="string">"home"</span>, <span class="string">"Barcelona"</span>);</span><br><span class="line">            <span class="comment">// 可用集合、string[]等定义JSON数组。</span></span><br><span class="line">            messi.put(<span class="string">"major"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"player"</span>, <span class="string">"star"</span>&#125;);</span><br><span class="line">            messi.put(<span class="string">"car"</span>, <span class="keyword">true</span>);</span><br><span class="line">            messi.put(<span class="string">"house"</span>, <span class="keyword">true</span>);</span><br><span class="line">            <span class="comment">// 直接使用null会产生二义性。</span></span><br><span class="line">            messi.put(<span class="string">"daughter"</span>, null1);</span><br><span class="line">            messi.put(<span class="string">"girlfriend"</span>, <span class="string">"安东内拉"</span>);</span><br><span class="line">            <span class="comment">// 此键值作为JSON数据的注释。</span></span><br><span class="line">            messi.put(<span class="string">"comment"</span>, <span class="string">"love him!!"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 打印JSON格式的数据。</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">             * 自动去除空格 —— 压缩数据。</span></span><br><span class="line"><span class="comment">             * 与键值的插入顺序不同。</span></span><br><span class="line"><span class="comment">             * &#123;"birthday":"1987-06-24","girlfriend":"安东内拉","major":["player","star"],"car":true,"name":"梅西","comment":"love him!!","house":true,"age":31.8,"home":"Barcelona"&#125;</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            System.out.println(messi.toString());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (JSONException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②使用-Map-构建-JSON-对象"><a href="#②使用-Map-构建-JSON-对象" class="headerlink" title="②使用 Map 构建 JSON 对象"></a>②使用 Map 构建 JSON 对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.json.JSONObject;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/10 16:34</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 使用Map构建JSON对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;String, Object&gt; messi = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">        Object null1 = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        messi.put(<span class="string">"name"</span>, <span class="string">"messi"</span>);</span><br><span class="line">        <span class="comment">// put方法具有替代性，第二次赋值会代替第一次赋值。</span></span><br><span class="line">        messi.put(<span class="string">"name"</span>, <span class="string">"梅西"</span>);</span><br><span class="line">        messi.put(<span class="string">"age"</span>, <span class="number">31.8</span>);</span><br><span class="line">        <span class="comment">// JSON中用String类型代替日期类型。</span></span><br><span class="line">        messi.put(<span class="string">"birthday"</span>, <span class="string">"1987-06-24"</span>);</span><br><span class="line">        messi.put(<span class="string">"home"</span>, <span class="string">"Barcelona"</span>);</span><br><span class="line">        <span class="comment">// 可用集合、string[]等定义JSON数组。</span></span><br><span class="line">        messi.put(<span class="string">"major"</span>, <span class="keyword">new</span> String[]&#123;<span class="string">"player"</span>, <span class="string">"star"</span>&#125;);</span><br><span class="line">        messi.put(<span class="string">"car"</span>, <span class="keyword">true</span>);</span><br><span class="line">        messi.put(<span class="string">"house"</span>, <span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">// 直接使用null会产生二义性。</span></span><br><span class="line">        messi.put(<span class="string">"daughter"</span>, null1);</span><br><span class="line">        messi.put(<span class="string">"girlfriend"</span>, <span class="string">"安东内拉"</span>);</span><br><span class="line">        <span class="comment">// 此键值作为JSON数据的注释。</span></span><br><span class="line">        messi.put(<span class="string">"comment"</span>, <span class="string">"love him!!"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印JSON格式的数据。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 通过JSONObject的构造函数传入Map对象,来构建一个JSON对象。</span></span><br><span class="line"><span class="comment">         * 自动去除空格 —— 压缩数据。</span></span><br><span class="line"><span class="comment">         * 与键值的插入顺序不同。</span></span><br><span class="line"><span class="comment">         * &#123;"birthday":"1987-06-24","girlfriend":"安东内拉","major":["player","star"],"car":true,"name":"梅西","comment":"love him!!","house":true,"age":31.8,"home":"Barcelona"&#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> JSONObject(messi).toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="③使用-Javabean-构建-JSON-对象-推荐使用"><a href="#③使用-Javabean-构建-JSON-对象-推荐使用" class="headerlink" title="③使用 Javabean 构建 JSON 对象(推荐使用)"></a>③使用 Javabean 构建 JSON 对象(推荐使用)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> json;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/10 17:21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 封装数据的Javabean。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">lover</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> age;</span><br><span class="line">    <span class="comment">// 日期类型需要用字符串类型代替。</span></span><br><span class="line">    <span class="keyword">private</span> String birthday;</span><br><span class="line">    <span class="keyword">private</span> String home;</span><br><span class="line">    <span class="keyword">private</span> String[] major;</span><br><span class="line">    <span class="keyword">private</span> Boolean car;</span><br><span class="line">    <span class="keyword">private</span> Boolean house;</span><br><span class="line">    <span class="keyword">private</span> String girlfriend;</span><br><span class="line">    <span class="keyword">private</span> Object daugter;</span><br><span class="line">    <span class="keyword">private</span> String comment;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">lover</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">double</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getBirthday</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBirthday</span><span class="params">(String birthday)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.birthday = birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getHome</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> home;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHome</span><span class="params">(String school)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.home = home;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String[] getMajor() &#123;</span><br><span class="line">        <span class="keyword">return</span> major;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMajor</span><span class="params">(String[] major)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.major = major;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">getCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> car;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCar</span><span class="params">(<span class="keyword">boolean</span> car)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.car = car;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">getHouse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> house;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHouse</span><span class="params">(<span class="keyword">boolean</span> house)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.house = house;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getGirlfriend</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> girlfriend;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGirlfriend</span><span class="params">(String girlfriend)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.girlfriend = girlfriend;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getDaughter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> daugter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDaughter</span><span class="params">(Object daugter)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.daugter = daugter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getComment</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> comment;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setComment</span><span class="params">(String comment)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.comment = comment;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.json.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/10 16:34</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 使用Javabean构建JSON对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 声明一个bean的实例。</span></span><br><span class="line">        lover messi = <span class="keyword">new</span> lover();</span><br><span class="line">        Object null1 = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 给bean的属性赋值。</span></span><br><span class="line">        messi.setName(<span class="string">"梅西"</span>);</span><br><span class="line">        messi.setAge(<span class="number">31.8</span>);</span><br><span class="line">        messi.setBirthday(<span class="string">"1987-06-24"</span>);</span><br><span class="line">        messi.setHome(<span class="string">"Barcelona"</span>);</span><br><span class="line">        messi.setMajor(<span class="keyword">new</span> String[]&#123;<span class="string">"player"</span>, <span class="string">"star"</span>&#125;);</span><br><span class="line">        messi.setCar(<span class="keyword">true</span>);</span><br><span class="line">        messi.setHouse(<span class="keyword">true</span>);</span><br><span class="line">        messi.setDaughter(null1);</span><br><span class="line">        messi.setGirlfriend(<span class="string">"安东内拉"</span>);</span><br><span class="line">        messi.setComment(<span class="string">"love him!!"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 通过JSONObject的构造函数传入Javabean实例，来构建一个JSON对象。</span></span><br><span class="line"><span class="comment">         * 并不是直接对JSONObject进行操作，没有将属性直接put到JSONObject中。而是先创建一个Javabean对象，给此对象的属性赋值，便于重用Javabean。</span></span><br><span class="line"><span class="comment">         * &#123;"birthday":"1987-06-24","girlfriend":"安东内拉","major":["player","star"],"car":true,"name":"梅西","comment":"love him!!","daughter":null,"house":true,"age":31.8,"home":null&#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> JSONObject(messi).toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="④从文件中读取-JSON"><a href="#④从文件中读取-JSON" class="headerlink" title="④从文件中读取 JSON"></a>④从文件中读取 JSON</h4><blockquote>
+<p><strong>需要将此 JSON 文件放在工程根目录下</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> json;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.io.FileUtils;</span><br><span class="line"><span class="keyword">import</span> org.json.JSONArray;</span><br><span class="line"><span class="keyword">import</span> org.json.JSONException;</span><br><span class="line"><span class="keyword">import</span> org.json.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/10 18:31</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 从文件中读取JSON数据。</span></span><br><span class="line"><span class="comment"> * 注意: JSONObject不支持将JSON数据反解析为Javabean。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">readJsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, JSONException </span>&#123;</span><br><span class="line">        <span class="comment">// 获取文件。</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(readJsonTest.class.getResource(<span class="string">"../messi.json"</span>).getFile());</span><br><span class="line">        <span class="comment">// 读取文件内容。</span></span><br><span class="line">        String content = FileUtils.readFileToString(file);</span><br><span class="line">        <span class="comment">// 将文件内容转换为JSON对象。</span></span><br><span class="line">        JSONObject json = <span class="keyword">new</span> JSONObject(content);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 增加程序的健壮性。</span></span><br><span class="line">        <span class="keyword">if</span> (!json.isNull(<span class="string">"name"</span>))</span><br><span class="line">            System.out.println(<span class="string">"name: "</span> + json.getString(<span class="string">"name"</span>));   </span><br><span class="line">        <span class="comment">// 解析JSON格式的数据。</span></span><br><span class="line">        System.out.println(<span class="string">"age: "</span> + json.getDouble(<span class="string">"age"</span>));</span><br><span class="line">        System.out.println(<span class="string">"birthday: "</span> + json.getString(<span class="string">"birthday"</span>));</span><br><span class="line">        System.out.println(<span class="string">"home: "</span> + json.getString(<span class="string">"home"</span>));</span><br><span class="line">        System.out.println(<span class="string">"car? "</span> + json.getBoolean(<span class="string">"car"</span>));</span><br><span class="line">        System.out.println(<span class="string">"house? "</span> + json.getBoolean(<span class="string">"house"</span>));</span><br><span class="line">        System.out.println(<span class="string">"comment: "</span> + json.getString(<span class="string">"comment"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// JSONObject对象不能解析JSON格式中的数组，需要JSONArray对象解析。</span></span><br><span class="line">        <span class="comment">// 获取JSON格式中的数组。</span></span><br><span class="line">        JSONArray array = json.getJSONArray(<span class="string">"major"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历获取到的数组。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 专业-1: player</span></span><br><span class="line"><span class="comment">         * 专业-2: star</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length(); i++)</span><br><span class="line">            System.out.println(<span class="string">"专业-"</span> + (i+<span class="number">1</span>) + <span class="string">": "</span> + array.getString(i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3-GSON-的使用"><a href="#3-GSON-的使用" class="headerlink" title="3.GSON 的使用"></a>3.GSON 的使用</h3><blockquote>
+<p><strong>Google 提出的开源项目(第三方工具)，相比于 JSONObject，功能更强大、性能更出色、使用方式更简单。</strong></p>
+</blockquote>
+<h4 id="①使用-Javabean-构建-JSON-对象-推荐使用"><a href="#①使用-Javabean-构建-JSON-对象-推荐使用" class="headerlink" title="①使用 Javabean 构建 JSON 对象(推荐使用)"></a>①使用 Javabean 构建 JSON 对象(推荐使用)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 17:21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 封装数据的JavaBean。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">lover1</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> age;</span><br><span class="line">    <span class="keyword">private</span> String birthday;</span><br><span class="line">    <span class="keyword">private</span> String home;</span><br><span class="line">    <span class="keyword">private</span> String[] major;</span><br><span class="line">    <span class="keyword">private</span> Boolean car;</span><br><span class="line">    <span class="keyword">private</span> Boolean house;</span><br><span class="line">    <span class="keyword">private</span> String girlfriend;</span><br><span class="line">    <span class="keyword">private</span> Object daughter;</span><br><span class="line">    <span class="keyword">private</span> String comment;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">lover1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">double</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getBirthday</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBirthday</span><span class="params">(String birthday)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.birthday = birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getHome</span><span class="params">()</span> </span>&#123; </span><br><span class="line">	    <span class="keyword">return</span> home; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHome</span><span class="params">(String home)</span> </span>&#123; </span><br><span class="line">	    <span class="keyword">this</span>.home = home; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String[] getMajor() &#123;</span><br><span class="line">        <span class="keyword">return</span> major;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMajor</span><span class="params">(String[] major)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.major = major;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">getCar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> car;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCar</span><span class="params">(<span class="keyword">boolean</span> car)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.car = car;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">getHouse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> house;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHouse</span><span class="params">(<span class="keyword">boolean</span> house)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.house = house;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getGirlfriend</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> girlfriend;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGirlfriend</span><span class="params">(String girlfriend)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.girlfriend = girlfriend;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getDaughter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> daughter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDaughter</span><span class="params">(Object daugter)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.daughter = daugter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getComment</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> comment;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setComment</span><span class="params">(String comment)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.comment = comment;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 10:13</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 使用Javabean构建JSON对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">gsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        lover1 messi = <span class="keyword">new</span> lover1();</span><br><span class="line">        Object null1 = <span class="keyword">null</span>;</span><br><span class="line">        Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line"></span><br><span class="line">        messi.setName(<span class="string">"messi"</span>);</span><br><span class="line">        messi.setAge(<span class="number">31.8</span>);</span><br><span class="line">        messi.setBirthday(<span class="string">"1987-06-24"</span>);</span><br><span class="line">        messi.setHome(<span class="string">"Barcelona"</span>);</span><br><span class="line">        messi.setMajor(<span class="keyword">new</span> String[]&#123;<span class="string">"player"</span>, <span class="string">"star"</span>&#125;);</span><br><span class="line">        messi.setCar(<span class="keyword">true</span>);</span><br><span class="line">        messi.setHouse(<span class="keyword">true</span>);</span><br><span class="line">        messi.setDaughter(null1);</span><br><span class="line">        messi.setGirlfriend(<span class="string">"安东内拉"</span>);</span><br><span class="line">        messi.setComment(<span class="string">"love him!!"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成JSON格式的数据。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * &#123;"name":"messi","age":31.8,"birthday":"1987-06-24","home":"Barcelona","major":["player","star"],"car":true,"house":true,"girlfriend":"安东内拉","comment":"love him!!"&#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(gson.toJson(messi));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②个性化定制-JSON"><a href="#②个性化定制-JSON" class="headerlink" title="②个性化定制 JSON"></a>②个性化定制 JSON</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.annotations.SerializedName;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 17:21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 封装数据的JavaBean。</span></span><br><span class="line"><span class="comment"> * GSON有更强的灵活性。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">lover2</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 通过添加注解的方式，标识生成JSON对象的一个key。</span></span><br><span class="line">    <span class="comment">// 将name转换为NAME，相当于解析的时候重新命名key值。</span></span><br><span class="line">    <span class="meta">@SerializedName</span>(<span class="string">"NAME"</span>)</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> age;</span><br><span class="line">    <span class="comment">// 隐藏某个属性。</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> String ignore;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">lover2</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">double</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getIgnore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ignore;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIgnore</span><span class="params">(String ignore)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.ignore = ignore;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"><span class="keyword">import</span> com.google.gson.GsonBuilder;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 10:13</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 使用Javabean构建JSON对象。</span></span><br><span class="line"><span class="comment"> * 个性化构建JSON格式。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">gsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        lover2 messi = <span class="keyword">new</span> lover2();</span><br><span class="line">        GsonBuilder gb = <span class="keyword">new</span> GsonBuilder();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过Javabean类中的注解将name变为NAME，即在构建过程中将key个性化，一直有效。</span></span><br><span class="line">        messi.setName(<span class="string">"messi"</span>);</span><br><span class="line">        messi.setAge(<span class="number">31.8</span>);</span><br><span class="line">        <span class="comment">// 通过传入回调参数将age变为AGE，即在构建过程中将key个性化，仅在这个gb对象中有效。</span></span><br><span class="line">        gb.setFieldNamingStrategy(field -&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (field.getName().equals(<span class="string">"age"</span>))</span><br><span class="line">                <span class="keyword">return</span> <span class="string">"AGE"</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> field.getName();</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成JSON格式的数据。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * &#123;"NAME":"messi","AGE":31.8&#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(gb.create().toJson(messi));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 美化JSON格式。</span></span><br><span class="line">        gb.setPrettyPrinting();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成JSON格式的数据。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * &#123;</span></span><br><span class="line"><span class="comment">         *   "NAME": "messi",</span></span><br><span class="line"><span class="comment">         *   "AGE": 31.8</span></span><br><span class="line"><span class="comment">         * &#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(gb.create().toJson(messi));</span><br><span class="line"></span><br><span class="line">        Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">        <span class="comment">// 在JavaBean中构建JSON对象时隐藏某个属性(private transient String 属性名)。</span></span><br><span class="line">        messi.setIgnore(<span class="string">"I love you!"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成JSON格式的数据。</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 隐藏了ignore属性。</span></span><br><span class="line"><span class="comment">         * &#123;"NAME":"messi","age":31.8&#125;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(gson.toJson(messi));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="③从文件中读取-JSON-将-JSON-数据反解析为-Javabean-对象"><a href="#③从文件中读取-JSON-将-JSON-数据反解析为-Javabean-对象" class="headerlink" title="③从文件中读取 JSON + 将 JSON 数据反解析为 Javabean 对象"></a>③从文件中读取 JSON + 将 JSON 数据反解析为 Javabean 对象</h4><blockquote>
+<p><strong>将 JSON 数据反解析为 Javabean 对象时，GSON 支持将 String 类型的日期转换为日期类型。</strong><br><strong>GSON 会将 JSON 数据中的数组自动转换为 Javabean 对象中的集合类型。</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 17:21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 封装数据的Javabean。</span></span><br><span class="line"><span class="comment"> * 将JSON数据反解析为Javabean对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">lover3</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> age;</span><br><span class="line">    <span class="comment">// 日期类型。</span></span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line">    <span class="comment">// 集合类型。</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; major;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">lover3</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">double</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Date <span class="title">getBirthday</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBirthday</span><span class="params">(Date birthday)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.birthday = birthday;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">getMajor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> major;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMajor</span><span class="params">(List&lt;String&gt; major)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.major = major;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> gson;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"><span class="keyword">import</span> com.google.gson.GsonBuilder;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.io.FileUtils;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/4/11 20:00</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 从文件中读取JSON。</span></span><br><span class="line"><span class="comment"> * 将JSON数据反解析为Javabean对象。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">readJsonTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 从文件中读取JSON。</span></span><br><span class="line">        File file = <span class="keyword">new</span> File(readJsonTest.class.getResource(<span class="string">"../messi.json"</span>).getFile());</span><br><span class="line">        String content = FileUtils.readFileToString(file);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用GsonBuilder的setDateFormat("日期模板")方法可以将JSON对象中String类型的日期转换成Date类型。</span></span><br><span class="line">        Gson gson = <span class="keyword">new</span> GsonBuilder().setDateFormat(<span class="string">"yyyy-MM-dd"</span>).create();</span><br><span class="line">        <span class="comment">// JSON对象中的key与Javabean的属性一一对应。</span></span><br><span class="line">        <span class="comment">// 将JSON数据反解析为Javabean对象。</span></span><br><span class="line">        lover3 messi = gson.fromJson(content, lover3.class);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * Wed Jun 24 00:00:00 CDT 1987</span></span><br><span class="line"><span class="comment">         * 31.8</span></span><br><span class="line"><span class="comment">         * gson.lover3@1e4a7dd4</span></span><br><span class="line"><span class="comment">         * GSON会将JSON数据中的数组自动转换为Javabean对象中的集合类型。</span></span><br><span class="line"><span class="comment">         * [player, star]</span></span><br><span class="line"><span class="comment">         * class java.util.ArrayList</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        System.out.println(messi.getBirthday());</span><br><span class="line">        System.out.println(messi.getAge());</span><br><span class="line">        System.out.println(messi.toString());</span><br><span class="line">        System.out.println(messi.getMajor());</span><br><span class="line">        System.out.println(messi.getMajor().getClass());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p><strong>org.json 是 Android SDK 的官方库。</strong><br><strong>GSON 应用于服务端开发，功能更强大。</strong></p>
+</blockquote>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#119;&#106;&#121;&#x6d;&#x65;&#x73;&#115;&#x69;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#119;&#106;&#121;&#x6d;&#x65;&#x73;&#115;&#x69;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    围巾一
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/" title="JSON快速入门(JAVA版)">http://messi1002.top/2018/12/11/JSON快速入门-JAVA版/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JSON/" rel="tag"><i class="fa fa-tag"></i> JSON</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/25/Git-版本控制工具/" rel="next" title="Git-版本控制工具">
+                <i class="fa fa-chevron-left"></i> Git-版本控制工具
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/18/ASCⅡ码/" rel="prev" title="ASC2码">
+                ASC2码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDM2Ni8xNjg5Mw=="></div>
+    </div>
+
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/favicon.ico" alt="围巾一">
+            
+              <p class="site-author-name" itemprop="name">围巾一</p>
+              <p class="site-description motion-element" itemprop="description">明天又是新的一天了。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/messi1002" target="_blank" title="Github">
+                      
+                        <i class="fa fa-fw fa-github"></i>Github</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/user/5bd6dd37f265da0ac962eb50" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>掘金</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-了解-JSON"><span class="nav-number">1.</span> <span class="nav-text">1.了解 JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①优点"><span class="nav-number">1.1.</span> <span class="nav-text">①优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②缺点"><span class="nav-number">1.2.</span> <span class="nav-text">②缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③实例"><span class="nav-number">1.3.</span> <span class="nav-text">③实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-org-json-包的使用"><span class="nav-number">2.</span> <span class="nav-text">2.org.json 包的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①使用-JSONObject-构建-JSON-对象"><span class="nav-number">2.1.</span> <span class="nav-text">①使用 JSONObject 构建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②使用-Map-构建-JSON-对象"><span class="nav-number">2.2.</span> <span class="nav-text">②使用 Map 构建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③使用-Javabean-构建-JSON-对象-推荐使用"><span class="nav-number">2.3.</span> <span class="nav-text">③使用 Javabean 构建 JSON 对象(推荐使用)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④从文件中读取-JSON"><span class="nav-number">2.4.</span> <span class="nav-text">④从文件中读取 JSON</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-GSON-的使用"><span class="nav-number">3.</span> <span class="nav-text">3.GSON 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①使用-Javabean-构建-JSON-对象-推荐使用"><span class="nav-number">3.1.</span> <span class="nav-text">①使用 Javabean 构建 JSON 对象(推荐使用)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②个性化定制-JSON"><span class="nav-number">3.2.</span> <span class="nav-text">②个性化定制 JSON</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③从文件中读取-JSON-将-JSON-数据反解析为-Javabean-对象"><span class="nav-number">3.3.</span> <span class="nav-text">③从文件中读取 JSON + 将 JSON 数据反解析为 Javabean 对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">围巾一</span>
+
+  
+</div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共47.1k字</span>
+</div>
+<!-- 
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+-->
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-md"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
