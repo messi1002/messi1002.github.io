@@ -108,23 +108,23 @@
 
 
 
-<meta name="description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树相关代码实现  注意：示例代码中的 TreeNode 对象和 Node 对象定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right;">
+<meta name="description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树的常用操作  注意：示例代码中的 TreeNode 对象、Node 对象和结构体定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right">
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树的遍历(递归+迭代)">
 <meta property="og:url" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树相关代码实现  注意：示例代码中的 TreeNode 对象和 Node 对象定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right;">
+<meta property="og:description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树的常用操作  注意：示例代码中的 TreeNode 对象、Node 对象和结构体定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582471231193.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582470579020.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582470913495.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582470604901.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582517961898.png">
-<meta property="og:updated_time" content="2020-03-03T18:14:58.756Z">
+<meta property="og:updated_time" content="2020-03-04T05:01:05.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树的遍历(递归+迭代)">
-<meta name="twitter:description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树相关代码实现  注意：示例代码中的 TreeNode 对象和 Node 对象定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right;">
+<meta name="twitter:description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树的常用操作  注意：示例代码中的 TreeNode 对象、Node 对象和结构体定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right">
 <meta name="twitter:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582471231193.png">
 
 
@@ -469,13 +469,15 @@
 
       
         <h3 id="1-相关博客"><a href="#1-相关博客" class="headerlink" title="1.相关博客"></a>1.相关博客</h3><p><strong>因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。</strong></p>
-<p><a href="https://messi1002.top/2019/06/08/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E6%80%A7%E8%B4%A8/">二叉树的定义及性质</a><br><a href="https://messi1002.top/2019/02/15/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/">二叉搜索树相关代码实现</a></p>
+<p><a href="https://messi1002.top/2019/02/08/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E6%80%A7%E8%B4%A8/">二叉树的定义及性质</a><br><a href="https://messi1002.top/2019/02/15/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">二叉搜索树的常用操作</a></p>
 <blockquote>
-<p>注意：示例代码中的 <code>TreeNode</code> 对象和 <code>Node</code> 对象定义如下：</p>
+<p>注意：示例代码中的 <code>TreeNode</code> 对象、<code>Node</code> 对象和结构体定义如下：</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode left;</span><br><span class="line">    TreeNode right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Node&gt; children;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> _val)</span> </span>&#123;</span><br><span class="line">        val = _val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> _val, List&lt;Node&gt; _children)</span> </span>&#123;</span><br><span class="line">        val = _val;</span><br><span class="line">        children = _children;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Node&gt; children;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> _val)</span> </span>&#123;</span><br><span class="line">        val = _val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> _val, List&lt;Node&gt; _children)</span> </span>&#123;</span><br><span class="line">        val = _val;</span><br><span class="line">        children = _children;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">right</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h3 id="2-树的前序遍历"><a href="#2-树的前序遍历" class="headerlink" title="2.树的前序遍历"></a>2.树的前序遍历</h3><ul>
@@ -602,8 +604,8 @@
 <hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#106;&#x79;&#x6d;&#x65;&#115;&#x73;&#x69;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x77;&#106;&#x79;&#x6d;&#x65;&#115;&#x73;&#x69;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;</a></li>
-<li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/DataStructure" target="_blank" rel="noopener">GitHub仓库</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#x79;&#x6d;&#101;&#x73;&#x73;&#x69;&#64;&#49;&#54;&#x33;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#x79;&#x6d;&#101;&#x73;&#x73;&#x69;&#64;&#49;&#54;&#x33;&#46;&#x63;&#111;&#109;</a></li>
+<li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
 </ul>
 
       
@@ -748,7 +750,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
