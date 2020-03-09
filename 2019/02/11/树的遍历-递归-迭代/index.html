@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582470913495.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582470604901.png">
 <meta property="og:image" content="http://messi1002.top/2019/02/11/树的遍历-递归-迭代/1582517961898.png">
-<meta property="og:updated_time" content="2020-03-04T08:26:26.417Z">
+<meta property="og:updated_time" content="2020-03-08T07:59:21.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树的遍历(递归+迭代)">
 <meta name="twitter:description" content="1.相关博客因为二叉树这种数据结构本身天然的就具有递归的结构，所以面对二叉树问题，使用递归方法解决通常比较简单。 二叉树的定义及性质二叉搜索树的常用操作  注意：示例代码中的 TreeNode 对象、Node 对象和结构体定义如下：  123456public class TreeNode &amp;#123;    int val;    TreeNode left;    TreeNode right">
@@ -489,7 +489,7 @@
 </ul>
 </li>
 <li>举例：<ul>
-<li>下图的先序遍历结果为：1、2、3、4、5、6、7、8、9</li>
+<li>下图的先序遍历结果为：1、2、3、4、5、6、7、8、9。</li>
 </ul>
 </li>
 </ul>
@@ -505,9 +505,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归函数，returnSize、arr是指针，动态修改。</span></span><br><span class="line"><span class="comment">// 递归函数定义: 前序遍历以root节点为根节点的二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">orderTraversal</span><span class="params">(struct TreeNode* root, <span class="keyword">int</span>* returnSize, <span class="keyword">int</span>* arr)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 递归终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 递归过程</span></span><br><span class="line">    <span class="comment">// 处理当前节点</span></span><br><span class="line">    arr[(*returnSize)++] = root-&gt;val;</span><br><span class="line">    <span class="comment">// 前序遍历root节点的左子树</span></span><br><span class="line">    orderTraversal(root-&gt;left, returnSize, arr);</span><br><span class="line">    <span class="comment">// 前序遍历root节点的右子树</span></span><br><span class="line">    orderTraversal(root-&gt;right, returnSize, arr);    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 统计结点数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">makeSize</span><span class="params">(struct TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> makeSize(root-&gt;left) + makeSize(root-&gt;right) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">preorderTraversal</span><span class="params">(struct TreeNode* root, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = makeSize(root);</span><br><span class="line">    <span class="keyword">int</span>* arr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * size);</span><br><span class="line">    *returnSize = <span class="number">0</span>;</span><br><span class="line">    orderTraversal(root, returnSize, arr);</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="②二叉树-迭代"><a href="#②二叉树-迭代" class="headerlink" title="②二叉树-迭代"></a>②二叉树-迭代</h4><ul>
-<li>遇到一个节点就访问它，然后把它压入栈中，并去遍历它的左子树</li>
-<li>当左子树遍历结束后，弹出栈顶元素</li>
-<li>再去先序遍历该节点的右子树</li>
+<li>遇到一个节点就访问它，然后把它压入栈中，并去遍历它的左子树。当左子树遍历结束后，弹出栈顶元素，再去先序遍历该节点的右子树。</li>
 <li>Java</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty() || root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 遇到一个节点就访问它，然后把它压入栈中，并去遍历它的左子树。</span></span><br><span class="line">            <span class="keyword">while</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">                list.add(root.val);</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root = root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 当左子树遍历结束后，弹出栈顶元素。</span></span><br><span class="line">            <span class="keyword">if</span> (!stack.isEmpty()) &#123;</span><br><span class="line">                root = stack.pop();</span><br><span class="line">                <span class="comment">// 再去先序遍历该节点的右子树</span></span><br><span class="line">                root = root.right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -535,9 +533,9 @@
 <li>③中序遍历其右子树 </li>
 </ul>
 </li>
-<li>对于二分搜索树来说，中序遍历使得元素从小到大排序</li>
+<li>对于二分搜索树来说，中序遍历使得元素从小到大排序。</li>
 <li>举例：<ul>
-<li>下图的中序遍历结果为：1、2、3、4、5、6、7、8、9</li>
+<li>下图的中序遍历结果为：1、2、3、4、5、6、7、8、9。</li>
 </ul>
 </li>
 </ul>
@@ -553,9 +551,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归函数，returnSize、arr是指针，动态修改。</span></span><br><span class="line"><span class="comment">// 递归函数定义: 中序遍历以root节点为根节点的二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">orderTraversal</span><span class="params">(struct TreeNode* root, <span class="keyword">int</span>* returnSize, <span class="keyword">int</span>* arr)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 递归终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 递归过程</span></span><br><span class="line">    <span class="comment">// 中序遍历root节点的左子树</span></span><br><span class="line">    orderTraversal(root-&gt;left, returnSize, arr);</span><br><span class="line">    <span class="comment">// 处理当前节点</span></span><br><span class="line">    arr[(*returnSize)++] = root-&gt;val;</span><br><span class="line">    <span class="comment">// 中序遍历root节点的右子树</span></span><br><span class="line">    orderTraversal(root-&gt;right, returnSize, arr);    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 统计结点数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">makeSize</span><span class="params">(struct TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> makeSize(root-&gt;left) + makeSize(root-&gt;right) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">inorderTraversal</span><span class="params">(struct TreeNode* root, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = makeSize(root);</span><br><span class="line">    <span class="keyword">int</span>* arr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * size);</span><br><span class="line">    *returnSize = <span class="number">0</span>;</span><br><span class="line">    orderTraversal(root, returnSize, arr);</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="②二叉树-迭代-1"><a href="#②二叉树-迭代-1" class="headerlink" title="②二叉树-迭代"></a>②二叉树-迭代</h4><ul>
-<li>遇到一个节点，就把它压入栈中，并去遍历它的左子树</li>
-<li>当左子树遍历结束后，弹出栈顶元素并访问它</li>
-<li>再去中序遍历该节点的右子树</li>
+<li>遇到一个节点，就把它压入栈中，并去遍历它的左子树。当左子树遍历结束后，弹出栈顶元素并访问它，再去中序遍历该节点的右子树。</li>
 <li>Java</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty() || root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 遇到一个节点，就把它压入栈中，并去遍历它的左子树。</span></span><br><span class="line">            <span class="keyword">while</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root = root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 当左子树遍历结束后，弹出栈顶元素并访问它。</span></span><br><span class="line">            <span class="keyword">if</span> (!stack.isEmpty()) &#123;</span><br><span class="line">                root = stack.pop();</span><br><span class="line">                list.add(root.val);</span><br><span class="line">                <span class="comment">// 再去中序遍历该节点的右子树</span></span><br><span class="line">                root = root.right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -574,7 +570,7 @@
 </ul>
 </li>
 <li>举例：<ul>
-<li>下图的后序遍历结果为：1、2、3、4、5、6、7、8、9</li>
+<li>下图的后序遍历结果为：1、2、3、4、5、6、7、8、9。</li>
 </ul>
 </li>
 </ul>
@@ -614,9 +610,9 @@
 
 <hr>
 <h3 id="5-树的层序遍历"><a href="#5-树的层序遍历" class="headerlink" title="5.树的层序遍历"></a>5.树的层序遍历</h3><ul>
-<li>从根节点开始，首先将根节点入队，然后开始执行循环：节点出队、访问该节点、其左右孩子入队</li>
+<li>从根节点开始，首先将根节点入队，然后开始执行循环：节点出队、访问该节点、其左右孩子入队。</li>
 <li>举例：<ul>
-<li>下图的层序遍历结果为：5、2、8、1、4、6、9、3、7</li>
+<li>下图的层序遍历结果为：5、2、8、1、4、6、9、3、7。</li>
 </ul>
 </li>
 </ul>
@@ -637,22 +633,22 @@
 
 <hr>
 <h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h3><ul>
-<li>前、中、后序遍历都属于 <strong>深度优先遍历</strong><ul>
-<li>即首先尝试走到最深，走不通之后再返回用回溯的方式将整棵树遍历结束</li>
-<li>三种遍历实际访问节点的顺序相同，只是执行打印的位置不同</li>
-<li>实现深度优先遍历：需要堆栈</li>
+<li>前、中、后序遍历都属于 <strong>深度优先遍历</strong>。<ul>
+<li>即首先尝试走到最深，走不通之后再返回用回溯的方式将整棵树遍历结束。</li>
+<li>三种遍历实际访问节点的顺序相同，只是执行打印的位置不同。</li>
+<li>实现深度优先遍历：需要堆栈。</li>
 </ul>
 </li>
-<li>层序遍历属于 <strong>广度优先遍历</strong><ul>
-<li>一层一层地遍历，关注广度，将每层的所有结点遍历完再去下一层</li>
-<li>实现广度优先遍历：需要队列</li>
+<li>层序遍历属于 <strong>广度优先遍历</strong>。<ul>
+<li>一层一层地遍历，关注广度，将每层的所有结点遍历完再去下一层。</li>
+<li>实现广度优先遍历：需要队列。</li>
 </ul>
 </li>
 </ul>
 <hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <strong><a href="mailto:wjymessi@163.com" target="_blank" rel="noopener">wjymessi@163.com</a></strong></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#x6d;&#x65;&#x73;&#115;&#x69;&#64;&#49;&#54;&#51;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#x6d;&#x65;&#x73;&#115;&#x69;&#64;&#49;&#54;&#51;&#46;&#99;&#x6f;&#109;</a></li>
 <li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
 </ul>
 
@@ -798,7 +794,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -809,7 +805,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -820,7 +816,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -907,7 +903,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共48.1k字</span>
+  <span class="post-count">博客全站共52.4k字</span>
 </div>
 <!-- 
 
