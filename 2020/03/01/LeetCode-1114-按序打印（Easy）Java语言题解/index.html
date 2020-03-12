@@ -108,18 +108,21 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.题目相关①题目及示例 ②相关标签 多线程  ③题目地址 1114. 按序打印 — 力扣网   2.解题方法①原子变量 使用一个原子变量控制，把并发调用变成按顺序调用。  ②volatile 关键字 使用 volatile 关键字保证变量的可见性，把并发调用变成按顺序调用。  ③信号量 三个线程第一次执行时，因为 flag1 信号量和 flag2 信号量的计数器初始值都为 0，所以需要等 fir">
 <meta name="keywords" content="Java并发编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[LeetCode] 1114. 按序打印（Easy）Java语言题解">
 <meta property="og:url" content="http://messi1002.top/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.题目相关①题目及示例 ②相关标签 多线程  ③题目地址 1114. 按序打印 — 力扣网   2.解题方法①原子变量 使用一个原子变量控制，把并发调用变成按顺序调用。  ②volatile 关键字 使用 volatile 关键字保证变量的可见性，把并发调用变成按顺序调用。  ③信号量 三个线程第一次执行时，因为 flag1 信号量和 flag2 信号量的计数器初始值都为 0，所以需要等 fir">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-03T05:42:05.252Z">
+<meta property="og:image" content="http://messi1002.top/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/1583211789594.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/1583211834605.png">
+<meta property="og:updated_time" content="2020-03-12T05:57:44.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 1114. 按序打印（Easy）Java语言题解">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.题目相关①题目及示例 ②相关标签 多线程  ③题目地址 1114. 按序打印 — 力扣网   2.解题方法①原子变量 使用一个原子变量控制，把并发调用变成按顺序调用。  ②volatile 关键字 使用 volatile 关键字保证变量的可见性，把并发调用变成按顺序调用。  ③信号量 三个线程第一次执行时，因为 flag1 信号量和 flag2 信号量的计数器初始值都为 0，所以需要等 fir">
+<meta name="twitter:image" content="http://messi1002.top/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/1583211789594.png">
 
 
 
@@ -426,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  803
                 </span>
               
 
@@ -442,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -463,7 +466,49 @@
       
 
       
-        
+        <h3 id="1-题目相关"><a href="#1-题目相关" class="headerlink" title="1.题目相关"></a>1.题目相关</h3><h4 id="①题目及示例"><a href="#①题目及示例" class="headerlink" title="①题目及示例"></a>①题目及示例</h4><p><img src="./1583211789594.png" alt="Alt text"><br><img src="./1583211834605.png" alt="Alt text"></p>
+<h4 id="②相关标签"><a href="#②相关标签" class="headerlink" title="②相关标签"></a>②相关标签</h4><ul>
+<li>多线程</li>
+</ul>
+<h4 id="③题目地址"><a href="#③题目地址" class="headerlink" title="③题目地址"></a>③题目地址</h4><ul>
+<li><a href="https://leetcode-cn.com/problems/print-in-order/" target="_blank" rel="noopener">1114. 按序打印 — 力扣网</a></li>
+</ul>
+<hr>
+<h3 id="2-解题方法"><a href="#2-解题方法" class="headerlink" title="2.解题方法"></a>2.解题方法</h3><h4 id="①原子变量"><a href="#①原子变量" class="headerlink" title="①原子变量"></a>①原子变量</h4><ul>
+<li>使用一个原子变量控制，把并发调用变成按顺序调用。</li>
+</ul>
+<h4 id="②volatile-关键字"><a href="#②volatile-关键字" class="headerlink" title="②volatile 关键字"></a>②volatile 关键字</h4><ul>
+<li>使用 volatile 关键字保证变量的可见性，把并发调用变成按顺序调用。</li>
+</ul>
+<h4 id="③信号量"><a href="#③信号量" class="headerlink" title="③信号量"></a>③信号量</h4><ul>
+<li>三个线程第一次执行时，因为 flag1 信号量和 flag2 信号量的计数器初始值都为 0，所以需要等 first 线程中释放了 flag1 信号量，second 线程才能开始执行，需要等 second 线程中释放了 flag2 信号量，third 线程才能开始执行。</li>
+</ul>
+<h4 id="④CountDownLatch"><a href="#④CountDownLatch" class="headerlink" title="④CountDownLatch"></a>④CountDownLatch</h4><ul>
+<li>两个 CountDownLatch 实例可以控制三个线程执行的先后顺序</li>
+<li>具体实现见代码</li>
+</ul>
+<h4 id="⑤CyclicBarrier"><a href="#⑤CyclicBarrier" class="headerlink" title="⑤CyclicBarrier"></a>⑤CyclicBarrier</h4><ul>
+<li>两个 CyclicBarrier 实例可以控制三个线程执行的先后顺序</li>
+<li>具体实现见代码</li>
+</ul>
+<hr>
+<h3 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3.代码详解"></a>3.代码详解</h3><h4 id="①原子变量-1"><a href="#①原子变量-1" class="headerlink" title="①原子变量"></a>①原子变量</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.使用一个原子变量控制，把并发调用变成按顺序调用。</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> AtomicInteger n = <span class="keyword">new</span> AtomicInteger(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">first</span><span class="params">(Runnable printFirst)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        printFirst.run();</span><br><span class="line">        n.incrementAndGet();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">second</span><span class="params">(Runnable printSecond)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待第一个线程执行完毕</span></span><br><span class="line">        <span class="keyword">while</span> (n.get() != <span class="number">1</span>) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        printSecond.run();</span><br><span class="line">        n.incrementAndGet();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">third</span><span class="params">(Runnable printThird)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待第二个线程执行完毕</span></span><br><span class="line">        <span class="keyword">while</span> (n.get() != <span class="number">2</span>) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        printThird.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②volatile-关键字-1"><a href="#②volatile-关键字-1" class="headerlink" title="②volatile 关键字"></a>②volatile 关键字</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.volatile关键字</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">first</span><span class="params">(Runnable printFirst)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        printFirst.run();</span><br><span class="line">        flag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">second</span><span class="params">(Runnable printSecond)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待第一个线程执行完毕</span></span><br><span class="line">        <span class="keyword">while</span> (flag != <span class="number">1</span>) &#123;&#125;</span><br><span class="line">        printSecond.run();</span><br><span class="line">        flag = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">third</span><span class="params">(Runnable printThird)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待第二个线程执行完毕</span></span><br><span class="line">        <span class="keyword">while</span> (flag != <span class="number">2</span>) &#123;&#125;</span><br><span class="line">        printThird.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="③信号量-1"><a href="#③信号量-1" class="headerlink" title="③信号量"></a>③信号量</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.信号量(Semaphore)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Semaphore flag1 = <span class="keyword">new</span> Semaphore(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">private</span> Semaphore flag2 = <span class="keyword">new</span> Semaphore(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">first</span><span class="params">(Runnable printFirst)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        printFirst.run();</span><br><span class="line">        <span class="comment">// 释放flag1信号量的一个许可</span></span><br><span class="line">        flag1.release();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">second</span><span class="params">(Runnable printSecond)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 获取flag1信号量的一个许可</span></span><br><span class="line">        flag1.acquire();</span><br><span class="line">        printSecond.run();</span><br><span class="line">        <span class="comment">// 释放flag2信号量的一个许可</span></span><br><span class="line">        flag2.release();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">third</span><span class="params">(Runnable printThird)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 获取flag2信号量的一个许可</span></span><br><span class="line">        flag2.acquire();</span><br><span class="line">        printThird.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="④CountDownLatch-1"><a href="#④CountDownLatch-1" class="headerlink" title="④CountDownLatch"></a>④CountDownLatch</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4.CountDownLatch</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> CountDownLatch latch1 = <span class="keyword">new</span> CountDownLatch(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">private</span> CountDownLatch latch2 = <span class="keyword">new</span> CountDownLatch(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">first</span><span class="params">(Runnable printFirst)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        printFirst.run();</span><br><span class="line">        <span class="comment">// 触发second线程执行</span></span><br><span class="line">        latch1.countDown();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">second</span><span class="params">(Runnable printSecond)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待被触发</span></span><br><span class="line">        latch1.await();</span><br><span class="line">        printSecond.run();</span><br><span class="line">        <span class="comment">// 触发third线程执行</span></span><br><span class="line">        latch2.countDown();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">third</span><span class="params">(Runnable printThird)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">// 等待被触发</span></span><br><span class="line">        latch2.await();</span><br><span class="line">        printThird.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="⑤CyclicBarrier-1"><a href="#⑤CyclicBarrier-1" class="headerlink" title="⑤CyclicBarrier"></a>⑤CyclicBarrier</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.CyclicBarrier</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> CyclicBarrier barrier1 = <span class="keyword">new</span> CyclicBarrier(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">private</span> CyclicBarrier barrier2 = <span class="keyword">new</span> CyclicBarrier(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">first</span><span class="params">(Runnable printFirst)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            printFirst.run();</span><br><span class="line">            barrier1.await();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (BrokenBarrierException e) &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">second</span><span class="params">(Runnable printSecond)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 等待fisrt线程执行完printFirst.run();</span></span><br><span class="line">            barrier1.await();</span><br><span class="line">            printSecond.run();</span><br><span class="line">            barrier2.await();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (BrokenBarrierException e) &#123;&#125;   </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">third</span><span class="params">(Runnable printThird)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 等待second线程执行完printSecond.run();</span></span><br><span class="line">            barrier2.await();</span><br><span class="line">            printThird.run();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (BrokenBarrierException e) &#123;&#125;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#109;&#101;&#115;&#x73;&#105;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#109;&#101;&#115;&#x73;&#105;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></li>
+<li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
+</ul>
+
       
     </div>
     
@@ -579,8 +624,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,7 +651,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,6 +720,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目相关"><span class="nav-number">1.</span> <span class="nav-text">1.题目相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①题目及示例"><span class="nav-number">1.1.</span> <span class="nav-text">①题目及示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②相关标签"><span class="nav-number">1.2.</span> <span class="nav-text">②相关标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③题目地址"><span class="nav-number">1.3.</span> <span class="nav-text">③题目地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题方法"><span class="nav-number">2.</span> <span class="nav-text">2.解题方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①原子变量"><span class="nav-number">2.1.</span> <span class="nav-text">①原子变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②volatile-关键字"><span class="nav-number">2.2.</span> <span class="nav-text">②volatile 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③信号量"><span class="nav-number">2.3.</span> <span class="nav-text">③信号量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④CountDownLatch"><span class="nav-number">2.4.</span> <span class="nav-text">④CountDownLatch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤CyclicBarrier"><span class="nav-number">2.5.</span> <span class="nav-text">⑤CyclicBarrier</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-代码详解"><span class="nav-number">3.</span> <span class="nav-text">3.代码详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①原子变量-1"><span class="nav-number">3.1.</span> <span class="nav-text">①原子变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②volatile-关键字-1"><span class="nav-number">3.2.</span> <span class="nav-text">②volatile 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③信号量-1"><span class="nav-number">3.3.</span> <span class="nav-text">③信号量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④CountDownLatch-1"><span class="nav-number">3.4.</span> <span class="nav-text">④CountDownLatch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤CyclicBarrier-1"><span class="nav-number">3.5.</span> <span class="nav-text">⑤CyclicBarrier</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -690,7 +760,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.4k字</span>
+  <span class="post-count">博客全站共60.2k字</span>
 </div>
 <!-- 
 

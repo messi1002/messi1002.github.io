@@ -108,18 +108,20 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.题目相关①题目及示例 ②相关标签 数学  ③题目地址 172. 阶乘后的零 — 力扣网   2.解题方法①暴力解法（超时） 思路：已知 2 * 5 = 10，所以尾数中零的数量只与 2 和 5 有关 。由此可知，我们只需要关注 N! 中作为乘法因子的 2 的数量和 5 的数量，最后计算 Math.min(count(2), count(5)) 即可。 深入分析 1：2 的数量一定比 5 的数量">
 <meta name="keywords" content="数学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[LeetCode] 172. 阶乘后的零（Easy）Java语言题解">
 <meta property="og:url" content="http://messi1002.top/2019/05/05/LeetCode-172-阶乘后的零（Easy）Java语言题解/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.题目相关①题目及示例 ②相关标签 数学  ③题目地址 172. 阶乘后的零 — 力扣网   2.解题方法①暴力解法（超时） 思路：已知 2 * 5 = 10，所以尾数中零的数量只与 2 和 5 有关 。由此可知，我们只需要关注 N! 中作为乘法因子的 2 的数量和 5 的数量，最后计算 Math.min(count(2), count(5)) 即可。 深入分析 1：2 的数量一定比 5 的数量">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-01T22:26:18.788Z">
+<meta property="og:image" content="http://messi1002.top/2019/05/05/LeetCode-172-阶乘后的零（Easy）Java语言题解/1582604454515.png">
+<meta property="og:updated_time" content="2020-03-09T04:20:56.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 172. 阶乘后的零（Easy）Java语言题解">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.题目相关①题目及示例 ②相关标签 数学  ③题目地址 172. 阶乘后的零 — 力扣网   2.解题方法①暴力解法（超时） 思路：已知 2 * 5 = 10，所以尾数中零的数量只与 2 和 5 有关 。由此可知，我们只需要关注 N! 中作为乘法因子的 2 的数量和 5 的数量，最后计算 Math.min(count(2), count(5)) 即可。 深入分析 1：2 的数量一定比 5 的数量">
+<meta name="twitter:image" content="http://messi1002.top/2019/05/05/LeetCode-172-阶乘后的零（Easy）Java语言题解/1582604454515.png">
 
 
 
@@ -426,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  431
                 </span>
               
 
@@ -463,7 +465,35 @@
       
 
       
-        
+        <h3 id="1-题目相关"><a href="#1-题目相关" class="headerlink" title="1.题目相关"></a>1.题目相关</h3><h4 id="①题目及示例"><a href="#①题目及示例" class="headerlink" title="①题目及示例"></a>①题目及示例</h4><p><img src="./1582604454515.png" alt="Alt text"></p>
+<h4 id="②相关标签"><a href="#②相关标签" class="headerlink" title="②相关标签"></a>②相关标签</h4><ul>
+<li>数学</li>
+</ul>
+<h4 id="③题目地址"><a href="#③题目地址" class="headerlink" title="③题目地址"></a>③题目地址</h4><ul>
+<li><a href="https://leetcode-cn.com/problems/factorial-trailing-zeroes/" target="_blank" rel="noopener">172. 阶乘后的零 — 力扣网</a></li>
+</ul>
+<hr>
+<h3 id="2-解题方法"><a href="#2-解题方法" class="headerlink" title="2.解题方法"></a>2.解题方法</h3><h4 id="①暴力解法（超时）"><a href="#①暴力解法（超时）" class="headerlink" title="①暴力解法（超时）"></a>①暴力解法（超时）</h4><ul>
+<li>思路：已知 <code>2 * 5 = 10</code>，所以尾数中零的数量只与 <code>2</code> 和 <code>5</code> 有关 。由此可知，我们只需要关注 <code>N!</code> 中作为乘法因子的 <code>2</code> 的数量和 <code>5</code> 的数量，最后计算 <code>Math.min(count(2), count(5))</code> 即可。</li>
+<li>深入分析 1：<code>2</code> 的数量一定比 <code>5</code> 的数量多，所以只需要考虑 <code>5</code> 的数量（即统计小于或等于 <code>N</code> 的 <code>5</code> 的倍数们能拆分成多少个 <code>5</code>）。</li>
+</ul>
+<h4 id="②数学规律"><a href="#②数学规律" class="headerlink" title="②数学规律"></a>②数学规律</h4><ul>
+<li>深入分析 2：通过观察 <code>5</code> 的倍数（5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 ……），可以发现对于 <code>N!</code> 的乘积因子来说，每隔 5 个数出现一个 <code>5</code>，每隔 25 个数出现两个 <code>5</code>，每隔 125 个数出现三个 <code>5</code>，以此类推，每隔 <code>5^i</code> 个数出现 <code>i</code> 个 <code>5</code>，最终 <code>5</code> 的个数就是 <code>N / 5 + N / 25 + N / 125 + ...</code>。</li>
+<li>时间复杂度：O(log n) </li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<hr>
+<h3 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3.代码详解"></a>3.代码详解</h3><h4 id="①暴力解法（超时）-1"><a href="#①暴力解法（超时）-1" class="headerlink" title="①暴力解法（超时）"></a>①暴力解法（超时）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trailingZeroes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 计算i的乘法因子中有几个5</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">5</span>; i &lt;= n; i += <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> j = i;</span><br><span class="line">        <span class="keyword">while</span> (j % <span class="number">5</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            j /= <span class="number">5</span>;</span><br><span class="line">            count += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="②数学规律-1"><a href="#②数学规律-1" class="headerlink" title="②数学规律"></a>②数学规律</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trailingZeroes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        count += n / <span class="number">5</span>;</span><br><span class="line">        n /= <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#109;&#101;&#x73;&#115;&#x69;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#109;&#101;&#x73;&#115;&#x69;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></li>
+<li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
+</ul>
+
       
     </div>
     
@@ -579,8 +609,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,7 +636,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,6 +705,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-题目相关"><span class="nav-number">1.</span> <span class="nav-text">1.题目相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①题目及示例"><span class="nav-number">1.1.</span> <span class="nav-text">①题目及示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②相关标签"><span class="nav-number">1.2.</span> <span class="nav-text">②相关标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③题目地址"><span class="nav-number">1.3.</span> <span class="nav-text">③题目地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解题方法"><span class="nav-number">2.</span> <span class="nav-text">2.解题方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①暴力解法（超时）"><span class="nav-number">2.1.</span> <span class="nav-text">①暴力解法（超时）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②数学规律"><span class="nav-number">2.2.</span> <span class="nav-text">②数学规律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-代码详解"><span class="nav-number">3.</span> <span class="nav-text">3.代码详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①暴力解法（超时）-1"><span class="nav-number">3.1.</span> <span class="nav-text">①暴力解法（超时）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②数学规律-1"><span class="nav-number">3.2.</span> <span class="nav-text">②数学规律</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -690,7 +745,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.4k字</span>
+  <span class="post-count">博客全站共60.2k字</span>
 </div>
 <!-- 
 
