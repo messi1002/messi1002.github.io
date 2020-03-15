@@ -108,18 +108,43 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.什么是 Docker①作用 解决了大部分企业的痛点：快速的持续集成、服务的弹性伸缩、部署简单、解放运维、为企业节省了机器资源。 目前京东、阿里、腾讯等公司已经在生产环境中大规模的使用 Docker。  ②概念 概念：Docker 是一个用来装应用的容器，就像杯子可以放水，笔筒可以放笔，书包可以放书一样。你可以把 “Hello World！” 放到 Docker 中，也可以把网站放到 Docke">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker入门">
 <meta property="og:url" content="http://messi1002.top/2019/07/20/Docker入门/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.什么是 Docker①作用 解决了大部分企业的痛点：快速的持续集成、服务的弹性伸缩、部署简单、解放运维、为企业节省了机器资源。 目前京东、阿里、腾讯等公司已经在生产环境中大规模的使用 Docker。  ②概念 概念：Docker 是一个用来装应用的容器，就像杯子可以放水，笔筒可以放笔，书包可以放书一样。你可以把 “Hello World！” 放到 Docker 中，也可以把网站放到 Docke">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-04T07:49:02.520Z">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584173231287.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1583416142815.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584208108508.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584208909662.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584208947997.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584237612757.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584237672068.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584238788610.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584238388036.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584242035857.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584239949145.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584242372342.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584242269412.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584242579503.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584243862238.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1583637018290.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1583638502779.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584247362450.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584247382596.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584259479913.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584248361438.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584248617247.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584248828557.png">
+<meta property="og:image" content="http://messi1002.top/2019/07/20/Docker入门/1584254881080.png">
+<meta property="og:updated_time" content="2020-03-15T08:50:28.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker入门">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.什么是 Docker①作用 解决了大部分企业的痛点：快速的持续集成、服务的弹性伸缩、部署简单、解放运维、为企业节省了机器资源。 目前京东、阿里、腾讯等公司已经在生产环境中大规模的使用 Docker。  ②概念 概念：Docker 是一个用来装应用的容器，就像杯子可以放水，笔筒可以放笔，书包可以放书一样。你可以把 “Hello World！” 放到 Docker 中，也可以把网站放到 Docke">
+<meta name="twitter:image" content="http://messi1002.top/2019/07/20/Docker入门/1584173231287.png">
 
 
 
@@ -415,7 +440,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  4k
                 </span>
               
 
@@ -431,7 +456,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  14
                 </span>
               
             </div>
@@ -452,7 +477,281 @@
       
 
       
-        
+        <h3 id="1-什么是-Docker"><a href="#1-什么是-Docker" class="headerlink" title="1.什么是 Docker"></a>1.什么是 Docker</h3><h4 id="①作用"><a href="#①作用" class="headerlink" title="①作用"></a>①作用</h4><ul>
+<li>解决了大部分企业的痛点：快速的持续集成、服务的弹性伸缩、部署简单、解放运维、为企业节省了机器资源。</li>
+<li>目前京东、阿里、腾讯等公司已经在生产环境中大规模的使用 Docker。</li>
+</ul>
+<h4 id="②概念"><a href="#②概念" class="headerlink" title="②概念"></a>②概念</h4><ul>
+<li>概念：Docker 是一个用来装应用的容器，就像杯子可以放水，笔筒可以放笔，书包可以放书一样。你可以把 “Hello World！” 放到 Docker 中，也可以把网站放到 Docker 中，也可以把任何你想到的程序放到 Docker 中。</li>
+<li>官网：<a href="http://www.docker.com" target="_blank" rel="noopener">www.docker.com</a> <ul>
+<li>对 Docker 的介绍：Docker is the world’s leading software containerization platform.（Docker 是世界领先的软件容器化平台）</li>
+</ul>
+</li>
+<li>总结：Docker 是一个使用 Go 语言开发的开源的应用容器引擎，可以让开发者打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的机器上。</li>
+</ul>
+<h4 id="③特点"><a href="#③特点" class="headerlink" title="③特点"></a>③特点</h4><ul>
+<li>Docker 是一个用来装应用的容器，由 Docker 公司开发。</li>
+<li>开源的，托管在 github 上（<code>docker/docker</code> 已改名为 <code>moby/moby</code>）。</li>
+</ul>
+<p><img src="./1584173231287.png" alt="Alt text"></p>
+<ul>
+<li>跨平台的，支持 Windows、Macos、Linux。</li>
+<li>Docker 是在 ubuntu 系统上开发的，所以推荐在 Linux 上使用 Docker。</li>
+</ul>
+<hr>
+<h3 id="2-了解-Docker"><a href="#2-了解-Docker" class="headerlink" title="2.了解 Docker"></a>2.了解 Docker</h3><h4 id="①Docker-思想"><a href="#①Docker-思想" class="headerlink" title="①Docker 思想"></a>①Docker 思想</h4><ol>
+<li>集装箱思想：把程序的运行环境和部署细节进行整体封装并密封，不容易丢失或损坏。<ul>
+<li>保证我们的程序放在任何地方运行时，都不会缺少东西。</li>
+</ul>
+</li>
+<li>标准化思想：<ol>
+<li>运输方式的标准化：Docker 有一个超级码头，任何一个地方需要货物时都由鲸鱼先将货物送到超级码头，再由鲸鱼从超级码头把货物送到目的地去。</li>
+</ol>
+<ul>
+<li>例如：把台式机上的应用部署到笔记本上，可以在台式机上执行 docker 命令，让鲸鱼把程序送到超级码头，然后在笔记本上执行 docker 命令，让鲸鱼把程序从超级码头送到笔记本上。</li>
+<li>即是执行固定命令发送代码到超级码头，执行固定命令将超级码头中的代码运送到部署地的标准化。</li>
+</ul>
+<ol start="2">
+<li>存储方式的标准化：程序员不需要关心应用存储在什么地方，docker 会自动进行标准化处理，我们只需要通过 docker 命令来启动或停止程序。</li>
+<li>API 接口的标准化：提供了一系列的 RestAPI 接口包含了对应用的启动、停止、查看和删除等控制。</li>
+</ol>
+<ul>
+<li>例如：能够实现执行同样的 docker 命令，来控制不同的 Web 应用服务器，例如 Tomcat、Nginx 等。</li>
+<li>即提供了一系列的 RestAPI 接口，包含了对不同应用的统一控制的标准化。</li>
+</ul>
+</li>
+<li>隔离思想：使用虚拟机时，有独立的内存、CPU、硬盘，使得使用者完全感觉不到外面主机的存在。Docker 也是类似，但是 Docker 技术更加轻量，可以实现快速的创建和销毁。创建虚拟机可能需要几分钟，而创建 Docker 只需要 1 秒。<ul>
+<li>最底层的技术是 Linux 的一种内核限制机制 LXC。</li>
+<li>LXC 是一种轻量级的容器虚拟化技术，最大效率的隔离了进程和资源，通过 cgroup 、namespace 等限制隔离进程组所使用的物理资源，如 CPU、I / O、Memory 等等。</li>
+<li>这个机制早在多年前就已经加入到 Linux 内核了，直到 2013 年 Docker 出世的时候它才火起来。</li>
+<li>Docker 也是随着云计算、敏捷开发、弹性服务等大环境的变迁而变火的，时势造英雄。</li>
+</ul>
+</li>
+</ol>
+<h4 id="②Docker-解决了什么问题"><a href="#②Docker-解决了什么问题" class="headerlink" title="②Docker 解决了什么问题"></a>②Docker 解决了什么问题</h4><ol>
+<li>问题：程序在自己的环境中运行完全没有问题，而在其他人的环境中出问题。<ul>
+<li>Java Web 程序正常运行依赖于：操作系统、JDK、Tomcat、源代码、配置文件等。</li>
+<li>在不同的环境下部署程序时，如果出现操作系统环境的改变、JDK 和 Tomcat 的版本差异、代码依赖于本地环境、配置文件丢失或者与本地系统相关等都可能会导致程序运行不起来。</li>
+<li>解决方案：程序员运行 docker 命令，把操作系统、JDK、Tomcat、源代码、配置文件都封装在集装箱中，然后打包交给鲸鱼，由鲸鱼送到服务器上。</li>
+<li>Docker 解决了运行环境不一致所带来的问题。</li>
+</ul>
+</li>
+<li>问题：系统好卡，谁又写死循环了，把资源都占用了。<ul>
+<li>当多个程序员共用一台服务器的时候，由于某一个人的程序失误，可能会导致其他人的程序内存耗尽、程序挂掉，或者程序运行越来越慢，甚至终端变卡顿。</li>
+<li>解决方案：Docker 的隔离机制，在每个程序启动时都限制了最大可启用的 CPU、内存和硬盘等，如果超过这个限制，就会杀掉这个进程。</li>
+</ul>
+</li>
+<li>问题：客户数量激增（例如：双 11），原有的服务器撑不住了，需要扩展服务器数量。<ul>
+<li>一到某些节日，运维需要对每一台服务器进行安装软件、部署应用、调试测试等工作，等高峰过了再将多余的节点下线（缺点：工作量太大）。</li>
+<li>解决方案：只要在每台机器上执行几个 docker 命令，分分钟就可以扩展成千上万台，并且运行不会出现任何问题。</li>
+<li>Docker 让快速扩展、弹性伸缩变得简单。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="3-走进-Docker"><a href="#3-走进-Docker" class="headerlink" title="3.走进 Docker"></a>3.走进 Docker</h3><h4 id="①核心技术"><a href="#①核心技术" class="headerlink" title="①核心技术"></a>①核心技术</h4><ul>
+<li>三个核心词汇：镜像（集装箱）、仓库（超级码头）和容器（运行程序的地方）</li>
+<li>用 Docker 运行一个程序的过程：去仓库把镜像拉到本地（Ship），然后用一条命令把镜像运行（Build）起来变成容器（Run）。<ul>
+<li>Build：构建镜像</li>
+<li>Ship：运输镜像（在仓库和主机之间运输）</li>
+<li>Run：运行的镜像就是一个容器</li>
+</ul>
+</li>
+</ul>
+<h4 id="②镜像"><a href="#②镜像" class="headerlink" title="②镜像"></a>②镜像</h4><ul>
+<li>英文名：image</li>
+<li>鲸鱼驮着的所有的集装箱就是一个镜像</li>
+<li>从本质上来说，镜像就是一系列的文件（可以包括应用程序的文件，也可以包括应用的运行环境的文件）。Docker 利用 Linux 的联合文件系统（UnionFS）存储镜像文件，将之保存在本地。<ul>
+<li>联合文件系统是一种分层的文件系统，它可以将不同的目录挂载到同一个虚拟文件系统下面。可以在同一个文件夹下看到 test1 文件夹和 test2 文件夹的内容集合。通过这样一种方式，联合文件系统就可以实现文件的分层，比如 test1 可以看做是第一层，test2 可以看做是第二层，每一层有每一层自己的文件，Docker 镜像就是利用了这种分层的概念来实现了镜像存储。</li>
+</ul>
+</li>
+<li>暂且忽视 writable 层，Docker 镜像的每一层文件系统都是只读的，把每一层加载完成之后，这些文件都会被看成是同一个目录，相对于只有一个文件系统，Docker 的这种文件系统就被称为镜像。<ul>
+<li>Image 层：相关软件（JDK、Tomcat、应用代码等），每一层都是我们自己可以控制的。</li>
+<li>Debian 层：具体的一个 Linux 操作系统</li>
+<li>最底层：操作系统的引导</li>
+</ul>
+</li>
+<li>镜像的存储格式（可以看成是一个个集装箱摞在一起）：</li>
+</ul>
+<p><img src="./1583416142815.png" alt="Alt text"></p>
+<h4 id="③容器"><a href="#③容器" class="headerlink" title="③容器"></a>③容器</h4><ul>
+<li>容器的本质就是一个进程，可以将它想象成是一个虚拟机，但是这个 “虚拟机” 的文件系统是一层一层的，并且只有最上面一层是可写的，其他层都是只读的。</li>
+<li>为什么有可写层：大部分程序在运行起来后，都会有写日志、修改文件等需求，所以容器在最高层创建了一个可读可写的文件系统。如果想对镜像文件进行修改操作，那么可读层内容会拷贝到最顶层（可写层），然后再进行修改操作。当我们的应用读取镜像文件时，会从最顶层（可写层）查找，如果没有相应文件，才会去可读层查找。</li>
+<li>即容器是可以修改的，而镜像是不能修改的。这样保证同一个镜像可以生成多个容器，它们之间独立运行，互不干扰。</li>
+</ul>
+<h4 id="④仓库"><a href="#④仓库" class="headerlink" title="④仓库"></a>④仓库</h4><ul>
+<li>构建镜像的目的：为了在其他的环境中运行我们的程序。<ul>
+<li>为了在其他的环境中运行程序，我们需要将构建的镜像传递到目的地，Docker 仓库可以帮助我们传输。</li>
+</ul>
+</li>
+<li>镜像的传输过程：先将构建的镜像传到 Docker 仓库中，再由目的地去 Docker 仓库将镜像拉取到本地。<ul>
+<li>Docker 提供了 Docker 仓库（一个中央服务器，地址是 <a href="http://hub.docker.com）" target="_blank" rel="noopener">http://hub.docker.com）</a></li>
+<li>如果自己的镜像比较私密，不想让别人看到，Docker 也支持自己（在内网中）搭建一个镜像中心。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-Docker-初体验"><a href="#4-Docker-初体验" class="headerlink" title="4.Docker 初体验"></a>4.Docker 初体验</h3><h4 id="①安装-Docker"><a href="#①安装-Docker" class="headerlink" title="①安装 Docker"></a>①安装 Docker</h4><ul>
+<li>Docker 下载地址：<ul>
+<li>win10 专业版：<a href="http://www.docker.com/products/docker#/windows" target="_blank" rel="noopener">官网下载</a>（Docker 对 win 10 做了原生的支持）</li>
+<li>windows 其他版本：<a href="http://www.docker.com/products/docker-toolbox" target="_blank" rel="noopener">官网下载</a>（在 windows 上虚拟了一个 Linux 的运行环境）</li>
+<li>国内下载地址：<a href="http://get.daocloud.io" target="_blank" rel="noopener">http://get.daocloud.io</a></li>
+<li>boot2docker.iso 下载地址：<a href="http://pan.baidu.com/s/1qYyc0ag" target="_blank" rel="noopener">http://pan.baidu.com/s/1qYyc0ag</a></li>
+</ul>
+</li>
+<li>安装教程：<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/72840457" target="_blank" rel="noopener">Win10家庭版安装Docker</a></li>
+<li><a href="https://www.shuijingwanwq.com/2017/10/11/1958/" target="_blank" rel="noopener">配置镜像加速器为阿里云加速器</a></li>
+<li><a href="https://www.cnblogs.com/wang-yaz/p/10429899.html" target="_blank" rel="noopener">CentOS7上安装Docker</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="②第一个-Docker-镜像"><a href="#②第一个-Docker-镜像" class="headerlink" title="②第一个 Docker 镜像"></a>②第一个 Docker 镜像</h4><ul>
+<li><strong>docker pull [OPTIONS] NAME[:TAG]</strong>：从 Docker 的远程仓库拉取镜像到本地<ul>
+<li><code>NAME</code> 表示要拉取的镜像的名称</li>
+<li>默认拉取地址为 Docker 官方提供的默认仓库（<a href="http://hub.docker.com）" target="_blank" rel="noopener">http://hub.docker.com）</a></li>
+<li><code>TAG</code> 表示要拉取的镜像的版本，默认版本为 <code>:latest</code>，表示为最新版本。</li>
+</ul>
+</li>
+<li><strong>docker images [OPTIONS] [REPOSITORY[:TAG]]</strong>：查看本机所有的镜像列表<ul>
+<li>可以用于验证 <strong>docker pull</strong> 命令是否执行成功</li>
+<li><code>REPOSITORY</code>：镜像名称</li>
+<li><code>TAG</code>：镜像版本</li>
+<li><code>IMAGE ID</code>：64 位字符串，用于唯一标识镜像。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584208108508.png" alt="Alt text"></p>
+<ul>
+<li>其他操作<ul>
+<li><a href="https://www.cnblogs.com/huanhuaqingfeng/p/11100995.html" target="_blank" rel="noopener">Docker删除本地镜像</a></li>
+<li><a href="https://blog.51cto.com/sky9896/2475966" target="_blank" rel="noopener">Error response from daemon: conflict: unable to delete fd2aef058105 (must be</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="③第一个-Docker-容器"><a href="#③第一个-Docker-容器" class="headerlink" title="③第一个 Docker 容器"></a>③第一个 Docker 容器</h4><ul>
+<li><strong>docker run [OPTIONS] IMAGE[:TAG] [COMMAND] [ARG…]</strong>：运行镜像<ul>
+<li><code>command</code>：镜像在运行起来时需要执行什么命令</li>
+<li><code>ARG</code>：<code>command</code> 命令所依赖的参数</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584208909662.png" alt="Alt text"><br><img src="./1584208947997.png" alt="Alt text"></p>
+<ul>
+<li>Client：本机执行命令的客户端</li>
+<li>DOCKER_HOST：本机的 Docker 服务</li>
+<li>Registry：Docker 的远程仓库</li>
+<li><strong>docker pull</strong> 流程：Docker Client 向 Docker daemon 发送 <strong>docker pull</strong> 命令，Docker daemon 会先在本机中寻找是否有相应的镜像，如果存在且版本一致则不做任何操作，如果不存在则会从 Docker 的远程仓库中将相应的镜像拉取到本地。</li>
+<li><strong>docker run</strong> 流程：Docker Client 向 Docker daemon 发送 <strong>docker run</strong> 命令，Docker daemon 会先在本机中寻找是否有相应的镜像，如果不存在则会从 Docker 的远程仓库中将相应的镜像拉取到本地（相当于执行 <strong>docker pull</strong> 命令），然后将镜像通过一定方式运行起来变成 Docker 的容器。</li>
+</ul>
+<hr>
+<h3 id="5-Docker-运行-Nginx-服务器"><a href="#5-Docker-运行-Nginx-服务器" class="headerlink" title="5.Docker 运行 Nginx 服务器"></a>5.Docker 运行 Nginx 服务器</h3><h4 id="①运行-nginx-镜像"><a href="#①运行-nginx-镜像" class="headerlink" title="①运行 nginx 镜像"></a>①运行 nginx 镜像</h4><ul>
+<li>Nginx（web 服务器）镜像特点：持久运行的容器<ul>
+<li>前台运行镜像：<strong>docker run NAME</strong>（Ctrl + C 结束进程）</li>
+<li>后台运行镜像：<strong>docker run -d NAME</strong> （返回容器 id）</li>
+<li><strong>docker ps</strong>：查看正在运行的容器</li>
+<li><strong>docker run –help</strong>：查看 <strong>docker run</strong> 命令的相关参数</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584237612757.png" alt="Alt text"><br><img src="./1584237672068.png" alt="Alt text"></p>
+<ul>
+<li><strong>docker exec [OPTIONS] CONTAINER COMMAND [ARG…]</strong>：在一个运行的容器中运行一个命令<ul>
+<li>CONTAINER：容器名称 / 容器 id（不需要写全 id，写到能够唯一确定一个容器即可）</li>
+<li><code>-i</code>：保证输入有效</li>
+<li><code>-t</code>：分配一个伪终端</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584238788610.png" alt="Alt text"></p>
+<ul>
+<li><strong>docker exec  -it id / name bash</strong>：进入容器<ul>
+<li>其实就是一个Linux，因为 Nginx 要运行在 Linux 容器上。</li>
+<li><strong>ps -ef</strong>：查看当前运行的进程</li>
+<li><strong>exit</strong>：退出容器</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584238388036.png" alt="Alt text"><br><img src="./1584242035857.png" alt="Alt text"></p>
+<h4 id="②Docker-网络"><a href="#②Docker-网络" class="headerlink" title="②Docker 网络"></a>②Docker 网络</h4><blockquote>
+<p>Docker 使用了 Linux 的 Namespace （命名空间）技术来进行资源的隔离，如 PID Namespace -&gt; 隔离进程，Mount Namespace -&gt; 隔离文件系统，Network Namespace -&gt; 隔离网络等。每一个 Network Namespace 都提供了一份独立的网络环境（网卡、路由、iptable 规则等都与其他的 Network Namespace 隔离）。</p>
+</blockquote>
+<ul>
+<li>Docker 的网络类型<ol>
+<li>bridge 模式（桥接）：Docker 默认的网络设置，此模式会为每一个容器分配一个独立的 Network Namespace、设置 IP 和端口等。一个虚拟网桥（docker0）与主机的网卡（eth0）相连，在启动容器时，容器中会虚拟一个容器的虚拟网卡，与网桥相连，然后通过网桥与主机进行通讯。</li>
+<li>host 模式：容器不会获得一个独立的 Network Namespace，而是和主机共同使用一个。这时容器将不会虚拟出自己的网卡，配置自己的 IP 等，而是会使用宿主机上的 IP 和端口。即在 Docker 中使用网络和在主机上使用网络是一样的（容器直接连在主机的网卡上，与主机使用同一块网卡）。</li>
+<li>none 模式：Docker 将不会和外界进行通讯</li>
+</ol>
+</li>
+<li>Docker 的端口映射：在使用 bridge 模式的时候，因为 bridge 模式所使用的网络有独立的 Namespace，这就需要一种技术使容器内的端口可以在主机上访问到，这种技术就是端口映射。Docker 可以将容器内的某一个端口与容器所在主机上的某一个端口之间做一个映射，当你在访问主机上的端口时，其实就是在访问容器内的端口，虚拟网桥会进行请求转发（端口映射）并将响应按原路返回。</li>
+</ul>
+<p><img src="./1584239949145.png" alt="Alt text"></p>
+<ul>
+<li><strong>docker stop id</strong>：停止容器</li>
+<li><strong>docker restart id</strong>：重启容器</li>
+<li><strong>docker run -d -p 主机端口:容器端口 容器名称</strong>：开放容器的一个端口到主机上的一个端口</li>
+</ul>
+<p><img src="./1584242372342.png" alt="Alt text"><br><img src="./1584242269412.png" alt="Alt text"></p>
+<ul>
+<li><strong>docker run -d -P 容器名称</strong>：开放容器的所有监听端口到主机上的随机端口（批量端口的映射方式）<ul>
+<li><strong>netstat -na | grep 8080</strong>：查看 8080 端口的状态</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1584242579503.png" alt="Alt text"><br><img src="./1584243862238.png" alt="Alt text"></p>
+<blockquote>
+<p>注意：使用云服务器操作时，记得让安全组开放对应的端口号，否则会访问失败。</p>
+</blockquote>
+<hr>
+<h3 id="6-Docker-化的-JavaWeb-应用"><a href="#6-Docker-化的-JavaWeb-应用" class="headerlink" title="6.Docker 化的 JavaWeb 应用"></a>6.Docker 化的 JavaWeb 应用</h3><h4 id="①制作自己的镜像"><a href="#①制作自己的镜像" class="headerlink" title="①制作自己的镜像"></a>①制作自己的镜像</h4><ul>
+<li>我们之前所下载的镜像都是由其他人做好后传到镜像仓库中的，我们也可以制作自己的镜像。</li>
+<li>Dockerfile：告诉 Docker 要怎么制作自己的镜像</li>
+<li><strong>docker build</strong>：执行 Dockerfile 中所描述的每一件事情，最终把 Docker 镜像构建出来。</li>
+<li>下面演示使用 jpress 来制作自己的镜像：</li>
+</ul>
+<ol>
+<li><p>下载 <code>jpress-web-newest.war</code> 并上传到服务器<br>链接：<a href="https://pan.baidu.com/s/1j8gBluzagoOIl1Th_ntXqA" target="_blank" rel="noopener">https://pan.baidu.com/s/1j8gBluzagoOIl1Th_ntXqA</a><br>提取码：fcqd</p>
+</li>
+<li><p>编写 Dockerfile 文件</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from tomcat # 继承自tomcat这个基础镜像</span><br><span class="line">MAINTAINER wjy wjymessi@163.com # 镜像所有者的个人信息</span><br><span class="line">COPY /usr/local/javaweb/jpress-web-newest.war /usr/local/tomcat/webapps # 将本地的web应用放在tomcat镜像中，让web应用随着tomcat一起启动。</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>下载基础镜像</li>
+</ol>
+<p><img src="./1583637018290.png" alt="Alt text"><br><img src="./1583638502779.png" alt="Alt text"></p>
+<ol start="4">
+<li>构建镜像：<strong>docker build Dokerfile文件所在的目录（若是当前目录则默认为 .）</strong><ul>
+<li><strong>docker build -t  REPOSITORY:TAG Dokerfile文件所在的目录</strong>：给镜像指定名称和版本</li>
+</ul>
+</li>
+</ol>
+<p><img src="./1584247362450.png" alt="Alt text"><br><img src="./1584247382596.png" alt="Alt text"></p>
+<h4 id="②运行自己的容器"><a href="#②运行自己的容器" class="headerlink" title="②运行自己的容器"></a>②运行自己的容器</h4><ul>
+<li>下面我们开始运行自己创建的镜像：</li>
+</ul>
+<p><img src="./1584259479913.png" alt="Alt text"></p>
+<ul>
+<li>如果出现下图问题，可以尝试此 <a href="https://blog.csdn.net/mah666/article/details/104055180" target="_blank" rel="noopener">解决方法</a></li>
+</ul>
+<p><img src="./1584248361438.png" alt="Alt text"></p>
+<ul>
+<li>成功运行镜像</li>
+</ul>
+<p><img src="./1584248617247.png" alt="Alt text"><br><img src="./1584248828557.png" alt="Alt text"><br><img src="./1584254881080.png" alt="Alt text"></p>
+<hr>
+<h3 id="7-总结"><a href="#7-总结" class="headerlink" title="7.总结"></a>7.总结</h3><ul>
+<li>Docker 思想：集装箱思想、标准化思想、隔离思想（网络隔离、磁盘隔离、进程隔离）</li>
+<li>Docker 核心内容：镜像（Build：构建镜像）、容器（Run：运行容器）、仓库（SHIP：镜像通过仓库传输）</li>
+<li>Docker 命令：pull（下拉镜像）、build（构建镜像）、run（运行容器）、stop（停止容器）、restart（重启容器）、exec（进入容器内部）…</li>
+</ul>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#x73;&#105;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#x73;&#105;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;</a></li>
+</ul>
+
       
     </div>
     
@@ -500,8 +799,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/18/阿里云CentOS7安装Docker/" rel="next" title="阿里云CentOS7安装Docker">
-                <i class="fa fa-chevron-left"></i> 阿里云CentOS7安装Docker
+              <a href="/2019/07/12/使用GoLand创建go工程/" rel="next" title="使用GoLand创建go工程">
+                <i class="fa fa-chevron-left"></i> 使用GoLand创建go工程
               </a>
             
           </div>
@@ -510,8 +809,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/26/SpringCloud入门/" rel="prev" title="SpringCloud入门">
-                SpringCloud入门 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/25/使用Docker部署JavaWeb项目/" rel="prev" title="使用Docker部署JavaWeb项目">
+                使用Docker部署JavaWeb项目 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -568,8 +867,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -586,7 +894,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -608,7 +916,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -655,6 +963,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-什么是-Docker"><span class="nav-number">1.</span> <span class="nav-text">1.什么是 Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①作用"><span class="nav-number">1.1.</span> <span class="nav-text">①作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②概念"><span class="nav-number">1.2.</span> <span class="nav-text">②概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③特点"><span class="nav-number">1.3.</span> <span class="nav-text">③特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-了解-Docker"><span class="nav-number">2.</span> <span class="nav-text">2.了解 Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①Docker-思想"><span class="nav-number">2.1.</span> <span class="nav-text">①Docker 思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②Docker-解决了什么问题"><span class="nav-number">2.2.</span> <span class="nav-text">②Docker 解决了什么问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-走进-Docker"><span class="nav-number">3.</span> <span class="nav-text">3.走进 Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①核心技术"><span class="nav-number">3.1.</span> <span class="nav-text">①核心技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②镜像"><span class="nav-number">3.2.</span> <span class="nav-text">②镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③容器"><span class="nav-number">3.3.</span> <span class="nav-text">③容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④仓库"><span class="nav-number">3.4.</span> <span class="nav-text">④仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Docker-初体验"><span class="nav-number">4.</span> <span class="nav-text">4.Docker 初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①安装-Docker"><span class="nav-number">4.1.</span> <span class="nav-text">①安装 Docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②第一个-Docker-镜像"><span class="nav-number">4.2.</span> <span class="nav-text">②第一个 Docker 镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③第一个-Docker-容器"><span class="nav-number">4.3.</span> <span class="nav-text">③第一个 Docker 容器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Docker-运行-Nginx-服务器"><span class="nav-number">5.</span> <span class="nav-text">5.Docker 运行 Nginx 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①运行-nginx-镜像"><span class="nav-number">5.1.</span> <span class="nav-text">①运行 nginx 镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②Docker-网络"><span class="nav-number">5.2.</span> <span class="nav-text">②Docker 网络</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Docker-化的-JavaWeb-应用"><span class="nav-number">6.</span> <span class="nav-text">6.Docker 化的 JavaWeb 应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①制作自己的镜像"><span class="nav-number">6.1.</span> <span class="nav-text">①制作自己的镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②运行自己的容器"><span class="nav-number">6.2.</span> <span class="nav-text">②运行自己的容器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-总结"><span class="nav-number">7.</span> <span class="nav-text">7.总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">8.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -679,7 +1003,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共60.2k字</span>
+  <span class="post-count">博客全站共64.2k字</span>
 </div>
 <!-- 
 
