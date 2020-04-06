@@ -117,7 +117,7 @@
 <meta property="og:description" content="1.题目相关①题目及示例 ②相关标签 数组 二分查找   ③题目地址 35. 搜索插入位置 — 力扣网   2.解题方法①顺序查找 根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。 时间复杂度：O(n) 空间复杂度：O(1)  ②二分查找 结论： 每次判断 nums[mid] 和 t">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://messi1002.top/2019/01/04/LeetCode-35-搜索插入位置（Easy）C语言题解/1582280358807.png">
-<meta property="og:updated_time" content="2020-03-25T13:33:35.696Z">
+<meta property="og:updated_time" content="2020-04-06T10:40:30.901Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode] 35.搜索插入位置（Easy）C语言题解">
 <meta name="twitter:description" content="1.题目相关①题目及示例 ②相关标签 数组 二分查找   ③题目地址 35. 搜索插入位置 — 力扣网   2.解题方法①顺序查找 根据题意可以看出，数组中第一个大于或等于 target 的元素对应的下标就是 target 将要插入的位置，若是数组中的元素都比 target 小，则返回数组长度。 时间复杂度：O(n) 空间复杂度：O(1)  ②二分查找 结论： 每次判断 nums[mid] 和 t">
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  564
+                  747
                 </span>
               
 
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -494,15 +494,24 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">    <span class="comment">// left &gt; right，之后退出循环。</span></span><br><span class="line">    left = mid + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[right + 1] &gt; target。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">    <span class="comment">// left &gt; right，之后退出循环。</span></span><br><span class="line">    left = mid + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[right + 1] &gt; target。</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">    <span class="comment">// right &lt; left，之后退出循环。</span></span><br><span class="line">    right = mid - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[mid] &gt; target。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">    <span class="comment">// right &lt; left，之后退出循环。</span></span><br><span class="line">    right = mid - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 退出循环后，nums[left] = nums[mid] &gt; target。</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>根据上述证明可知，返回 left 是正确的。</li>
 <li>时间复杂度：O(log n)</li>
 <li>空间复杂度：O(1)</li>
 </ul>
+<blockquote>
+<p><strong>注意：修改以上代码的返回结果，也可以用于求解其他题目。</strong></p>
+<ol>
+<li>返回 <code>left</code>，表示查找比 <code>target</code> 大的最小数的位置，适用于本题以及 <a href="https://leetcode-cn.com/problems/first-bad-version/" target="_blank" rel="noopener">278. 第一个错误的版本</a>、<a href="https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/" target="_blank" rel="noopener">744. 寻找比目标字母大的最小字母</a> 等题。</li>
+<li>返回 <code>right</code>，表示查找比 <code>target</code> 小的最大数的位置，适用于 <a href="https://leetcode-cn.com/problems/arranging-coins/" target="_blank" rel="noopener">441. 排列硬币</a>、<a href="https://leetcode-cn.com/problems/sqrtx/" target="_blank" rel="noopener">69. x 的平方根</a> 等题。</li>
+<li>返回 <code>-1</code> 或者 <code>false</code>，表示查找不到 <code>target</code>，适用于 <a href="https://leetcode-cn.com/problems/binary-search/" target="_blank" rel="noopener">704. 二分查找</a>、<a href="https://leetcode-cn.com/problems/valid-perfect-square/" target="_blank" rel="noopener">367. 有效的完全平方数</a>、<a href="https://leetcode-cn.com/problems/search-a-2d-matrix/" target="_blank" rel="noopener">74. 搜索二维矩阵</a> 等题。</li>
+<li>如果题目中说明一定能找到 <code>target</code>，这时返回哪个值都可以，适用于 <a href="https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/" target="_blank" rel="noopener">852. 山脉数组的峰顶索引</a> 等题。</li>
+</ol>
+</blockquote>
 <hr>
 <h3 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3.代码详解"></a>3.代码详解</h3><h4 id="①暴力解法"><a href="#①暴力解法" class="headerlink" title="①暴力解法"></a>①暴力解法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &gt;= target) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> numsSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -511,7 +520,7 @@
 <hr>
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
-<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#106;&#x79;&#109;&#101;&#x73;&#115;&#x69;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x77;&#106;&#x79;&#109;&#101;&#x73;&#115;&#x69;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#106;&#121;&#x6d;&#101;&#115;&#115;&#105;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#x77;&#106;&#121;&#x6d;&#101;&#115;&#115;&#105;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></li>
 <li>关于 <strong>数据结构与算法</strong> 的更多代码 请查看我的 <a href="https://github.com/messi1002/leetcode" target="_blank" rel="noopener">GitHub仓库</a></li>
 </ul>
 
@@ -659,7 +668,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -768,7 +777,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共77.8k字</span>
+  <span class="post-count">博客全站共78.2k字</span>
 </div>
 <!-- 
 
