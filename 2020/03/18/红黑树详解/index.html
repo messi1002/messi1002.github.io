@@ -108,18 +108,82 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.相关博客 二叉树的定义及性质 树的遍历（递归加迭代） 二叉搜索树的常用操作   2.2-3 树①定义 虽然它不是一种二叉树，但是它满足二分搜索树的基本性质。每次操作节点时，都按照二分搜索树的策略查找它的位置。    它有两种节点，一种节点可以存放一个元素（与普通的二分搜索树的节点一样，有左右两个孩子，左孩子的值小于该节点的值，右孩子的值大于该节点的值），另一种节点可以存放两个元素（有三个孩子，">
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="红黑树详解">
 <meta property="og:url" content="http://messi1002.top/2020/03/18/红黑树详解/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.相关博客 二叉树的定义及性质 树的遍历（递归加迭代） 二叉搜索树的常用操作   2.2-3 树①定义 虽然它不是一种二叉树，但是它满足二分搜索树的基本性质。每次操作节点时，都按照二分搜索树的策略查找它的位置。    它有两种节点，一种节点可以存放一个元素（与普通的二分搜索树的节点一样，有左右两个孩子，左孩子的值小于该节点的值，右孩子的值大于该节点的值），另一种节点可以存放两个元素（有三个孩子，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-25T14:35:20.034Z">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585224465398.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585224858183.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591155532615.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585060829837.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591158783683.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591158764465.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585064434426.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585227128943.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585061325704.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585062667731.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063161812.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585062829673.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063005182.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063135172.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063188667.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063276086.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063531640.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063585154.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063602258.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063676521.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585063783118.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585104517935.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585104479733.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585095199689.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585094681384.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585059312441.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591180272683.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585136914860.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585136939404.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585150450933.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585150770595.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585150912880.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585150990487.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585151213731.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585151171223.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585151276886.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585190185726.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585151357938.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585191325921.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585191796271.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585191845084.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585192443861.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591323538754.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585192749464.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193005457.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193103904.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193143226.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193182809.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193261795.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193291665.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585193369299.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591323448245.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197158785.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197126604.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197094171.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197060938.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197212159.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585197245720.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591323375387.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591325370914.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1591342373714.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585218547226.png">
+<meta property="og:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585218240250.png">
+<meta property="og:updated_time" content="2020-06-12T11:51:08.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="红黑树详解">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.相关博客 二叉树的定义及性质 树的遍历（递归加迭代） 二叉搜索树的常用操作   2.2-3 树①定义 虽然它不是一种二叉树，但是它满足二分搜索树的基本性质。每次操作节点时，都按照二分搜索树的策略查找它的位置。    它有两种节点，一种节点可以存放一个元素（与普通的二分搜索树的节点一样，有左右两个孩子，左孩子的值小于该节点的值，右孩子的值大于该节点的值），另一种节点可以存放两个元素（有三个孩子，">
+<meta name="twitter:image" content="http://messi1002.top/2020/03/18/红黑树详解/1585224465398.png">
 
 
 
@@ -239,16 +303,6 @@
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-最爱">
-          <a href="/love/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-soccer-ball-o"></i> <br>
-            
-            最爱
           </a>
         </li>
       
@@ -436,7 +490,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  7.5k
                 </span>
               
 
@@ -452,7 +506,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  29
                 </span>
               
             </div>
@@ -473,7 +527,317 @@
       
 
       
-        
+        <h3 id="1-相关博客"><a href="#1-相关博客" class="headerlink" title="1.相关博客"></a>1.相关博客</h3><ul>
+<li><a href="https://messi1002.top/2019/02/08/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E6%80%A7%E8%B4%A8/">二叉树的定义及性质</a></li>
+<li><a href="https://messi1002.top/2019/02/11/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86-%E9%80%92%E5%BD%92-%E8%BF%AD%E4%BB%A3/">树的遍历（递归加迭代）</a></li>
+<li><a href="https://messi1002.top/2019/02/15/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">二叉搜索树的常用操作</a></li>
+</ul>
+<hr>
+<h3 id="2-2-3-树"><a href="#2-2-3-树" class="headerlink" title="2.2-3 树"></a>2.2-3 树</h3><h4 id="①定义"><a href="#①定义" class="headerlink" title="①定义"></a>①定义</h4><ul>
+<li>虽然它不是一种二叉树，但是它满足二分搜索树的基本性质。每次操作节点时，都按照二分搜索树的策略查找它的位置。</li>
+</ul>
+<p><img src="./1585224465398.png" alt="Alt text"><br><img src="./1585224858183.png" alt="Alt text"></p>
+<ul>
+<li>它有两种节点，一种节点可以存放一个元素（与普通的二分搜索树的节点一样，有左右两个孩子，左孩子的值小于该节点的值，右孩子的值大于该节点的值），另一种节点可以存放两个元素（有三个孩子，三个孩子分别在第一个元素的左侧、两个元素的中间和第二个元素的右侧。且这个节点左孩子的值小于左侧元素的值，中间孩子的值在两个元素之间，右孩子的值大于右侧元素的值），所以存放两个元素的节点也满足二分搜索树的基本性质。</li>
+<li>2-3 树的每个节点有 2 个或者 3 个孩子，通常将存放一个元素且有两个孩子的节点叫做 2 节点，将存放两个元素且有三个孩子的节点叫做 3 节点。</li>
+</ul>
+<p><img src="./1591155532615.png" alt="Alt text"></p>
+<ul>
+<li>下图为一颗 2-3 树：</li>
+</ul>
+<p><img src="./1585060829837.png" alt="Alt text"></p>
+<h4 id="②性质—绝对平衡性"><a href="#②性质—绝对平衡性" class="headerlink" title="②性质—绝对平衡性"></a>②性质—绝对平衡性</h4><ul>
+<li>2-3 树是一颗绝对平衡的树（与 2-3 树本身插入元素时的构建方法相关）<ul>
+<li>绝对平衡：从根节点到任意一个叶子节点所经过的节点数量一定是相同的（即对于任意一个节点来说，左右子树的高度一定是相同的，可以将 2-3 树类比为满二叉树）</li>
+</ul>
+</li>
+<li>2-3 树如何维持绝对的平衡：添加节点将永远不会添加到一个空的位置，只会和最后找到的叶子节点做融合，若最后找到的叶子节点是 2 节点，则添加进 2 节点，形成一个 3 节点，否则添加进 3 节点，暂时形成一个 4 节点，然后对 4 节点做一个变形处理，形成由三个 2 节点组成的子树。 </li>
+</ul>
+<p><img src="./1591158783683.png" alt="Alt text"><br><img src="./1591158764465.png" alt="Alt text"></p>
+<ul>
+<li>若暂时形成的 4 节点是根节点，则变形处理即可。</li>
+<li>若暂时形成的 4 节点是叶子节点，则在变形处理后，将子树的根节点继续向其父亲节点（即变形处理前 4 节点的父亲节点，简称 A）融合。如果 A 为 2 节点，则融合后 A 变成一个 3 节点，子树中剩下的两个节点变为 A 的左孩子和中孩子（或者中孩子和右孩子）。如果 A 为 3 节点，则暂时形成一个 4 节点，然后对 4 节点做一个变形处理，再形成由三个 2 节点组成的子树，将子树的根节点继续向其父亲节点融合……直到融合到根节点或者 2 节点。</li>
+</ul>
+<p><img src="./1585064434426.png" alt="Alt text"><br><img src="./1585227128943.png" alt="Alt text"></p>
+<h4 id="③模拟添加节点的过程"><a href="#③模拟添加节点的过程" class="headerlink" title="③模拟添加节点的过程"></a>③模拟添加节点的过程</h4><ul>
+<li>下面我们通过向 2-3 树中添加节点，来看看 2-3 树是如何维持绝对平衡的。</li>
+<li>添加第一个节点：作为根节点，形成一个 2 节点。</li>
+</ul>
+<p><img src="./1585061325704.png" alt="Alt text"></p>
+<ul>
+<li>添加第二个节点：和最后找到的叶子节点（42）做融合，形成一个 3 节点。</li>
+</ul>
+<p><img src="./1585062667731.png" alt="Alt text"></p>
+<ul>
+<li>添加第三个节点：和最后找到的叶子节点（37 | 42）做融合，暂时形成一个 4 节点，然后将 4 节点变形成由三个 2 节点组成的平衡的树。</li>
+</ul>
+<p><img src="./1585063161812.png" alt="Alt text"><br><img src="./1585062829673.png" alt="Alt text"></p>
+<ul>
+<li>添加第四个节点：和最后找到的叶子节点（12）做融合，形成一个 3 节点。</li>
+</ul>
+<p><img src="./1585063005182.png" alt="Alt text"></p>
+<ul>
+<li>添加第五个节点：和最后找到的叶子节点（12 | 18）做融合，暂时形成一个 4 节点，然后将 4 节点变形成由三个 2 节点组成的子树，将子树的根节点（12）继续向上融合，融合后形成一个 3 节点。</li>
+</ul>
+<p><img src="./1585063135172.png" alt="Alt text"><br><img src="./1585063188667.png" alt="Alt text"><br><img src="./1585063276086.png" alt="Alt text"></p>
+<ul>
+<li>添加第六个节点：和最后找到的叶子节点（6）做融合，形成一个 3 节点。</li>
+</ul>
+<p><img src="./1585063531640.png" alt="Alt text"></p>
+<ul>
+<li>添加第七个节点：和最后找到的叶子节点（6 | 11）做融合，暂时形成一个 4 节点，然后将 4 节点变形成由三个 2 节点组成的子树，将子树的根节点（6）继续向上融合，融合后又形成一个 4 节点，继续将 4 节点变形成由三个 2 节点组成的子树，此时已经融合到根节点，表示添加成功。</li>
+</ul>
+<p><img src="./1585063585154.png" alt="Alt text"><br><img src="./1585063602258.png" alt="Alt text"><br><img src="./1585063676521.png" alt="Alt text"><br><img src="./1585063783118.png" alt="Alt text"></p>
+<h4 id="④红黑树和-2-3-树的等价性"><a href="#④红黑树和-2-3-树的等价性" class="headerlink" title="④红黑树和 2-3 树的等价性"></a>④红黑树和 2-3 树的等价性</h4><ul>
+<li>红黑树本质上与 2-3 树是等价的<ul>
+<li>2-3 树是包含两种节点（2 节点和 3 节点）的树结构，而红黑树是包含一种节点（每个节点只能存储一个元素）的树结构。虽然红黑树与 2-3 树的数据结构不同，但是它们实现了相同的逻辑。</li>
+</ul>
+</li>
+<li>红黑树是一种自平衡的二分搜索树，在红黑树中，对每一个节点都附着了一个颜色 — 红色或者黑色。<ul>
+<li>黑色节点：普通节点，表示在原来的 2-3 树中的 2 节点。</li>
+<li>红色节点：和其父亲节点（黑色节点）一起表示在原来的 2-3 树中的 3 节点</li>
+<li>左倾红黑树：所有的红色节点都是向左倾斜的。左倾红节点来表示 2-3 树中的 3 节点（2-3 树的 3 节点的左边元素在红黑树中通过红色节点（简称 A）表示，3 节点的右边元素在红黑树中通过黑色节点（简称 B）表示，并且 A 是 B 的左孩子，表示 A 与 B 在原来的 2-3 树中是并列关系，一起存放在一个 3 节点中）。</li>
+<li>右倾红黑树：所有的红色节点都是向右倾斜的。右倾红节点来表示 2-3 树中的 3 节点（2-3 树的 3 节点的左边元素在红黑树中通过黑色节点（简称 A）表示，3 节点的右边元素在红黑树中通过红色节点（简称 B）表示，并且 B 是 A 的右孩子，表示 A 与 B 在原来的 2-3 树中是并列关系，一起存放在一个 3 节点中）。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1585104517935.png" alt="Alt text"><br><img src="./1585104479733.png" alt="Alt text"></p>
+<blockquote>
+<p><strong>ps：左倾红黑树是红黑树相对标准的一种实现方式，但并不是唯一的实现方式，这篇博客的后续内容都以左倾红黑树为例进行分析。</strong></p>
+</blockquote>
+<ul>
+<li>与 2-3 树等价的红黑树：2-3 树中有三个 3 节点 —&gt; 红黑树中有三个红色节点，每一个 3 节点产生一个红色节点。</li>
+<li>对于任何一颗 2-3 树，我们都可以使用以上规则将之转化成一颗红黑树。</li>
+</ul>
+<p><img src="./1585095199689.png" alt="Alt text"><br><img src="./1585094681384.png" alt="Alt text"></p>
+<hr>
+<h3 id="3-红黑树"><a href="#3-红黑树" class="headerlink" title="3.红黑树"></a>3.红黑树</h3><h4 id="①概念"><a href="#①概念" class="headerlink" title="①概念"></a>①概念</h4><ul>
+<li>红黑树（Red Black Tree）是一种自平衡的二分搜索树，它在每个结点上增加一个存储位来表示结点的颜色，可以是 Red 或 Black。红黑树通过对任意一条从根到叶子的路径上的各个结点着色方式的限制，确保没有一条路径会比其他路径长出两倍，因而是接近平衡的。</li>
+<li>下图为一颗红黑树：</li>
+</ul>
+<p><img src="./1585059312441.png" alt="Alt text"></p>
+<h4 id="②基本性质"><a href="#②基本性质" class="headerlink" title="②基本性质"></a>②基本性质</h4><ul>
+<li>红黑树必须满足如下条件：</li>
+<li>①（定义）每个节点或者是红色的，或者是黑色的。</li>
+<li>②根节点是黑色的<ul>
+<li>在 2-3 树中，根节点或者是 2 节点，或者是 3 节点，而 2 节点和 3 节点在与之等价的红黑树（左倾红黑树）中表示为下图的两种情况。</li>
+<li>由下图可见， 2-3 树中的 2 节点和 3 节点对应到与之等价的红黑树中，根节点都是黑色的。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1591180272683.png" alt="Alt text"></p>
+<ul>
+<li>③（定义）每一个叶子节点（这里的叶子节点指的是最后的空节点）是黑色的<ul>
+<li>相当于定义空节点本身是黑色的， 一颗空树本身也是一颗红黑树，它的根节点和叶子节点都是空节点（空节点是黑色节点），同时满足 ②、③ 条性质。</li>
+</ul>
+</li>
+<li>④如果一个节点是红色的，那么它的孩子节点都是黑色的。<ul>
+<li>在红黑树中，只有表示原来的 2-3 树中的 3 节点时，才会出现红色节点。此时红色节点的两个孩子节点是原来的 2-3 树中 3 节点的左孩子和中间的孩子，不管两个孩子是 2 节点还是 3 节点，其对应到红黑树中，根结点都是黑色的（具体见 <strong>性质②</strong>）。</li>
+<li>黑色节点的右孩子一定是黑色的节点（对于左倾红黑树来说，这是我们的定义），它的左孩子可能是红色的节点，也可能是黑色的节点。如果是红色的，表示这两个节点是原来的 2-3 树中的一个 3 节点。如果是黑色的，表示这两个节点是原来的 2-3 树中的两个节点。</li>
+</ul>
+</li>
+<li>⑤（核心）从任意一个节点到其每个叶子节点（空节点），经过的黑色节点数量是一样的。<ul>
+<li>2-3 树是一颗绝对平衡的树，从 2-3 树的任意一个节点出发到其每个叶子节点，经过的节点数量是一样的。</li>
+<li>因为 2-3 树的 2 节点或 3 节点转换成红黑树中的节点表示时，都会有一个黑色的节点，所以从红黑树的任意一个节点出发，每经过一个黑色节点，等于一定经过了原来的 2-3 树中的某个节点。</li>
+<li>红黑树是保持 “黑平衡” 的二叉树（黑平衡是指从根节点到任意一个叶子节点，经过的黑色节点数量是一样的）。从严格意义上讲，红黑树不是平衡二叉树，平衡二叉树的定义为左右子树的高度差不能超过 1，红黑树并不符合。</li>
+</ul>
+</li>
+</ul>
+<h4 id="③数据结构"><a href="#③数据结构" class="headerlink" title="③数据结构"></a>③数据结构</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RBTree</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> RED = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> BLACK = <span class="keyword">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> key;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> value;</span><br><span class="line">        <span class="keyword">public</span> TreeNode left;</span><br><span class="line">        <span class="keyword">public</span> TreeNode right;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">boolean</span> color;</span><br><span class="line">        </span><br><span class="line">        TreeNode(<span class="keyword">int</span> key, <span class="keyword">int</span> value) &#123;</span><br><span class="line">            <span class="keyword">this</span>.key = key;</span><br><span class="line">            <span class="keyword">this</span>.value = value;</span><br><span class="line">            <span class="keyword">this</span>.left = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">this</span>.right = <span class="keyword">null</span>;</span><br><span class="line">            <span class="comment">// 默认的节点颜色为红色</span></span><br><span class="line">            <span class="keyword">this</span>.color = RED;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>为什么默认的节点颜色为红色？<ul>
+<li>在 2-3 树中添加一个节点，永远是和最后找到的叶子节点做融合，融合后或者形成一个 3 节点，或者形成一个临时的 4 节点。在红黑树中，红色节点代表它和它的父亲节点（黑色节点）在原来的 2-3 树中是在一起的，等价于 2-3 树中的一个 3 节点。所以在红黑树中，总是将新添加的节点的颜色设置为红色，等价于在 2-3 树中永远将新节点融合进已有的节点中。</li>
+<li>在红黑树中添加红色节点后，可能会破坏红黑树的基本性质，此时需要再做一些调整工作（具体见下文）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="④保持根节点为黑色"><a href="#④保持根节点为黑色" class="headerlink" title="④保持根节点为黑色"></a>④保持根节点为黑色</h4><blockquote>
+<p><strong>红黑树中添加新元素之保持根节点为黑色</strong></p>
+</blockquote>
+<ul>
+<li>添加根节点：添加第一个红色节点，作为红黑树的根节点。由红黑树的基本性质②（根节点是黑色的）可知，需要将根节点变成黑色。<ul>
+<li>结论：若插入的红色节点是红黑树的根结点，应该将红色节点变为黑色节点。 </li>
+</ul>
+</li>
+</ul>
+<p><img src="./1585136914860.png" alt="Alt text"><br><img src="./1585136939404.png" alt="Alt text"></p>
+<ul>
+<li>添加普通节点：在原来的 2-3 树中添加元素 4 时，元素 4 应该添加到元素 2 和元素 5 组成的 3 节点中，形成一个临时的 4 节点（2 | 4 | 5）。然后将临时的 4 节点变形成由三个 2 节点组成的子树，让子树的根节点（即节点 4） 向上融合（与元素 6 和元素 8 所在的 3 节点进行融合），再形成一个临时的 4 节点（4 | 6 | 8），然后再将它变形成由三个 2 节点组成的子树，此时这颗子树的根节点是整棵 2-3 树的根节点，不再向上融合。由于元素  4 和元素 6 在原来的 2-3 树中是向上融合的，所以在与之等价的红黑树中，它们所在的节点是红色的。由于节点 6 是最后的根节点，所以在与之等价的红黑树中，元素 6 所在的节点是黑色的。<ul>
+<li>结论：对于临时的 4 节点，在 2-3 树的添加过程中每次都要向上融合一个元素，这个元素所在的节点在红黑树的表示中应该是红色的节点。直到它融合到了根节点，再也不能向上走时，变为黑色的节点。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1585150450933.png" alt="Alt text"></p>
+<ul>
+<li>代码实践：保持根节点为黑色</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能描述: 向红黑树中添加新的节点(key, value)</span></span><br><span class="line"><span class="comment"> *  </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>: [key, value]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15 17:55</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 见⑧添加新元素</span></span><br><span class="line">    node = insert(node, key, value);</span><br><span class="line">    <span class="comment">// 保持根节点为黑色</span></span><br><span class="line">    node.color = BLACK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="⑤左旋转"><a href="#⑤左旋转" class="headerlink" title="⑤左旋转"></a>⑤左旋转</h4><ul>
+<li><strong>向 2-3 树的 2 节点中添加一个新元素的第一种情况</strong> —&gt; 对应到红黑树中表示：如下图所示。</li>
+</ul>
+<p><img src="./1585150770595.png" alt="Alt text"></p>
+<ul>
+<li>在上图的红黑树中，添加的新元素（红色节点）在黑色节点的左侧：直接添加（对应 2-3 树中的一个 3 节点）<br></li>
+<li><strong>向 2-3 树的 2 节点中添加一个新元素的第二种情况</strong> —&gt; 对应到红黑树中表示：如下图所示。</li>
+</ul>
+<p><img src="./1585150912880.png" alt="Alt text"></p>
+<ul>
+<li>在上图的红黑树中，添加的新元素（红色节点）在黑色节点的右侧：先添加（此时红黑树不满足我们定义的左倾红黑树的性质) 、再调整（进行一次左旋转）。</li>
+</ul>
+<p><img src="./1585150990487.png" alt="Alt text"></p>
+<ul>
+<li>左旋转的过程（注意：旋转前后的红黑树都要满足二分搜索树的性质）<ol>
+<li>让 x 的左子树 T2 变成 node 的右子树</li>
+<li>让 node 变成 x 的左子树</li>
+<li>维护节点的颜色<ul>
+<li>x 的颜色等于 node 的颜色（可能是红色，也可能是黑色）。因为在左旋转之前的树中，node 是根节点，现在 x 变成了根节点，根节点的颜色应该保持一致。</li>
+<li>node 的颜色应该设置为红色。在原来的 2-3 树中，新加入的节点 42 与 37 形成了一个新的 3 节点。通过左旋转之后，并没有改变 3 节点中的两个元素，只是置换了两个元素的位置（在红黑树中）。所以为了表示它们在旋转前后都是原来的 2-3 树中的同一个 3 节点，node 节点要设置为红色。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><img src="./1585151213731.png" alt="Alt text"><br><img src="./1585151171223.png" alt="Alt text"><br><img src="./1585151276886.png" alt="Alt text"><br><img src="./1585190185726.png" alt="Alt text"><br><img src="./1585151357938.png" alt="Alt text"></p>
+<ul>
+<li>注意：</li>
+</ul>
+<ol>
+<li>左旋转只是一个子过程，在左旋转的过程中并不维持红黑树的性质，我们只需要通过旋转操作让两个元素对应是原来的 2-3 树中的一个 3 节点即可。</li>
+<li>在左旋转之后有可能产生两个连续的红色节点。</li>
+</ol>
+<ul>
+<li>代码实践：左旋转</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能描述: 对传入的node节点进行左旋转</span></span><br><span class="line"><span class="comment"> * 返回旋转之后新的子树的根节点</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *   node                     x</span></span><br><span class="line"><span class="comment"> *  /    \     左旋转(node)  /   \</span></span><br><span class="line"><span class="comment"> * T1     x   ---------&gt;  node  T3</span></span><br><span class="line"><span class="comment"> *       / \              /   \</span></span><br><span class="line"><span class="comment"> *      T2 T3            T1   T2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15 23:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">leftRotate</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 记录node节点的右孩子x</span></span><br><span class="line">    TreeNode x = node.right;</span><br><span class="line">    <span class="comment">// 左旋转</span></span><br><span class="line">    node.right = x.left;</span><br><span class="line">    x.left = node;</span><br><span class="line">    <span class="comment">// 维持节点的颜色</span></span><br><span class="line">    x.color = node.color;</span><br><span class="line">    node.color = RED;</span><br><span class="line">    <span class="comment">// 返回旋转后子树的新的根节点，在添加元素的操作中会对根节点的颜色做进一步的处理。</span></span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="⑥颜色翻转"><a href="#⑥颜色翻转" class="headerlink" title="⑥颜色翻转"></a>⑥颜色翻转</h4><ul>
+<li><strong>向 2-3 树的 3 节点中添加一个新元素的第一种情况</strong> —&gt; 对应到红黑树中表示：如下图所示。</li>
+</ul>
+<p><img src="./1585191325921.png" alt="Alt text"><br><img src="./1585191796271.png" alt="Alt text"></p>
+<ul>
+<li>在上图的红黑树中添加一个新元素 66，应该添加到 42 的右孩子。—&gt; 对应到 2-3 树中表示：原来的 2-3 树中有一个 3 节点（37 | 42），添加一个新元素 66，形成一个临时的 4 节点（37 | 42 | 66）。</li>
+<li>然后将临时的 4 节点变形成由 3 个 2 节点组成的子树。 —&gt; 对应到红黑树中表示：三个节点都应该是黑色的节点，我们需要将两个红色节点的颜色翻转成黑色。</li>
+</ul>
+<p><img src="./1585191845084.png" alt="Alt text"></p>
+<ul>
+<li>最后由 3 个 2 节点组成的子树的根节点要继续向上与其父亲节点进行融合。—&gt; 对应到红黑树中表示：需要将根节点的颜色翻转成红色。</li>
+</ul>
+<p><img src="./1585192443861.png" alt="Alt text"></p>
+<ul>
+<li>代码实践：颜色翻转</li>
+</ul>
+<p><img src="./1591323538754.png" alt="Alt text"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 功能描述: 颜色翻转</span></span><br><span class="line"><span class="comment">  * 调用前需要保证以node为根的子树满足翻转条件</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@date</span>: 2020/3/15 11:16</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">flipColors</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">    node.color = RED;</span><br><span class="line">    node.left.color = BLACK;</span><br><span class="line">    node.right.color = BLACK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="⑦右旋转"><a href="#⑦右旋转" class="headerlink" title="⑦右旋转"></a>⑦右旋转</h4><ul>
+<li><strong>向 2-3 树的 3 节点中添加一个新元素的第二种情况</strong> —&gt; 对应到红黑树中表示：如下图所示。</li>
+</ul>
+<p><img src="./1585192749464.png" alt="Alt text"><br><img src="./1585193005457.png" alt="Alt text"></p>
+<ul>
+<li>在上图的红黑树中添加一个新元素 12，应该添加到 37 的左孩子。—&gt; 对应到 2-3 树中表示：原来的 2-3 树中有一个 3 节点（37 | 42），添加一个新元素 12，形成一个临时的 4 节点（12 | 37 | 42）。</li>
+<li>然后将临时的 4 节点变形成由 3 个 2 节点组成的子树 —&gt; 对应到红黑树中表示：需要先对节点 42 进行一次右旋转，右旋转之后，红黑树的结构满足进行颜色翻转的条件，此时再对红黑树进行一次颜色翻转，具体见 <strong>⑥颜色翻转</strong>。</li>
+<li>右旋转的过程（注意：旋转前后的红黑树都要满足二分搜索树的性质）<ol>
+<li>让 x 的右子树 T1 变成 node 的左子树</li>
+<li>让 node 变成 x 的右子树</li>
+<li>维护节点的颜色<ul>
+<li>x 的颜色等于 node 的颜色（可能是红色，也可能是黑色），因为在右旋转之前的树中，node 是根节点，现在 x 变成了根节点，根节点的颜色应该保持一致。</li>
+<li>node 的颜色应该设置为红色。因为在右旋转之后，三个节点对应到原来的 2-3 树中还是临时的 4 节点，所以 node 节点是红色表示它和它的父亲节点在原来的 2-3 树中是融合在一起的。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><img src="./1585193103904.png" alt="Alt text"><br><img src="./1585193143226.png" alt="Alt text"><br><img src="./1585193182809.png" alt="Alt text"><br><img src="./1585193261795.png" alt="Alt text"><br><img src="./1585193291665.png" alt="Alt text"><br><img src="./1585193369299.png" alt="Alt text"></p>
+<ul>
+<li>代码实践：右旋转</li>
+</ul>
+<p><img src="./1591323448245.png" alt="Alt text"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能描述: 对传入的node节点进行右旋转</span></span><br><span class="line"><span class="comment"> * 返回旋转之后新的子树的根节点</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *        y                            x</span></span><br><span class="line"><span class="comment"> *       / \                         /   \</span></span><br><span class="line"><span class="comment"> *      x   T4     向右旋转(y)        z     y</span></span><br><span class="line"><span class="comment"> *     / \       - - - - - - - -&gt;   / \   / \</span></span><br><span class="line"><span class="comment"> *    z   T3                      T1  T2 T3 T4</span></span><br><span class="line"><span class="comment"> *   / \</span></span><br><span class="line"><span class="comment"> * T1   T2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15 11:29</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">rightRotate</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 记录node节点的左孩子x</span></span><br><span class="line">    TreeNode x = node.left;</span><br><span class="line">    <span class="comment">// 右旋转</span></span><br><span class="line">    node.left = x.right;</span><br><span class="line">    x.right = node;</span><br><span class="line">    <span class="comment">// 维持节点的颜色</span></span><br><span class="line">    x.color = node.color;</span><br><span class="line">    node.color = RED;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li><strong>向 2-3 树的 3 节点中添加一个新元素的第三种情况</strong> —&gt; 对应到红黑树中表示：如下图所示。</li>
+</ul>
+<p><img src="./1585197158785.png" alt="Alt text"><br><img src="./1585197126604.png" alt="Alt text"></p>
+<ul>
+<li>在上图的红黑树中添加一个新元素 40，应该添加到 37 的右孩子。—&gt; 对应到 2-3 树中表示：原来的 2-3 树中有一个 3 节点（37 | 42），添加一个新元素 12，形成一个临时的 4 节点（37 | 40 | 42）。</li>
+<li>然后将临时的 4 节点变形成由 3 个 2 节点组成的子树 —&gt; 对应到红黑树中表示：需要先对节点 37 进行一次左旋转，左旋转之后，红黑树的结构满足进行右旋转的条件，此时再对红黑树进行一次右旋转，具体见 <strong>⑦右旋转</strong>。</li>
+</ul>
+<p><img src="./1585197094171.png" alt="Alt text"><br><img src="./1585197060938.png" alt="Alt text"><br><img src="./1585197212159.png" alt="Alt text"><br><img src="./1585197245720.png" alt="Alt text"><br><img src="./1591323375387.png" alt="Alt text"></p>
+<h4 id="⑧添加新元素"><a href="#⑧添加新元素" class="headerlink" title="⑧添加新元素"></a>⑧添加新元素</h4><ul>
+<li>下图总结了在红黑树中添加新元素的所有情况：</li>
+</ul>
+<p><img src="./1591325370914.png" alt="Alt text"></p>
+<ul>
+<li>添加新元素后维护红黑树性质的方法：使用二分搜索树的策略将新元素添加进红黑树后，按照上图顺序依次判断该子树是否需要左旋转、右旋转和颜色翻转，然后将维护后的新的根节点返回给递归调用的上一层，在上一层继续维护红黑树的性质。</li>
+<li>代码实践：添加新元素</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能描述: 向以node为根的红黑树中插入新的节点(key, value)</span></span><br><span class="line"><span class="comment"> * 返回插入新节点后红黑树的根</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>: [node, key, value]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15 17:50</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> TreeNode <span class="title">insert</span><span class="params">(TreeNode node, <span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 搜索插入位置</span></span><br><span class="line">    <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="comment">// 默认插入红色节点</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(key, value);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (key == node.key) &#123;</span><br><span class="line">        node.value = value;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &lt; node.key) &#123;</span><br><span class="line">        node.left = insert(node.left, key, value);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        node.right = insert(node.right, key, value);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="comment">// 红黑树性质的维护</span></span><br><span class="line">    <span class="comment">// 是否需要左旋转</span></span><br><span class="line">    <span class="keyword">if</span> (isRed(node.right) &amp;&amp; !isRed(node.left)) &#123;</span><br><span class="line">        node = leftRotate(node);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 是否需要右旋转</span></span><br><span class="line">    <span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.left.left)) &#123;</span><br><span class="line">        node = rightRotate(node);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 是否需要翻转</span></span><br><span class="line">    <span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.right)) &#123;</span><br><span class="line">        flipColors(node);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="⑨删除新元素"><a href="#⑨删除新元素" class="headerlink" title="⑨删除新元素"></a>⑨删除新元素</h4><ul>
+<li><a href="https://blog.csdn.net/ThinkWon/article/details/102571535" target="_blank" rel="noopener">参考链接</a></li>
+</ul>
+<h4 id="⑩代码实现-测试"><a href="#⑩代码实现-测试" class="headerlink" title="⑩代码实现 + 测试"></a>⑩代码实现 + 测试</h4><ul>
+<li>查找方法与二分搜索树（红黑树是一种自平衡的二分搜索树）的查找方法一致</li>
+<li>前序、中序、后序和层序遍历方法与树的遍历方法一致</li>
+<li>红黑树的全部操作如下：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tree.redblacktree;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 红黑树</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RBTree</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> RED = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> BLACK = <span class="keyword">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> key;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> value;</span><br><span class="line">        <span class="keyword">public</span> TreeNode left;</span><br><span class="line">        <span class="keyword">public</span> TreeNode right;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">boolean</span> color;</span><br><span class="line">        </span><br><span class="line">        TreeNode(<span class="keyword">int</span> key, <span class="keyword">int</span> value) &#123;</span><br><span class="line">            <span class="keyword">this</span>.key = key;</span><br><span class="line">            <span class="keyword">this</span>.value = value;</span><br><span class="line">            <span class="keyword">this</span>.left = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">this</span>.right = <span class="keyword">null</span>;</span><br><span class="line">            <span class="comment">// 默认的节点颜色为红色</span></span><br><span class="line">            <span class="keyword">this</span>.color = RED;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> TreeNode node;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RBTree</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.node = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">this</span>.count = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 判断节点的颜色</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: boolean</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 12:23</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isRed</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> BLACK;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node.color;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 查看以node为根的红黑树中是否包含键值为key的节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node, key]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: boolean</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:58</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">contain</span><span class="params">(TreeNode node, <span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (key == node.key) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &lt; node.key) &#123;</span><br><span class="line">            <span class="keyword">return</span> contain(node.left, key);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> contain(node.right, key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对传入的node节点进行左旋转</span></span><br><span class="line"><span class="comment">     * 返回旋转之后新的子树的根节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *   node                     x</span></span><br><span class="line"><span class="comment">     *  /    \     左旋转(node)  /   \</span></span><br><span class="line"><span class="comment">     * T1     x   ---------&gt;  node  T3</span></span><br><span class="line"><span class="comment">     *       / \              /   \</span></span><br><span class="line"><span class="comment">     *      T2 T3            T1   T2</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 23:53</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">leftRotate</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 记录node节点的右孩子x</span></span><br><span class="line">        TreeNode x = node.right;</span><br><span class="line">        <span class="comment">// 左旋转</span></span><br><span class="line">        node.right = x.left;</span><br><span class="line">        x.left = node;</span><br><span class="line">        <span class="comment">// 维持节点的颜色</span></span><br><span class="line">        x.color = node.color;</span><br><span class="line">        node.color = RED;</span><br><span class="line">        <span class="comment">// 返回旋转后子树的新的根节点，在添加元素的操作中会对根节点的颜色做进一步的处理。</span></span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对传入的node节点进行右旋转</span></span><br><span class="line"><span class="comment">     * 返回旋转之后新的子树的根节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *        y                            x</span></span><br><span class="line"><span class="comment">     *       / \                         /   \</span></span><br><span class="line"><span class="comment">     *      x   T4     向右旋转(y)        z     y</span></span><br><span class="line"><span class="comment">     *     / \       - - - - - - - -&gt;   / \   / \</span></span><br><span class="line"><span class="comment">     *    z   T3                      T1  T2 T3 T4</span></span><br><span class="line"><span class="comment">     *   / \</span></span><br><span class="line"><span class="comment">     * T1   T2</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 11:29</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">rightRotate</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 记录node节点的左孩子x</span></span><br><span class="line">        TreeNode x = node.left;</span><br><span class="line">        <span class="comment">// 右旋转</span></span><br><span class="line">        node.left = x.right;</span><br><span class="line">        x.right = node;</span><br><span class="line">        <span class="comment">// 维持节点的颜色</span></span><br><span class="line">        x.color = node.color;</span><br><span class="line">        node.color = RED;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 颜色翻转</span></span><br><span class="line"><span class="comment">     * 调用前需要保证以node为根的子树满足翻转条件</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 11:16</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">flipColors</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        node.color = RED;</span><br><span class="line">        node.left.color = BLACK;</span><br><span class="line">        node.right.color = BLACK;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 向以node为根的红黑树中插入新的节点(key, value)</span></span><br><span class="line"><span class="comment">     * 返回插入新节点后红黑树的根</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node, key, value]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: tree.redblacktree.RBTree.TreeNode</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:50</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">insert</span><span class="params">(TreeNode node, <span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 搜索插入位置</span></span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            count++;</span><br><span class="line">            <span class="comment">// 默认插入红色节点</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(key, value);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (key == node.key) &#123;</span><br><span class="line">            node.value = value;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &lt; node.key) &#123;</span><br><span class="line">            node.left = insert(node.left, key, value);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            node.right = insert(node.right, key, value);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 红黑树性质的维护</span></span><br><span class="line">        <span class="comment">// 是否需要左旋转</span></span><br><span class="line">        <span class="keyword">if</span> (isRed(node.right) &amp;&amp; !isRed(node.left)) &#123;</span><br><span class="line">            node = leftRotate(node);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 是否需要右旋转</span></span><br><span class="line">        <span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.left.left)) &#123;</span><br><span class="line">            node = rightRotate(node);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 是否需要翻转</span></span><br><span class="line">        <span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.right)) &#123;</span><br><span class="line">            flipColors(node);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对以node为根的红黑树进行层序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 18:12</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.add(node);</span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            TreeNode treeNode = queue.poll();</span><br><span class="line">            System.out.print(treeNode.key + <span class="string">"("</span> + treeNode.color + <span class="string">") "</span>);</span><br><span class="line">            <span class="keyword">if</span> (treeNode.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.add(treeNode.left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (treeNode.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                queue.add(treeNode.right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对以node为根的红黑树进行前序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 1:29</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(node.key + <span class="string">" "</span>);</span><br><span class="line">        preOrder(node.left);</span><br><span class="line">        preOrder(node.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对以node为根的红黑树进行中序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:58</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        inOrder(node.left);</span><br><span class="line">        System.out.print(node.key + <span class="string">" "</span>);</span><br><span class="line">        inOrder(node.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 对以node为根的红黑树进行后序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [node]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 1:30</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">postOrder</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        postOrder(node.left);</span><br><span class="line">        postOrder(node.right);</span><br><span class="line">        System.out.print(node.key + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> count == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 判断是否包含key</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [key]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: boolean</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:55</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contain</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> contain(node, key);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 向红黑树中添加新的节点(key, value)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: [key, value]</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:55</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        node = insert(node, key, value);</span><br><span class="line">        <span class="comment">// 保持根节点为黑色</span></span><br><span class="line">        node.color = BLACK;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 红黑树的层序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: []</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 17:45</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        levelOrder(node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 红黑树的前序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: []</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 18:05</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        preOrder(node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 红黑树的中序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: []</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 18:05</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        inOrder(node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 功能描述: 红黑树的后序遍历</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>: []</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span>: 2020/3/15 18:05</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        postOrder(node);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>测试红黑树的代码：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> tree.redblacktree;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/3/15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 测试红黑树</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">42</span>, <span class="number">37</span>, <span class="number">12</span>, <span class="number">18</span>, <span class="number">6</span>, <span class="number">11</span>&#125;;</span><br><span class="line">        RBTree rbTree = <span class="keyword">new</span> RBTree();</span><br><span class="line">        System.out.println(<span class="string">"红黑树是否为空: "</span> + rbTree.isEmpty());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">            rbTree.insert(arr[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"红黑树的节点个数: "</span> + rbTree.size());</span><br><span class="line">        System.out.println(<span class="string">"红黑树的层序遍历: "</span>);</span><br><span class="line">        rbTree.levelOrder();</span><br><span class="line">        System.out.println(<span class="string">"\n红黑树的前序遍历: "</span>);</span><br><span class="line">        rbTree.preOrder();</span><br><span class="line">        System.out.println(<span class="string">"\n红黑树的中序遍历: "</span>);</span><br><span class="line">        rbTree.inOrder();</span><br><span class="line">        System.out.println(<span class="string">"\n红黑树的后序遍历: "</span>);</span><br><span class="line">        rbTree.postOrder();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="./1591342373714.png" alt="Alt text"></p>
+<ul>
+<li>通过前序、中序、后序和层序遍历的结果可以推算出红黑树的结构：</li>
+</ul>
+<p><img src="./1585218547226.png" alt="Alt text"></p>
+<ul>
+<li>也可以推算出与其等价的 2-3 树的结构：</li>
+</ul>
+<p><img src="./1585218240250.png" alt="Alt text"></p>
+<hr>
+<h3 id="4-常见面试问题"><a href="#4-常见面试问题" class="headerlink" title="4.常见面试问题"></a>4.常见面试问题</h3><h4 id="①红黑树的数据结构是怎么定义的？"><a href="#①红黑树的数据结构是怎么定义的？" class="headerlink" title="①红黑树的数据结构是怎么定义的？"></a>①红黑树的数据结构是怎么定义的？</h4><ul>
+<li>具体见 <strong>3.红黑树—③数据结构</strong></li>
+</ul>
+<h4 id="②红黑树有哪些性质？"><a href="#②红黑树有哪些性质？" class="headerlink" title="②红黑树有哪些性质？"></a>②红黑树有哪些性质？</h4><ul>
+<li>具体见 <strong>3.红黑树—②基本性质</strong></li>
+</ul>
+<h4 id="③红黑树的各种操作的时间复杂度是多少？"><a href="#③红黑树的各种操作的时间复杂度是多少？" class="headerlink" title="③红黑树的各种操作的时间复杂度是多少？"></a>③红黑树的各种操作的时间复杂度是多少？</h4><ul>
+<li>最大高度： <code>2logn</code>（<code>logn</code> 个红色节点 + <code>logn</code> 个黑色节点，此时该条路径上每一个黑色节点的左孩子都是红色节点。）</li>
+<li>增删改查的时间复杂度：<code>O（logn）</code></li>
+</ul>
+<h4 id="④红黑树相比于-BST-和-AVL-树有什么优点？"><a href="#④红黑树相比于-BST-和-AVL-树有什么优点？" class="headerlink" title="④红黑树相比于 BST 和 AVL 树有什么优点？"></a>④红黑树相比于 BST 和 AVL 树有什么优点？</h4><ul>
+<li>BST：最大高度不定，可能会退化为链表。<ul>
+<li>优点：内部实现简单，没有复杂的维持平衡的操作。对于完全随机的数据，并不会退化为链表。</li>
+<li>缺点：极端情况会退化为链表（数据按顺序进入二分搜索树时）或者高度不平衡（数据近乎有序时）</li>
+</ul>
+</li>
+<li>AVL 树：采用了平衡二叉树的策略，最大高度为 <code>logn</code>，且不会退化为链表，对于查询操作（get、set、contain 等方法）性能较高。</li>
+<li>红黑树：并不完全满足平衡二叉树的定义，最大高度为 <code>2logn</code>，它可以保持自平衡而不会退化为链表，对于插入和删除操作（insert、delete 等方法）性能较高。 </li>
+<li>AVL 树和红黑树的对比：<ul>
+<li>它们都是在二分搜索树的基础上添加了一些其他的性质，来保证自己不会退化为链表。</li>
+<li>红黑树的增删操作快于 AVL 树，查找操作慢于 AVL 树（因为 AVL 树的最大高度是 <code>logn</code>，红黑树的最大高度是 <code>2logn</code>，它们是常数级别的差异），所以 AVL 树适用于查询较多的情况，而红黑树适用于插入和删除较多的情况。</li>
+<li>红黑树的统计性能更优，虽然其时间复杂度与 AVL 树是同一个级别的，但是综合增删改查所有的操作，红黑树在平均情况下更好一些。</li>
+<li>总结：红黑树相对于 AVL 树来说，牺牲了部分平衡性以换取插入 / 删除操作时少量的旋转操作，整体性能要优于 AVL 树。</li>
+</ul>
+</li>
+</ul>
+<h4 id="⑤红黑树的应用？"><a href="#⑤红黑树的应用？" class="headerlink" title="⑤红黑树的应用？"></a>⑤红黑树的应用？</h4><ul>
+<li>由于红黑树的统计性能（综合增删改查所有的操作）更优，所以很多语言内部的容器类中的有序映射都是基于红黑树实现的。例如：Java 中的 TreeMap、TreeSet、JDK 1.8 后的 HashMap 和 C++ 的 STL 中的 map 和 set。</li>
+<li><a href="https://messi1002.top/2020/03/04/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%80%BB%E7%BB%93-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Java集合框架总结+源码分析</a></li>
+</ul>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#119;&#106;&#x79;&#x6d;&#x65;&#x73;&#x73;&#105;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#119;&#106;&#x79;&#x6d;&#x65;&#x73;&#x73;&#105;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+
       
     </div>
     
@@ -521,8 +885,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/15/2020届春招面经之JVM/" rel="next" title="2020届春招面经之JVM">
-                <i class="fa fa-chevron-left"></i> 2020届春招面经之JVM
+              <a href="/2020/03/01/LeetCode-1115-交替打印FooBar（Medium）Java语言题解/" rel="next" title="[LeetCode] 1115. 交替打印FooBar（Medium）Java语言题解">
+                <i class="fa fa-chevron-left"></i> [LeetCode] 1115. 交替打印FooBar（Medium）Java语言题解
               </a>
             
           </div>
@@ -531,8 +895,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/20/B树和B-树详解/" rel="prev" title="B树和B+树详解">
-                B树和B+树详解 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/15/要怎样努力，才能成为很厉害的人？/" rel="prev" title="要怎样努力，才能成为很厉害的人？">
+                要怎样努力，才能成为很厉害的人？ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -589,8 +953,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -607,7 +980,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -618,7 +991,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -629,7 +1002,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -676,6 +1049,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-相关博客"><span class="nav-number">1.</span> <span class="nav-text">1.相关博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-树"><span class="nav-number">2.</span> <span class="nav-text">2.2-3 树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①定义"><span class="nav-number">2.1.</span> <span class="nav-text">①定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②性质—绝对平衡性"><span class="nav-number">2.2.</span> <span class="nav-text">②性质—绝对平衡性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③模拟添加节点的过程"><span class="nav-number">2.3.</span> <span class="nav-text">③模拟添加节点的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④红黑树和-2-3-树的等价性"><span class="nav-number">2.4.</span> <span class="nav-text">④红黑树和 2-3 树的等价性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-红黑树"><span class="nav-number">3.</span> <span class="nav-text">3.红黑树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①概念"><span class="nav-number">3.1.</span> <span class="nav-text">①概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②基本性质"><span class="nav-number">3.2.</span> <span class="nav-text">②基本性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③数据结构"><span class="nav-number">3.3.</span> <span class="nav-text">③数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④保持根节点为黑色"><span class="nav-number">3.4.</span> <span class="nav-text">④保持根节点为黑色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤左旋转"><span class="nav-number">3.5.</span> <span class="nav-text">⑤左旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑥颜色翻转"><span class="nav-number">3.6.</span> <span class="nav-text">⑥颜色翻转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑦右旋转"><span class="nav-number">3.7.</span> <span class="nav-text">⑦右旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑧添加新元素"><span class="nav-number">3.8.</span> <span class="nav-text">⑧添加新元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑨删除新元素"><span class="nav-number">3.9.</span> <span class="nav-text">⑨删除新元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑩代码实现-测试"><span class="nav-number">3.10.</span> <span class="nav-text">⑩代码实现 + 测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-常见面试问题"><span class="nav-number">4.</span> <span class="nav-text">4.常见面试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①红黑树的数据结构是怎么定义的？"><span class="nav-number">4.1.</span> <span class="nav-text">①红黑树的数据结构是怎么定义的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②红黑树有哪些性质？"><span class="nav-number">4.2.</span> <span class="nav-text">②红黑树有哪些性质？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③红黑树的各种操作的时间复杂度是多少？"><span class="nav-number">4.3.</span> <span class="nav-text">③红黑树的各种操作的时间复杂度是多少？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④红黑树相比于-BST-和-AVL-树有什么优点？"><span class="nav-number">4.4.</span> <span class="nav-text">④红黑树相比于 BST 和 AVL 树有什么优点？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤红黑树的应用？"><span class="nav-number">4.5.</span> <span class="nav-text">⑤红黑树的应用？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">5.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -700,7 +1089,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共84.8k字</span>
+  <span class="post-count">博客全站共93.5k字</span>
 </div>
 <!-- 
 

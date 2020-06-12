@@ -242,16 +242,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-最爱">
-          <a href="/love/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-soccer-ball-o"></i> <br>
-            
-            最爱
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -336,7 +326,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/06/08/2020秋招复习之数据结构与算法/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/01/LeetCode-1188-设计有限阻塞队列（Medium）Java语言题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -355,7 +345,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/08/2020秋招复习之数据结构与算法/" itemprop="url">2020秋招复习之数据结构与算法</a></h1>
+                <a class="post-title-link" href="/2020/03/01/LeetCode-1188-设计有限阻塞队列（Medium）Java语言题解/" itemprop="url">[LeetCode] 1188. 设计有限阻塞队列（Medium）Java语言题解</a></h1>
         
 
         <div class="post-meta">
@@ -367,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-08T17:01:28+08:00">
-                2020-06-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T13:25:08+08:00">
+                2020-03-01
               </time>
             
 
@@ -390,8 +380,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2020秋招/" itemprop="url" rel="index">
-                    <span itemprop="name">2020秋招</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -401,8 +391,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/2020秋招/知识点总结/" itemprop="url" rel="index">
-                    <span itemprop="name">知识点总结</span>
+                  <a href="/categories/Java/LeetCode-多线程题解/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode-多线程题解</span>
                   </a>
                 </span>
 
@@ -432,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6.4k
+                  792
                 </span>
               
 
@@ -448,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  24
+                  3
                 </span>
               
             </div>
@@ -471,15 +461,27 @@
       
         
           
-          1.面经相关①相关博客
-大厂秋招笔试真题汇总
-大厂秋招笔试真题分类统计
+          1.题目相关①题目及示例
+②相关标签
+多线程
 
-②分类优先级29.多线程 &gt; 15.设计 &gt; 23.线段树 &gt; 22.字典树 &gt; 19.堆 &gt; 20.分治算法 &gt; 4.动态规划 &gt; 14.回溯算法 &gt; 11.贪心算法 &gt; 8.图 &gt; 7.树 &gt; 13.栈 &gt; 24.队列 &gt; 16.位运算 &gt; 17.排序 &gt; 18.链表 &gt; 21.递归 &gt; 12.滑动窗口 &gt; 10
+③题目地址
+1188. 设计有限阻塞队列 — 力扣网
+
+
+2.解题方法
+使用 LinkedList 集合模拟阻塞队列
+存储当前队列元素个数的变量是 AtomicInteger 类型（来保证原子性）
+
+①synchronized 关键字 + this 锁对象
+使用 synchronized 关键字对入队和出队操作加锁
+使用 Object 对象的 wait 方法 和 notify 方法控制两个线程的相互等待和唤醒操作
+
+②lock + conditio
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/08/2020秋招复习之数据结构与算法/#more" rel="contents">
+            <a class="btn" href="/2020/03/01/LeetCode-1188-设计有限阻塞队列（Medium）Java语言题解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -530,7 +532,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/21/Java工程师技能整理基础篇（春招复习）/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/01/LeetCode-1195-交替打印字符串（Medium）Java语言题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -549,7 +551,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/21/Java工程师技能整理基础篇（春招复习）/" itemprop="url">Java工程师技能整理基础篇（春招复习）</a></h1>
+                <a class="post-title-link" href="/2020/03/01/LeetCode-1195-交替打印字符串（Medium）Java语言题解/" itemprop="url">[LeetCode] 1195. 交替打印字符串（Medium）Java语言题解</a></h1>
         
 
         <div class="post-meta">
@@ -561,8 +563,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-21T23:46:36+08:00">
-                2020-03-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T13:17:28+08:00">
+                2020-03-01
               </time>
             
 
@@ -584,8 +586,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面经/" itemprop="url" rel="index">
-                    <span itemprop="name">面经</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -595,8 +597,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面经/资源汇总/" itemprop="url" rel="index">
-                    <span itemprop="name">资源汇总</span>
+                  <a href="/categories/Java/LeetCode-多线程题解/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode-多线程题解</span>
                   </a>
                 </span>
 
@@ -626,7 +628,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  2k
                 </span>
               
 
@@ -642,7 +644,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
@@ -665,11 +667,21 @@
       
         
           
-          
-          
+          1.题目相关①题目及示例
+②相关标签
+多线程
+
+③题目地址
+1195. 交替打印字符串 — 力扣网
+
+
+2.解题方法①synchronized 关键字 + this 锁对象
+原因：四个线程属于同一个实例，虽然四个线程访问的是一个类的不同的普通同步方法，但是四个普通同步方法默认都是以 this 对象作为同步方法的锁，所以它们会争抢同一把锁（对于同一个实例来讲，四个方法的 this 对象是同一个）。
+结果：四个线程争抢同一把锁，同一时刻只能有一个线程执行该线程对应的同步方法，然后再使用 wait 方
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/21/Java工程师技能整理基础篇（春招复习）/#more" rel="contents">
+            <a class="btn" href="/2020/03/01/LeetCode-1195-交替打印字符串（Medium）Java语言题解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -720,7 +732,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/20/计算机网络之常见web攻击手段/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/01/LeetCode-1116-打印零与奇偶数（Medium）Java语言题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -739,7 +751,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/20/计算机网络之常见web攻击手段/" itemprop="url">计算机网络之常见web攻击手段</a></h1>
+                <a class="post-title-link" href="/2020/03/01/LeetCode-1116-打印零与奇偶数（Medium）Java语言题解/" itemprop="url">[LeetCode] 1116. 打印零与奇偶数（Medium）Java语言题解</a></h1>
         
 
         <div class="post-meta">
@@ -751,8 +763,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T13:50:28+08:00">
-                2019-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T13:13:37+08:00">
+                2020-03-01
               </time>
             
 
@@ -774,8 +786,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -785,8 +797,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/网络安全/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/Java/LeetCode-多线程题解/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode-多线程题解</span>
                   </a>
                 </span>
 
@@ -816,7 +828,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1.2k
                 </span>
               
 
@@ -832,7 +844,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -855,11 +867,21 @@
       
         
           
-          
-          
+          1.题目相关①题目及示例
+②相关标签
+多线程
+
+③题目地址
+1116. 打印零与奇偶数 — 力扣网
+
+
+2.解题方法①synchronized 关键字 + this 锁对象
+原因：三个线程属于同一个实例，虽然三个线程访问的是一个类的不同的普通同步方法，但是三个普通同步方法默认都是以 this 对象作为同步方法的锁，所以它们会争抢同一把锁（对于同一个实例来讲，三个方法的 this 对象是同一个）。
+结果：三个线程争抢同一把锁，同一时刻只能有一个线程执行该线程对应的同步方法，然后再使用 wait 方
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/20/计算机网络之常见web攻击手段/#more" rel="contents">
+            <a class="btn" href="/2020/03/01/LeetCode-1116-打印零与奇偶数（Medium）Java语言题解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -910,7 +932,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/20/计算机网络之对称加密和非对称加密/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/01/LeetCode-1226-哲学家进餐（Medium）Java语言题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -929,7 +951,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/20/计算机网络之对称加密和非对称加密/" itemprop="url">计算机网络之对称加密和非对称加密</a></h1>
+                <a class="post-title-link" href="/2020/03/01/LeetCode-1226-哲学家进餐（Medium）Java语言题解/" itemprop="url">[LeetCode] 1226. 哲学家进餐（Medium）Java语言题解</a></h1>
         
 
         <div class="post-meta">
@@ -941,8 +963,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T13:48:44+08:00">
-                2019-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T13:05:45+08:00">
+                2020-03-01
               </time>
             
 
@@ -964,8 +986,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -975,8 +997,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/网络安全/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/Java/LeetCode-多线程题解/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode-多线程题解</span>
                   </a>
                 </span>
 
@@ -1006,7 +1028,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1.1k
                 </span>
               
 
@@ -1022,7 +1044,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -1045,11 +1067,28 @@
       
         
           
-          
-          
+          1.题目相关①题目及示例
+②相关标签
+多线程
+
+③题目地址
+1226. 哲学家进餐 — 力扣网
+
+
+2.解题方法
+哲学家进餐问题有死锁和资源耗尽的风险：每个哲学家同时拿着左边的筷子，永远都在等右边的筷子。
+所以本题的重点在于如何避免死锁，我们采用两种常用的解决方法：
+改变一个哲学家拿叉子的顺序
+餐票策略
+
+
+
+①synchronized 关键字 + 改变一个哲学家拿叉子的顺序
+改变一个哲学家拿叉子的顺序：要想发生死锁，必须所有人同时拿起左边的筷子，但是如果这时有一个哲学家先拿右边再拿左边，就不会
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/20/计算机网络之对称加密和非对称加密/#more" rel="contents">
+            <a class="btn" href="/2020/03/01/LeetCode-1226-哲学家进餐（Medium）Java语言题解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1100,7 +1139,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/17/计算机网络之TCP协议/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -1119,7 +1158,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/17/计算机网络之TCP协议/" itemprop="url">计算机网络之TCP协议</a></h1>
+                <a class="post-title-link" href="/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/" itemprop="url">[LeetCode] 1114. 按序打印（Easy）Java语言题解</a></h1>
         
 
         <div class="post-meta">
@@ -1131,8 +1170,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-17T13:50:50+08:00">
-                2019-10-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T13:04:48+08:00">
+                2020-03-01
               </time>
             
 
@@ -1154,8 +1193,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1165,8 +1204,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/协议/" itemprop="url" rel="index">
-                    <span itemprop="name">协议</span>
+                  <a href="/categories/Java/LeetCode-多线程题解/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode-多线程题解</span>
                   </a>
                 </span>
 
@@ -1196,7 +1235,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  803
                 </span>
               
 
@@ -1212,7 +1251,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -1235,11 +1274,26 @@
       
         
           
-          
-          
+          1.题目相关①题目及示例
+②相关标签
+多线程
+
+③题目地址
+1114. 按序打印 — 力扣网
+
+
+2.解题方法①原子变量
+使用一个原子变量控制，把并发调用变成按顺序调用。
+
+②volatile 关键字
+使用 volatile 关键字保证变量的可见性，把并发调用变成按顺序调用。
+
+③信号量
+三个线程第一次执行时，因为 flag1 信号量和 flag2 信号量的计数器初始值都为 0，所以需要等 first 线程中释放了 flag1 信号量，second 线程才能开始执行，需要等 second 线程中
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/17/计算机网络之TCP协议/#more" rel="contents">
+            <a class="btn" href="/2020/03/01/LeetCode-1114-按序打印（Easy）Java语言题解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1290,7 +1344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/17/计算机网络之IP地址/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/02/25/Java并发编程之基础概念/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -1309,7 +1363,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/17/计算机网络之IP地址/" itemprop="url">计算机网络之IP地址</a></h1>
+                <a class="post-title-link" href="/2020/02/25/Java并发编程之基础概念/" itemprop="url">Java并发编程之基础概念</a></h1>
         
 
         <div class="post-meta">
@@ -1321,8 +1375,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-17T13:50:39+08:00">
-                2019-10-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-25T12:30:32+08:00">
+                2020-02-25
               </time>
             
 
@@ -1344,8 +1398,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1355,8 +1409,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/协议/" itemprop="url" rel="index">
-                    <span itemprop="name">协议</span>
+                  <a href="/categories/Java/并发编程/" itemprop="url" rel="index">
+                    <span itemprop="name">并发编程</span>
                   </a>
                 </span>
 
@@ -1386,7 +1440,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  5.7k
                 </span>
               
 
@@ -1402,7 +1456,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  19
                 </span>
               
             </div>
@@ -1425,11 +1479,24 @@
       
         
           
-          
-          
+          1.进程和线程①与操作系统的关系
+一个操作系统可以拥有多个进程（process）
+一个进程可以拥有多个线程（thread）
+即操作系统是包含多个进程的容器，而每个进程又都是容纳多个线程的容器。
+
+
+②进程定义
+Oracle 的官方定义：
+进程：使用 fork 系统调用创建的 UNIX 环境（包括文件描述符、用户 ID 、CPU 使用时间、存储器、IO 设备、内存等），它被设置为运行程序。
+线程：在进程上下文中执行的一系列指令
+
+
+通俗理解进程：
+进程指的是程序的一次执行。在用户下达运行程序的命令
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/17/计算机网络之IP地址/#more" rel="contents">
+            <a class="btn" href="/2020/02/25/Java并发编程之基础概念/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1480,7 +1547,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/15/计算机网络之HTTPS协议/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2020/02/20/Synchronized关键字/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -1499,7 +1566,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/15/计算机网络之HTTPS协议/" itemprop="url">计算机网络之HTTPS协议</a></h1>
+                <a class="post-title-link" href="/2020/02/20/Synchronized关键字/" itemprop="url">Synchronized关键字</a></h1>
         
 
         <div class="post-meta">
@@ -1511,8 +1578,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-15T13:49:06+08:00">
-                2019-10-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-20T12:21:51+08:00">
+                2020-02-20
               </time>
             
 
@@ -1534,8 +1601,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1545,8 +1612,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/协议/" itemprop="url" rel="index">
-                    <span itemprop="name">协议</span>
+                  <a href="/categories/Java/并发编程/" itemprop="url" rel="index">
+                    <span itemprop="name">并发编程</span>
                   </a>
                 </span>
 
@@ -1576,7 +1643,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  8.8k
                 </span>
               
 
@@ -1592,7 +1659,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  35
                 </span>
               
             </div>
@@ -1615,11 +1682,18 @@
       
         
           
-          
-          
+          1.简介①作用
+Oracle 的官方解释：synchronized 关键字的同步方法支持一种简单的策略来防止线程干扰和内存一致性错误。
+如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过同步方法完成的。
+
+
+一句话总结 synchronized 的作用：能够保证在同一时刻最多只有一个线程执行该段代码，以达到保证并发安全的效果。
+被 synchronized 关键字修饰的代码会以原子的方式执行，即多个线程不会同时执行这段代码，同一时刻最多只有一个线程执行该段代码。
+如何控制同一时刻
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/15/计算机网络之HTTPS协议/#more" rel="contents">
+            <a class="btn" href="/2020/02/20/Synchronized关键字/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1670,7 +1744,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/13/计算机网络之体系结构/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/08/15/Java发起HTTP请求的工具类/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -1689,7 +1763,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/13/计算机网络之体系结构/" itemprop="url">计算机网络之体系结构</a></h1>
+                <a class="post-title-link" href="/2019/08/15/Java发起HTTP请求的工具类/" itemprop="url">Java发起HTTP请求的工具类</a></h1>
         
 
         <div class="post-meta">
@@ -1701,8 +1775,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-13T13:48:53+08:00">
-                2019-10-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-15T10:42:54+08:00">
+                2019-08-15
               </time>
             
 
@@ -1724,8 +1798,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1735,8 +1809,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/Java/进阶内容/" itemprop="url" rel="index">
+                    <span itemprop="name">进阶内容</span>
                   </a>
                 </span>
 
@@ -1766,7 +1840,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  711
                 </span>
               
 
@@ -1782,7 +1856,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -1806,10 +1880,13 @@
         
           
           
-          
+ps：CloseableHttpClient 是 HttpClient 接口的实现类
+
+1.发起GET请求①无参数的GET请求123456789101112/** * 功能描述: 无参数的GET请求 * * @param: [url] * @return: java.lang.String * @auther: wjy * @date: 2019/5/31 22:06 */public static String doGet(String url) &#123;    return doGet
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/13/计算机网络之体系结构/#more" rel="contents">
+            <a class="btn" href="/2019/08/15/Java发起HTTP请求的工具类/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1860,7 +1937,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/12/计算机网络之HTTP协议/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2018/09/20/Java进制转换及位运算/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -1879,7 +1956,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/12/计算机网络之HTTP协议/" itemprop="url">计算机网络之HTTP协议</a></h1>
+                <a class="post-title-link" href="/2018/09/20/Java进制转换及位运算/" itemprop="url">Java进制转换及位运算</a></h1>
         
 
         <div class="post-meta">
@@ -1891,8 +1968,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T13:58:11+08:00">
-                2019-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T21:17:40+08:00">
+                2018-09-20
               </time>
             
 
@@ -1914,8 +1991,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -1925,8 +2002,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/协议/" itemprop="url" rel="index">
-                    <span itemprop="name">协议</span>
+                  <a href="/categories/Java/基础内容/" itemprop="url" rel="index">
+                    <span itemprop="name">基础内容</span>
                   </a>
                 </span>
 
@@ -1956,7 +2033,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1.8k
                 </span>
               
 
@@ -1972,7 +2049,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -1995,11 +2072,17 @@
       
         
           
-          
-          
+          1.进制①进制相关
+在线进制转换工具：https://tool.lu/hexconvert/ 
+进位制是一种记数方式，亦称进位计数法或位值计数法。它是人们为计数和运算方便而约定的计数系统。
+把一个数表示成 a 与 10 的 n 次幂相乘的形式（1 ≤ |a| &lt; 10，n 为整数），这种记数的方法叫做科学记数法。
+使用的数字符号的数目称为这种进位制的基数或底数。
+位权：一个数码在不同的位置上所代表的值不同、且不同的进位制，处于同一数位上的权也是不同的。
+例如：十进制第 2 位的位权为 10
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/12/计算机网络之HTTP协议/#more" rel="contents">
+            <a class="btn" href="/2018/09/20/Java进制转换及位运算/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2050,7 +2133,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2019/10/12/计算机网络之Session和Cookie/">
+    <link itemprop="mainEntityOfPage" href="http://messi1002.top/2018/09/15/交换变量的三种方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="围巾一">
@@ -2069,7 +2152,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/12/计算机网络之Session和Cookie/" itemprop="url">计算机网络之Session和Cookie</a></h1>
+                <a class="post-title-link" href="/2018/09/15/交换变量的三种方法/" itemprop="url">交换变量的三种方法</a></h1>
         
 
         <div class="post-meta">
@@ -2081,8 +2164,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T13:51:01+08:00">
-                2019-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-15T19:35:03+08:00">
+                2018-09-15
               </time>
             
 
@@ -2104,8 +2187,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机网络</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -2115,8 +2198,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机网络/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/Java/基础内容/" itemprop="url" rel="index">
+                    <span itemprop="name">基础内容</span>
                   </a>
                 </span>
 
@@ -2146,7 +2229,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  400
                 </span>
               
 
@@ -2185,11 +2268,48 @@
       
         
           
-          
-          
+          1.相关博客
+Java进制转换及位运算
+
+
+2.临时变量法
+利用临时变量来实现两个变量的交换
+步骤：
+C = A
+A = B
+B = C
+
+
+
+
+3.算术法
+利用加减法来实现两个变量的交换
+步骤：
+A = A + B
+B = A - B
+A = A - B
+
+
+
+
+4.位运算法
+利用位异或运算来实现两个变量的交换（效率最高）
+原理：利用一个数异或本身等于 0 、与 0 异或保留原值和异或运算符合交换律
+
+
+步骤：
+A = A ^ B
+B = A ^ B
+A = A ^ B
+
+
+
+
+5.代码示例1
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/10/12/计算机网络之Session和Cookie/#more" rel="contents">
+            <a class="btn" href="/2018/09/15/交换变量的三种方法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2231,7 +2351,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2281,7 +2401,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2292,7 +2412,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2303,7 +2423,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2374,7 +2494,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共84.8k字</span>
+  <span class="post-count">博客全站共93.5k字</span>
 </div>
 <!-- 
 
