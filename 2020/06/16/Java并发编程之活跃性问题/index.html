@@ -108,18 +108,24 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="死锁是最常见的活跃性问题，除了死锁之外，活锁和饥饿也会导致程序无法顺利执行，一般将死锁、活锁和饥饿统称为活跃性问题（也称为活性故障）。  1.死锁（DeadLock） Java并发编程之死锁的前生今世   2.活锁（LiveLock）①什么是活锁  死锁：是指两个（或多个）线程（或进程）相互持有对方所需要的资源，又不主动释放，导致大家都无法继续前进，程序陷入无尽的阻塞。 比喻 1：如上图所示，绅">
 <meta name="keywords" content="Java并发编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java并发编程之活跃性问题">
 <meta property="og:url" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="死锁是最常见的活跃性问题，除了死锁之外，活锁和饥饿也会导致程序无法顺利执行，一般将死锁、活锁和饥饿统称为活跃性问题（也称为活性故障）。  1.死锁（DeadLock） Java并发编程之死锁的前生今世   2.活锁（LiveLock）①什么是活锁  死锁：是指两个（或多个）线程（或进程）相互持有对方所需要的资源，又不主动释放，导致大家都无法继续前进，程序陷入无尽的阻塞。 比喻 1：如上图所示，绅">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-16T14:51:45.312Z">
+<meta property="og:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592485590026.png">
+<meta property="og:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592365869582.png">
+<meta property="og:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592475426998.png">
+<meta property="og:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592474944876.png">
+<meta property="og:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592558856167.png">
+<meta property="og:updated_time" content="2020-06-19T13:10:54.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java并发编程之活跃性问题">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="死锁是最常见的活跃性问题，除了死锁之外，活锁和饥饿也会导致程序无法顺利执行，一般将死锁、活锁和饥饿统称为活跃性问题（也称为活性故障）。  1.死锁（DeadLock） Java并发编程之死锁的前生今世   2.活锁（LiveLock）①什么是活锁  死锁：是指两个（或多个）线程（或进程）相互持有对方所需要的资源，又不主动释放，导致大家都无法继续前进，程序陷入无尽的阻塞。 比喻 1：如上图所示，绅">
+<meta name="twitter:image" content="http://messi1002.top/2020/06/16/Java并发编程之活跃性问题/1592485590026.png">
 
 
 
@@ -426,7 +432,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  2.3k
                 </span>
               
 
@@ -442,7 +448,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
@@ -463,7 +469,101 @@
       
 
       
-        
+        <blockquote>
+<p><strong>死锁是最常见的活跃性问题，除了死锁之外，活锁和饥饿也会导致程序无法顺利执行，一般将死锁、活锁和饥饿统称为活跃性问题（也称为活性故障）。</strong></p>
+</blockquote>
+<h3 id="1-死锁（DeadLock）"><a href="#1-死锁（DeadLock）" class="headerlink" title="1.死锁（DeadLock）"></a>1.死锁（DeadLock）</h3><ul>
+<li><a href="https://messi1002.top/2020/04/03/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E6%AD%BB%E9%94%81%E7%9A%84%E5%89%8D%E7%94%9F%E4%BB%8A%E4%B8%96/">Java并发编程之死锁的前生今世</a></li>
+</ul>
+<hr>
+<h3 id="2-活锁（LiveLock）"><a href="#2-活锁（LiveLock）" class="headerlink" title="2.活锁（LiveLock）"></a>2.活锁（LiveLock）</h3><h4 id="①什么是活锁"><a href="#①什么是活锁" class="headerlink" title="①什么是活锁"></a>①什么是活锁</h4><p><img src="./1592485590026.png" alt="Alt text"></p>
+<ul>
+<li>死锁：是指两个（或多个）线程（或进程）相互持有对方所需要的资源，又不主动释放，导致大家都无法继续前进，程序陷入无尽的阻塞。<ul>
+<li>比喻 1：如上图所示，绅士 1 说：你先，先生。绅士 2 说：还是你先，先生。然后他们不再说话，一直等待。</li>
+<li>比喻 2：在哲学家就餐问题中，每个哲学家都拿着左边的叉子，永远都在等右边的叉子（或者相反）。 </li>
+<li>程序阻塞，不需要消耗 CPU 资源。</li>
+</ul>
+</li>
+<li>活锁：（用两个线程举例）是指线程 1 可以使用资源，但它很礼貌，让线程 2 先使用资源。线程 2 也可以使用资源，但它很绅士，让线程 1 先使用资源。这样你让我，我让你，最后两个线程都无法使用资源。<ul>
+<li>比喻 1：如上图所示，绅士 1 说：你先，先生。绅士 2 说：还是你先，先生。绅士 1 继续说：还是你先，先生。绅士 2 继续说：…… 双方一直在互相谦让，但是都不会起来。  </li>
+<li>比喻 2：在哲学家就餐问题中，每个哲学家同时拿起左边的叉子，等待五秒钟后（检测到发生死锁），同时放下手中的叉子，再等待五秒钟后，又同时拿起左边的叉子 …… 一直都吃不到饭。</li>
+<li>程序一直在运转，需要消耗 CPU 资源。</li>
+<li>虽然线程没有阻塞，也始终在运行（所以叫做 “活” 锁，线程是 “活” 的），但是程序却得不到进展，因为线程间始终在互相谦让。</li>
+</ul>
+</li>
+<li>死锁和活锁的结果是一样的 -&gt; 都使得线程无法正常运行。</li>
+</ul>
+<h4 id="②代码演示"><a href="#②代码演示" class="headerlink" title="②代码演示"></a>②代码演示</h4><ul>
+<li>具体代码如下：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> threadcoreknowledge.deadlock;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/6/17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 演示活锁问题</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LiveLock</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 勺子类</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Spoon</span> </span>&#123;</span><br><span class="line">        <span class="comment">// owner是勺子的拥有者，拥有勺子时才能吃饭。</span></span><br><span class="line">        <span class="keyword">private</span> Person owner;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Spoon</span><span class="params">(Person owner)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.owner = owner;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOwner</span><span class="params">(Person owner)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.owner = owner;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 用synchronized关键字修饰方法，表示同时只能有一个人吃饭。</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 格式化打印，方便统一处理变量。</span></span><br><span class="line">            System.out.printf(<span class="string">"%s has eaten!\n"</span>, owner.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 就餐者类</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 就餐者的名字</span></span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="comment">// 就餐者是否饥饿</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">boolean</span> isHungry;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.isHungry = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 功能描述: 就餐方法</span></span><br><span class="line"><span class="comment">         * spoon: 勺子</span></span><br><span class="line"><span class="comment">         * spouse: 另一半的实例</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span>: [spoon, spouse]</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@date</span>: 2020/6/18 21:26</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eatWith</span><span class="params">(Spoon spoon, Person spouse)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 如果饿了，才准备吃饭。</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">this</span>.isHungry) &#123;</span><br><span class="line">                <span class="comment">// 勺子不在自己手里时，等待1ms。</span></span><br><span class="line">                <span class="keyword">if</span> (spoon.owner != <span class="keyword">this</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">1</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 勺子在自己手里时，如果另一半饿了，就让另一半先吃饭。</span></span><br><span class="line">                <span class="keyword">if</span> (spouse.isHungry) &#123;</span><br><span class="line">                    System.out.println(name + <span class="string">": 亲爱的"</span> + spouse.name + <span class="string">"你先吃吧!"</span>);</span><br><span class="line">                    <span class="comment">// 初始状态两个人都是饥饿的，他们不断地互相谦让，变成了传勺子游戏。</span></span><br><span class="line">                    spoon.setOwner(spouse);</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 勺子在自己手里时，如果另一半不饿，自己才开始吃饭。</span></span><br><span class="line">                    spoon.use();</span><br><span class="line">                    isHungry = <span class="keyword">false</span>;</span><br><span class="line">                    System.out.println(name + <span class="string">": 我吃完了!"</span>);</span><br><span class="line">                    <span class="comment">// 把勺子交给另一半</span></span><br><span class="line">                    spoon.setOwner(spouse);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person husband = <span class="keyword">new</span> Person(<span class="string">"牛郎"</span>);</span><br><span class="line">        Person wife = <span class="keyword">new</span> Person(<span class="string">"织女"</span>);</span><br><span class="line">        <span class="comment">// 先把勺子给牛郎</span></span><br><span class="line">        Spoon spoon = <span class="keyword">new</span> Spoon(husband);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                husband.eatWith(spoon, wife);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                wife.eatWith(spoon, husband);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="./1592365869582.png" alt="Alt text"></p>
+<h4 id="③工程中的活锁实例：消息队列"><a href="#③工程中的活锁实例：消息队列" class="headerlink" title="③工程中的活锁实例：消息队列"></a>③工程中的活锁实例：消息队列</h4><p><img src="./1592475426998.png" alt="Alt text"></p>
+<ul>
+<li>上图为一个先进先出的消息队列</li>
+<li>错误策略：某个消息如果处理失败，就放在队列开头重试。此时如果依赖服务出了问题，无法成功处理该消息，会导致程序不停地重试。</li>
+<li>解决方法：</li>
+</ul>
+<ol>
+<li>将处理失败的消息放在队列尾部<ul>
+<li>将其他消息处理完成后，再重试之前处理失败的消息。此时即便该消息再次处理失败，也不会对其他消息造成影响。</li>
+</ul>
+</li>
+<li>加上重试次数的限制（根据业务的不同选取合适的次数）<ul>
+<li>达到重试次数上限后，我们可以认为该消息短时间内无法恢复了，此时可以将它写到数据库中。对于数据库来说，一旦发现写入了处理失败的消息，一方面会触发报警机制，另一方面会存在定时任务定时重试该消息。</li>
+</ul>
+</li>
+</ol>
+<h4 id="④如何解决活锁问题"><a href="#④如何解决活锁问题" class="headerlink" title="④如何解决活锁问题"></a>④如何解决活锁问题</h4><ul>
+<li>发生活锁问题的原因：重试机制不变，导致程序一直重试（如消息队列始终重试、吃饭始终互相谦让等）。</li>
+<li>解决活锁问题 1：在程序中加入一个随机因素，让重试策略更加多元化。<ul>
+<li>解决 <strong>2.活锁 — ②代码演示</strong> 中的活锁问题：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> threadcoreknowledge.deadlock;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: wjy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2020/6/17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 解决活锁问题</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LiveLock</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 勺子类</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Spoon</span> </span>&#123;</span><br><span class="line">        <span class="comment">// owner是勺子的拥有者，拥有勺子时才能吃饭。</span></span><br><span class="line">        <span class="keyword">private</span> Person owner;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Spoon</span><span class="params">(Person owner)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.owner = owner;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOwner</span><span class="params">(Person owner)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.owner = owner;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 用synchronized关键字修饰方法，表示同时只能有一个人吃饭。</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">use</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 格式化打印，方便统一处理变量。</span></span><br><span class="line">            System.out.printf(<span class="string">"%s has eaten!\n"</span>, owner.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 就餐者类</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 就餐者的名字</span></span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="comment">// 就餐者是否饥饿</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">boolean</span> isHungry;</span><br><span class="line">    </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.isHungry = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 功能描述: 就餐方法</span></span><br><span class="line"><span class="comment">         * spoon: 勺子</span></span><br><span class="line"><span class="comment">         * spouse: 另一半的实例</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param</span>: [spoon, spouse]</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@return</span>: void</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@auther</span>: wjy</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@date</span>: 2020/6/18 21:26</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eatWith</span><span class="params">(Spoon spoon, Person spouse)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 如果饿了，才准备吃饭。</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">this</span>.isHungry) &#123;</span><br><span class="line">                <span class="comment">// 勺子不在自己手里时，等待1ms。</span></span><br><span class="line">                <span class="keyword">if</span> (spoon.owner != <span class="keyword">this</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">1</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 解决活锁问题</span></span><br><span class="line">                Random random = <span class="keyword">new</span> Random();</span><br><span class="line">                <span class="comment">// 勺子在自己手里时，如果另一半饿了，有90%的概率让另一半先吃饭。</span></span><br><span class="line">                <span class="keyword">if</span> (spouse.isHungry &amp;&amp; random.nextInt(<span class="number">10</span>) &lt; <span class="number">9</span>) &#123;</span><br><span class="line">                    System.out.println(name + <span class="string">": 亲爱的"</span> + spouse.name + <span class="string">"你先吃吧!"</span>);</span><br><span class="line">                    spoon.setOwner(spouse);</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 自己开始吃饭</span></span><br><span class="line">                    spoon.use();</span><br><span class="line">                    isHungry = <span class="keyword">false</span>;</span><br><span class="line">                    System.out.println(name + <span class="string">": 我吃完了!"</span>);</span><br><span class="line">                    <span class="comment">// 把勺子交给另一半</span></span><br><span class="line">                    spoon.setOwner(spouse);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person husband = <span class="keyword">new</span> Person(<span class="string">"牛郎"</span>);</span><br><span class="line">        Person wife = <span class="keyword">new</span> Person(<span class="string">"织女"</span>);</span><br><span class="line">        <span class="comment">// 先把勺子给牛郎</span></span><br><span class="line">        Spoon spoon = <span class="keyword">new</span> Spoon(husband);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                husband.eatWith(spoon, wife);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                wife.eatWith(spoon, husband);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="./1592474944876.png" alt="Alt text"></p>
+<ul>
+<li>解决活锁问题 2：以太网的指数退避算法（如下图所示）<ul>
+<li>解决哲学家就餐问题中的活锁问题：当陷入死锁时，让每个哲学家等待一段随机时间后放下叉子，而不是设置一个固定的等待时间。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./1592558856167.png" alt="Alt text"></p>
+<hr>
+<h3 id="3-饥饿"><a href="#3-饥饿" class="headerlink" title="3.饥饿"></a>3.饥饿</h3><h4 id="①什么是饥饿"><a href="#①什么是饥饿" class="headerlink" title="①什么是饥饿"></a>①什么是饥饿</h4><ul>
+<li>饥饿：线程需要某些资源（通常指 CPU），但是却始终得不到。</li>
+<li>饥饿可能会导致响应性变差：比如，浏览器有一个线程负责处理前台响应，另外的后台线程负责下载图片和文件、计算渲染等。在这种情况下，如果后台线程把 CPU 资源都占了，那么前台线程将无法流畅地执行，这会使得用户的体验很差。</li>
+</ul>
+<h4 id="②导致饥饿的几种情况"><a href="#②导致饥饿的几种情况" class="headerlink" title="②导致饥饿的几种情况"></a>②导致饥饿的几种情况</h4><ol>
+<li>线程的优先级设置得过于低（CPU 始终分配给优先级更高的线程）</li>
+<li>有其他线程持有锁的同时又无限循环从而不释放锁</li>
+<li>某程序始终占用某文件的写锁</li>
+</ol>
+<h4 id="③关于线程优先级"><a href="#③关于线程优先级" class="headerlink" title="③关于线程优先级"></a>③关于线程优先级</h4><ol>
+<li>Java 中有 10 个级别，默认的线程优先级为 5，子线程默认继承父线程的优先级。</li>
+<li>程序设计不应该依赖于优先级。因为不同的操作系统对优先级的理解不一样，Windows 只有 7 个优先级，而 Linux 可能会忽略优先级。如果程序在不同的操作系统上运行的效果不一样，是不符合预期的。</li>
+<li>操作系统的权限很高，程序的优先级会被操作系统改变。</li>
+<li>为了避免饥饿现象的发生，不应该在程序中设定优先级。</li>
+</ol>
+<hr>
+<h3 id="4-面试常考问题"><a href="#4-面试常考问题" class="headerlink" title="4.面试常考问题"></a>4.面试常考问题</h3><h4 id="①什么是活跃性问题？活锁、饥饿和死锁有什么区别？"><a href="#①什么是活跃性问题？活锁、饥饿和死锁有什么区别？" class="headerlink" title="①什么是活跃性问题？活锁、饥饿和死锁有什么区别？"></a>①什么是活跃性问题？活锁、饥饿和死锁有什么区别？</h4><blockquote>
+<p>具体见 <strong>上文</strong></p>
+</blockquote>
+<ul>
+<li>活跃性问题：一般将死锁、活锁和饥饿统称为活跃性问题（也称为活性故障），它们都会导致程序无法顺利执行。</li>
+<li>死锁：争来争去 谁也得不到</li>
+<li>活锁：让来让去 谁都不拥有</li>
+<li>饥饿：排多久 都轮不到自己</li>
+</ul>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#x73;&#x69;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#x73;&#x69;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></li>
+</ul>
+
       
     </div>
     
@@ -575,8 +675,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -593,7 +702,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -604,7 +713,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -615,7 +724,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -662,6 +771,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-死锁（DeadLock）"><span class="nav-number">1.</span> <span class="nav-text">1.死锁（DeadLock）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-活锁（LiveLock）"><span class="nav-number">2.</span> <span class="nav-text">2.活锁（LiveLock）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①什么是活锁"><span class="nav-number">2.1.</span> <span class="nav-text">①什么是活锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②代码演示"><span class="nav-number">2.2.</span> <span class="nav-text">②代码演示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③工程中的活锁实例：消息队列"><span class="nav-number">2.3.</span> <span class="nav-text">③工程中的活锁实例：消息队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④如何解决活锁问题"><span class="nav-number">2.4.</span> <span class="nav-text">④如何解决活锁问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-饥饿"><span class="nav-number">3.</span> <span class="nav-text">3.饥饿</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①什么是饥饿"><span class="nav-number">3.1.</span> <span class="nav-text">①什么是饥饿</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②导致饥饿的几种情况"><span class="nav-number">3.2.</span> <span class="nav-text">②导致饥饿的几种情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③关于线程优先级"><span class="nav-number">3.3.</span> <span class="nav-text">③关于线程优先级</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-面试常考问题"><span class="nav-number">4.</span> <span class="nav-text">4.面试常考问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①什么是活跃性问题？活锁、饥饿和死锁有什么区别？"><span class="nav-number">4.1.</span> <span class="nav-text">①什么是活跃性问题？活锁、饥饿和死锁有什么区别？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">5.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -686,7 +811,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共93.5k字</span>
+  <span class="post-count">博客全站共103.8k字</span>
 </div>
 <!-- 
 
