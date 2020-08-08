@@ -108,18 +108,32 @@
 
 
 
-<meta name="description" content="明天又是新的一天了。">
+<meta name="description" content="1.概念https://mp.weixin.qq.com/s/YNYtD-yItbH7u5KqC8Z-Pg ①数据库设计 数据库系统：数据库系统是应用系统存储数据的关键组成部分，是系统稳定运行的基础，决定着系统是否可以高效稳定地运行。 数据库设计：数据库设计就是根据业务系统的具体需要，结合我们所选用的 DBMS（数据库管理系统），为这个业务系统构造出最优的数据存储模型。并建立好数据库中的表结构及表">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL入门之数据库设计">
 <meta property="og:url" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/index.html">
 <meta property="og:site_name" content="wjy&#39;s blog">
-<meta property="og:description" content="明天又是新的一天了。">
+<meta property="og:description" content="1.概念https://mp.weixin.qq.com/s/YNYtD-yItbH7u5KqC8Z-Pg ①数据库设计 数据库系统：数据库系统是应用系统存储数据的关键组成部分，是系统稳定运行的基础，决定着系统是否可以高效稳定地运行。 数据库设计：数据库设计就是根据业务系统的具体需要，结合我们所选用的 DBMS（数据库管理系统），为这个业务系统构造出最优的数据存储模型。并建立好数据库中的表结构及表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-03T13:01:47.272Z">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596685448401.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596686353459.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596687571060.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596687575292.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596687672609.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596694472222.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596687821345.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596694451673.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596688008001.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596694928605.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596695164218.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596701565342.png">
+<meta property="og:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596701582953.png">
+<meta property="og:updated_time" content="2020-08-07T15:14:03.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL入门之数据库设计">
-<meta name="twitter:description" content="明天又是新的一天了。">
+<meta name="twitter:description" content="1.概念https://mp.weixin.qq.com/s/YNYtD-yItbH7u5KqC8Z-Pg ①数据库设计 数据库系统：数据库系统是应用系统存储数据的关键组成部分，是系统稳定运行的基础，决定着系统是否可以高效稳定地运行。 数据库设计：数据库设计就是根据业务系统的具体需要，结合我们所选用的 DBMS（数据库管理系统），为这个业务系统构造出最优的数据存储模型。并建立好数据库中的表结构及表">
+<meta name="twitter:image" content="http://messi1002.top/2020/01/09/MySQL入门之数据库设计/1596685448401.png">
 
 
 
@@ -426,7 +440,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  6.1k
                 </span>
               
 
@@ -442,7 +456,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  21
                 </span>
               
             </div>
@@ -463,7 +477,368 @@
       
 
       
-        
+        <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p><a href="https://mp.weixin.qq.com/s/YNYtD-yItbH7u5KqC8Z-Pg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/YNYtD-yItbH7u5KqC8Z-Pg</a></p>
+<h4 id="①数据库设计"><a href="#①数据库设计" class="headerlink" title="①数据库设计"></a>①数据库设计</h4><ul>
+<li>数据库系统：数据库系统是应用系统存储数据的关键组成部分，是系统稳定运行的基础，决定着系统是否可以高效稳定地运行。</li>
+<li>数据库设计：数据库设计就是根据业务系统的具体需要，结合我们所选用的 DBMS（数据库管理系统），为这个业务系统构造出最优的数据存储模型。并建立好数据库中的表结构及表与表之间的关联关系的过程。</li>
+<li>常用的关系型数据库系统：MySQL、Oracle、SQLServer、PgSql。</li>
+<li>常用的 NoSQL 系统：MongoDB、Redis、Memcache。</li>
+<li>数据库设计的最终结果：利用所选择的数据库管理系统，有效地对应用系统中的产生的数据进行存储，并且可以对已经存储的数据进行高效的访问。</li>
+</ul>
+<h4 id="②你的数据库是怎么设计的？"><a href="#②你的数据库是怎么设计的？" class="headerlink" title="②你的数据库是怎么设计的？"></a>②你的数据库是怎么设计的？</h4><h5 id="a-需求分析"><a href="#a-需求分析" class="headerlink" title="a.需求分析"></a>a.需求分析</h5><ul>
+<li>为什么要进行需求分析？<ul>
+<li>了解系统中所要存储的数据</li>
+<li>了解数据的存储特点</li>
+<li>了解数据的生命周期</li>
+</ul>
+</li>
+<li>需要分析哪些内容？<ul>
+<li>数据是什么？</li>
+<li>数据有哪些属性？</li>
+<li>数据和属性各自的特点有哪些？ </li>
+</ul>
+</li>
+<li>对于时效性数据：采取过期清理或归档的方式进行存储。</li>
+<li>对于数据量增长很快的非核心数据：采取分库分表的方式进行存储（如日志数据增长很快且非核心数据，不适合存储在数据库中。如果要存储在数据库中，需要分库分表、按时清理或归档。）</li>
+</ul>
+<h5 id="b-逻辑设计"><a href="#b-逻辑设计" class="headerlink" title="b.逻辑设计"></a>b.逻辑设计</h5><ul>
+<li>逻辑设计是做什么的？<ul>
+<li>将需求转化为数据库的逻辑模型</li>
+<li>通过 ER 图的形式对逻辑模型进行展示</li>
+<li>同所选用的具体的 DBMS 系统无关 </li>
+</ul>
+</li>
+<li>要搞清楚的一些问题<ul>
+<li>在数据库中存储的实体（即对象）有哪些？ </li>
+<li>实体之间的关系、实体与数据库表的关系（1 对 1、1 对多或多对多）</li>
+<li>实体所包含的属性有什么？</li>
+<li>哪些属性或属性的组合可以唯一标识一个实体</li>
+</ul>
+</li>
+</ul>
+<h5 id="c-物理设计"><a href="#c-物理设计" class="headerlink" title="c.物理设计"></a>c.物理设计</h5><ul>
+<li>具体见 <strong>2.物理设计</strong></li>
+</ul>
+<h5 id="d-维护优化"><a href="#d-维护优化" class="headerlink" title="d.维护优化"></a>d.维护优化</h5><ul>
+<li>具体见 <strong>3.维护优化</strong></li>
+</ul>
+<blockquote>
+<p>注意：有新需求时，同样需要经过以上步骤修改表结构。</p>
+</blockquote>
+<h4 id="③为什么要进行数据库的设计？"><a href="#③为什么要进行数据库的设计？" class="headerlink" title="③为什么要进行数据库的设计？"></a>③为什么要进行数据库的设计？</h4><table>
+<thead>
+<tr>
+<th align="left">优良的设计</th>
+<th align="left">糟糕的设计</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">减少数据冗余</td>
+<td align="left">存在大量数据冗余</td>
+</tr>
+<tr>
+<td align="left">避免数据维护异常</td>
+<td align="left">存在数据插入、更新、删除异常</td>
+</tr>
+<tr>
+<td align="left">节约存储空间</td>
+<td align="left">浪费大量存储空间</td>
+</tr>
+<tr>
+<td align="left">高效的访问</td>
+<td align="left">访问数据低效</td>
+</tr>
+</tbody></table>
+<h4 id="④如何选择合适的数据存储方案-？"><a href="#④如何选择合适的数据存储方案-？" class="headerlink" title="④如何选择合适的数据存储方案 ？"></a>④如何选择合适的数据存储方案 ？</h4><table>
+<thead>
+<tr>
+<th align="left">数据库</th>
+<th align="left">类型</th>
+<th align="left">实现语言</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
+<th align="left">应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">MySQL</td>
+<td align="left">关系型数据库</td>
+<td align="left">C、C++</td>
+<td align="left">开源、跨平台、功能强大且使用方便</td>
+<td align="left">①最大的缺点是其安全系统，主要是复杂而非标准，只有调用 mysqladmin 来重读用户权限才会发生改变。②不允许调试存储过程，开发和维护存储过程很难。③不支持热备份。④价格随平台和安装方式变化。⑤在海量数据处理的时候效率会显著变慢</td>
+<td align="left">Web 网站系统、日志记录系统、数据仓库系统、嵌入式系统</td>
+</tr>
+<tr>
+<td align="left">Redis</td>
+<td align="left">非关系型数据库</td>
+<td align="left">C</td>
+<td align="left">支持多种数据结构、支持持久化操作、支持 pub/sub 消息订阅机制</td>
+<td align="left">单线程、只支持简单的事务需求、在 String 类型上会消耗较多内存</td>
+<td align="left">缓存、会话缓存、时效性、访问频率、计数器、社交列表、记录用户判定信息、热门列表与排行榜、最新动态等</td>
+</tr>
+<tr>
+<td align="left">MongoDB</td>
+<td align="left">文档型数据库</td>
+<td align="left">C++</td>
+<td align="left">更高的写负载、处理很大规模的单表、高可用性、快速的查询</td>
+<td align="left">不支持事务、占用空间过大、没有成熟的维护工具</td>
+<td align="left">主要解决海量数据的访问效率问题</td>
+</tr>
+</tbody></table>
+<h4 id="⑤数据库的架构"><a href="#⑤数据库的架构" class="headerlink" title="⑤数据库的架构"></a>⑤数据库的架构</h4><h4 id="⑥数据库的三大范式"><a href="#⑥数据库的三大范式" class="headerlink" title="⑥数据库的三大范式"></a>⑥数据库的三大范式</h4><ul>
+<li>第一范式：每个列都不可以再拆分</li>
+<li>第二范式：在第一范式的基础上，非主键列完全依赖于主键，而不能是依赖于主键的一部分。</li>
+<li>第三范式： 在第二范式的基础上，非主键列只依赖于主键，不依赖于其他非主键。</li>
+<li>什么是范式：构造数据库必须遵循一定的规则，在关系数据库中，这种规则就是范式。</li>
+<li>范式作用：如果是符合数据库范式的设计，则是简洁高效、结构清晰的数据库设计，同时可以避免数据库的插入、更新和删除异常，并且最大限度地避免数据冗余。<ul>
+<li>插入异常：应该插入的数据未被插入</li>
+<li>更新异常：更新一条记录时需要更新其他多条记录</li>
+<li>删除异常：不该删除的数据被删除</li>
+<li>数据冗余：每条记录都含有相同信息</li>
+<li>如果一个表存在插入异常，则必定会存在更新异常和删除异常。</li>
+</ul>
+</li>
+<li>符合范式的好处：<ul>
+<li>减少数据冗余</li>
+<li>消除异常（插入异常，更新异常，删除异常）</li>
+<li>让数据组织的更加和谐</li>
+</ul>
+</li>
+<li>注意：三大范式只是一般设计数据库的基本理念，可以建立冗余较小、结构合理的数据库。如果有特殊情况，当然要特殊对待，数据库设计最重要的是看需求跟性能，需求 &gt; 性能 &gt; 表结构。所以不能一味的去追求范式建立数据库。</li>
+</ul>
+<h4 id="⑦反范式化表设计"><a href="#⑦反范式化表设计" class="headerlink" title="⑦反范式化表设计"></a>⑦反范式化表设计</h4><ul>
+<li>概念：反范式化是针对范式化而言的，它为了性能和读取效率的考虑而适当的对第三范式的要求进行违反，而允许存在少量的数据冗余。反范式化就是使用空间来换取时间。</li>
+<li>优点：减少表的关联数量，意味着减少了磁盘的 IO 操作，增加了数据的读取效率。</li>
+<li>缺点：增加了数据冗余、对数据的修改需要更多的成本</li>
+<li>注意：一定要适度（在可控范围内）。</li>
+</ul>
+<hr>
+<h3 id="2-物理设计"><a href="#2-物理设计" class="headerlink" title="2.物理设计"></a>2.物理设计</h3><h4 id="①概念"><a href="#①概念" class="headerlink" title="①概念"></a>①概念</h4><ul>
+<li>根据数据库自身的特点把逻辑设计转换为物理设计，物理设计是整个数据库设计中最核心的部分。 </li>
+<li>要做的工作：建立起数据库的表结构<ol>
+<li>选择合适的数据库管理系统（MySQL、Oracle 等）：从应用特点和成本方面进行考虑。</li>
+<li>定义数据库、表及字段的命名规范（以便通过字段名和表名看出字段或表的作用）：不同的数据库管理系统中对数据库表及字段名的长度限制不同</li>
+<li>根据所选的数据库管理系统选择合适的字段类型，然后依据命名规范及逻辑模型进行建库建表操作。</li>
+<li>出于效率的考虑，对于已经设计好的符合规范的逻辑模型进行一些反范式化设计（如增加一些数据冗余，以空间换时间。）</li>
+</ol>
+</li>
+</ul>
+<h4 id="②表及字段的命名规则"><a href="#②表及字段的命名规则" class="headerlink" title="②表及字段的命名规则"></a>②表及字段的命名规则</h4><h4 id="③字段类型的选择原则"><a href="#③字段类型的选择原则" class="headerlink" title="③字段类型的选择原则"></a>③字段类型的选择原则</h4><h4 id="④其它注意事项"><a href="#④其它注意事项" class="headerlink" title="④其它注意事项"></a>④其它注意事项</h4><hr>
+<h3 id="3-维护优化"><a href="#3-维护优化" class="headerlink" title="3.维护优化"></a>3.维护优化</h3><h4 id="①如何维护数据字典"><a href="#①如何维护数据字典" class="headerlink" title="①如何维护数据字典"></a>①如何维护数据字典</h4><h4 id="②如何维护索引"><a href="#②如何维护索引" class="headerlink" title="②如何维护索引"></a>②如何维护索引</h4><h4 id="③如何维护表结构"><a href="#③如何维护表结构" class="headerlink" title="③如何维护表结构"></a>③如何维护表结构</h4><h4 id="④数据库中适合的操作"><a href="#④数据库中适合的操作" class="headerlink" title="④数据库中适合的操作"></a>④数据库中适合的操作</h4><ol>
+<li>数据库适合批量操作，逐条操作适合在应用程序中完成。</li>
+<li>禁止使用 SELECT * 这样的查询，查询出大量不使用的字段，会造成 IO 的浪费。</li>
+<li>大量使用用户自定义函数可能会对索引的使用造成影响。如果使用函数，则列中的索引就会不起作用。</li>
+<li>全文索引需要另外建立索引文件来对索引进行维护，且对中文的支持不好。最好使用专业的搜索引擎工具来代替全文索引。</li>
+</ol>
+<hr>
+<h3 id="4-主键"><a href="#4-主键" class="headerlink" title="4.主键"></a>4.主键</h3><h4 id="①为什么要尽量设定一个主键"><a href="#①为什么要尽量设定一个主键" class="headerlink" title="①为什么要尽量设定一个主键?"></a>①为什么要尽量设定一个主键?</h4><ul>
+<li>主键是数据库确保数据行在整张表唯一性的保障。即使业务上本张表没有主键，也建议添加一个自增长的 ID 列作为主键。设定了主键之后，在后续的删改查的时候可能更加快速并且确保操作数据范围安全。</li>
+</ul>
+<h4 id="②主键使用自增-ID-还是-UUID"><a href="#②主键使用自增-ID-还是-UUID" class="headerlink" title="②主键使用自增 ID 还是 UUID?"></a>②主键使用自增 ID 还是 UUID?</h4><ul>
+<li>推荐使用自增 ID，不要使用 UUID。</li>
+<li>因为在 InnoDB 存储引擎中，主键索引是作为聚簇索引存在的。也就是说，主键索引的 B+ 树叶子节点上存储了主键索引以及全部的数据（按照顺序），如果主键索引是自增 ID ，那么只需要不断向后排列即可，如果是 UUID，由于到来的 ID 与原来的大小不确定，会造成非常多的数据插入、数据移动，导致产生很多的内存碎片，进而造成插入性能的下降。</li>
+<li>总之，在数据量大的情况下，用自增主键性能会好一些。</li>
+</ul>
+<blockquote>
+<p>注意：如果没有主键，InnoDB 会选择一个唯一键来作为聚簇索引。如果没有唯一键，则会生成一个隐式的主键。</p>
+</blockquote>
+<h4 id="③分布式-ID"><a href="#③分布式-ID" class="headerlink" title="③分布式 ID"></a>③分布式 ID</h4><ul>
+<li>问：什么是分布式 ID？<ul>
+<li>答：分库分表后需要有一个唯一 ID 来标识一条数据， 这个全局唯一 ID 就叫分布式 ID。</li>
+</ul>
+</li>
+<li>问：分布式 ID 需要满足那些条件？<ul>
+<li>全局唯一：确保生成的 ID 是全局唯一的。</li>
+<li>高性能：高可用低延时，ID 生成响应要块，否则反倒会成为业务瓶颈。</li>
+<li>高可用：确保任何时候都能正确的生成 ID。</li>
+<li>好接入：要秉着拿来即用的设计原则，在系统设计和实现上要尽可能的简单。</li>
+<li>趋势递增：最好趋势递增，这个要求就得看具体业务场景了，一般不严格要求。</li>
+</ul>
+</li>
+<li>问：订单如何唯一标识？/ MySQL 全局唯一 ID 生成方案？/ 如何选择合适的分布式 ID 的设计方案？/ 常见的几种分布式 ID 的设计方案？<ul>
+<li>答：见下文 </li>
+</ul>
+</li>
+</ul>
+<h5 id="a-UUID"><a href="#a-UUID" class="headerlink" title="a.UUID"></a>a.UUID</h5><ul>
+<li>用法：<code>String uuid = UUID.randomUUID().toString().replaceAll(&quot;-&quot;, &quot;&quot;);</code>，它有着全球唯一的特性。UUID 的生成简单到只有一行代码，输出结果  c2b8c2b9e46c47e3b30dca3b0d447718，但它却并不适用于实际的业务需求。像用作订单号 UUID 这样的字符串没有丝毫的意义，看不出和订单相关的有用信息；而对于数据库来说用作业务主键 ID，它不仅长还是字符串，存储性能差查询也很耗时，所以不推荐用作分布式 ID。</li>
+<li>优点：代码实现简单，本地生成无网络消耗，具有唯一性。</li>
+<li>缺点：<ul>
+<li>每次生成的 ID 是无序的，不具备趋势自增的特性。</li>
+<li>没有具体的业务含义</li>
+<li>UUID 的字符串存储，存储空间大，查询效率低。存储以及查询对 MySQL 的性能消耗较大，MySQL 官方明确建议主键要尽量越短越好，作为数据库主键 UUID 的无序性会导致数据位置频繁变动，严重影响性能。</li>
+</ul>
+</li>
+<li>应用场景：类似生成 token 令牌的场景、不适用一些要求有趋势递增的 ID 场景。</li>
+</ul>
+<h5 id="b-MySQL-主键自增"><a href="#b-MySQL-主键自增" class="headerlink" title="b.MySQL 主键自增"></a>b.MySQL 主键自增</h5><ul>
+<li>用法：基于数据库的 auto_increment 自增 ID 完全可以充当分布式 ID，具体实现：需要一个单独的 MySQL 实例用来生成 ID，当我们需要一个 ID 的时候，向表中插入一条记录返回主键 ID。但这种方式有一个比较致命的缺点，访问量激增时 MySQL 本身就是系统的瓶颈，用它来实现分布式服务风险比较大，不推荐！</li>
+<li>优点：实现简单，ID 单调自增，数值类型且效率高。</li>
+<li>缺点：DB 单点存在宕机风险，无法扛住高并发场景。</li>
+</ul>
+<h5 id="c-MySQL-多实例主键自增"><a href="#c-MySQL-多实例主键自增" class="headerlink" title="c.MySQL 多实例主键自增"></a>c.MySQL 多实例主键自增</h5><ul>
+<li>用法：对单点数据库方式做一些高可用优化，换成主从模式集群。害怕一个主节点挂掉没法用，那就做多主模式集群，也就是多个MySQL 实例都能单独的生产自增 ID。通过设置起始值和自增步长来避免多个 MySQL 实例生成重复 ID。</li>
+</ul>
+<p><img src="./1596685448401.png" alt="Alt text"></p>
+<ul>
+<li>优点：解决了数据库单点问题</li>
+<li>缺点：不利于后续扩容，实际上单个数据库自身压力还是大，依旧无法满足高并发场景。</li>
+<li>应用场景：数据不需要扩容的场景</li>
+</ul>
+<h5 id="d-基于数据库的号段模式"><a href="#d-基于数据库的号段模式" class="headerlink" title="d.基于数据库的号段模式"></a>d.基于数据库的号段模式</h5><ul>
+<li>用法：号段模式是当下分布式 ID 生成器的主流实现方式之一，号段模式可以理解为从数据库批量的获取自增 ID，每次从数据库取出一个号段范围，例如 (1,1000] 代表 1000 个 ID，具体的业务服务将本号段生成 1~1000 的自增 ID 并加载到内存。等这批号段 ID 用完，再次向数据库申请新号段。由于多业务端可能同时操作，所以采用版本号 version 乐观锁方式更新，这种分布式 ID 的生成方式不强依赖于数据库，不会频繁的访问数据库，对数据库的压力小很多。</li>
+<li>优点：避免了每次生成 ID 都要访问数据库并带来压力，提高性能。</li>
+<li>缺点：属于本地生成策略，存在单点故障，服务重启会造成 ID 不连续。</li>
+</ul>
+<h5 id="e-Redis-生成方案"><a href="#e-Redis-生成方案" class="headerlink" title="e.Redis 生成方案"></a>e.Redis 生成方案</h5><ul>
+<li>用法：利用 Redis 的 incr 命令实现 ID 的原子性自增，一般算法为：年份 + 当天距当年第多少天 + 天数 + 小时 + Redis 自增。</li>
+<li>优点：<ul>
+<li>不依赖于数据库，灵活方便，且性能优于数据库。</li>
+<li>有序递增，可读性强。</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>占用带宽，每次要向 Redis 进行请求。</li>
+<li>复杂性太高，需要严重依赖第三方服务，而且代码配置繁琐。</li>
+</ul>
+</li>
+</ul>
+<h5 id="f-雪花-snowflake-算法"><a href="#f-雪花-snowflake-算法" class="headerlink" title="f.雪花 snowflake 算法"></a>f.雪花 snowflake 算法</h5><ul>
+<li>用法：它给每台机器分配一个唯一标识，然后通过时间戳 + 标识 + 自增实现全局唯一 ID。根据这个算法的逻辑，只需要将这个算法用 Java 语言实现出来，封装为一个工具方法，那么各个业务应用可以直接使用该工具方法来获取分布式 ID，只需保证每个业务应用有自己的工作机器 ID 即可，而不需要单独去搭建一个获取分布式 ID 的应用。</li>
+</ul>
+<p><img src="./1596686353459.png" alt="Alt text"></p>
+<ul>
+<li>优点：<ul>
+<li>此方案每秒能够产生 409.6 万个 ID，速度快。</li>
+<li>时间戳在高位，自增序列在低位，整个 ID 是趋势递增的，按照时间有序递增。</li>
+<li>灵活度高，可以根据业务需求，调整 bit 位的划分，满足不同的需求。</li>
+</ul>
+</li>
+<li>缺点：依赖机器的时钟，如果服务器时钟回拨，会导致重复 ID 生成。</li>
+</ul>
+<h5 id="g-百度-UidGenerator"><a href="#g-百度-UidGenerator" class="headerlink" title="g.百度 UidGenerator"></a>g.百度 UidGenerator</h5><p><a href="https://zhuanlan.zhihu.com/p/107939861" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/107939861</a><br><a href="https://juejin.im/post/6844903631137800200" target="_blank" rel="noopener">https://juejin.im/post/6844903631137800200</a><br><a href="https://mp.weixin.qq.com/s/HRJb8iBsXJTdsUhfhOxHlw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/HRJb8iBsXJTdsUhfhOxHlw</a></p>
+<h5 id="h-美团-Leaf"><a href="#h-美团-Leaf" class="headerlink" title="h.美团 Leaf"></a>h.美团 Leaf</h5><h5 id="i-滴滴-Tinyid"><a href="#i-滴滴-Tinyid" class="headerlink" title="i.滴滴 Tinyid"></a>i.滴滴 Tinyid</h5><hr>
+<h3 id="5-分库分表"><a href="#5-分库分表" class="headerlink" title="5.分库分表"></a>5.分库分表</h3><h4 id="①数据库瓶颈"><a href="#①数据库瓶颈" class="headerlink" title="①数据库瓶颈"></a>①数据库瓶颈</h4><h5 id="a-IO-瓶颈"><a href="#a-IO-瓶颈" class="headerlink" title="a.IO 瓶颈"></a>a.IO 瓶颈</h5><ol>
+<li>磁盘读 IO 瓶颈：热点数据太多，数据库缓存放不下，每次查询时会产生大量的 IO，降低查询速度 —&gt; 分库和垂直分表。</li>
+<li>网络 IO 瓶颈：请求的数据太多，网络带宽不够 —&gt; 分库。</li>
+</ol>
+<h5 id="b-CPU-瓶颈"><a href="#b-CPU-瓶颈" class="headerlink" title="b.CPU 瓶颈"></a>b.CPU 瓶颈</h5><ol>
+<li>SQL 问题：如 SQL 中包含 JOIN，GROUP BY，ORDER BY，非索引字段条件查询等，增加 CPU 运算的操作 —&gt; SQL 优化，建立合适的索引，在业务 Service 层进行业务计算。</li>
+<li>单表数据量太大，查询时扫描的行太多，SQL 效率低，CPU 率先出现瓶颈 —&gt; 水平分表。</li>
+</ol>
+<h4 id="②水平分库（拆分表中记录）"><a href="#②水平分库（拆分表中记录）" class="headerlink" title="②水平分库（拆分表中记录）"></a>②水平分库（拆分表中记录）</h4><p><img src="./1596687571060.png" alt="Alt text"><br><img src="./1596687575292.png" alt="Alt text"></p>
+<ul>
+<li>概念：以字段为依据，按照一定策略（hash、range 等），将一个库中的数据拆分到多个库中。</li>
+<li>结果：<ul>
+<li>每个库的结构都一样</li>
+<li>每个库的数据都不一样，没有交集。</li>
+<li>所有库的并集是全量数据</li>
+</ul>
+</li>
+<li>应用场景：系统绝对并发量上来了，分表难以从根本上解决问题，并且还没有明显的业务归属来垂直分库。</li>
+<li>分析：库多了，IO 和 CPU 的压力自然可以成倍缓解。</li>
+</ul>
+<h4 id="③水平分表（拆分表中记录）"><a href="#③水平分表（拆分表中记录）" class="headerlink" title="③水平分表（拆分表中记录）"></a>③水平分表（拆分表中记录）</h4><blockquote>
+<p>注意：MySQL 单表存储量推荐是百万级。</p>
+</blockquote>
+<p><img src="./1596687672609.png" alt="Alt text"><br><img src="./1596694472222.png" alt="Alt text"></p>
+<ul>
+<li>概念：以字段为依据，按照一定策略（hash、range 等），将一个表中的数据拆分到多个表中。</li>
+<li>结果：<ul>
+<li>每个表的结构都一样</li>
+<li>每个表的数据都不一样，没有交集。</li>
+<li>所有表的并集是全量数据</li>
+</ul>
+</li>
+<li>应用场景：系统绝对并发量并没有上来，只是单表的数据量太多，影响了 SQL 效率，加重了 CPU 负担，以至于成为瓶颈。</li>
+<li>分析：表的数据量少了，单次 SQL 执行效率高，自然减轻了 CPU 的负担。</li>
+</ul>
+<h4 id="④垂直分库（拆分表）"><a href="#④垂直分库（拆分表）" class="headerlink" title="④垂直分库（拆分表）"></a>④垂直分库（拆分表）</h4><p><img src="./1596687821345.png" alt="Alt text"><br><img src="./1596694451673.png" alt="Alt text"></p>
+<ul>
+<li>概念：以表为依据，按照业务归属不同，将不同的表拆分到不同的库中。</li>
+<li>结果：<ul>
+<li>每个库的结构都不一样；</li>
+<li>每个库的数据也不一样，没有交集；</li>
+<li>所有库的并集是全量数据；</li>
+</ul>
+</li>
+<li>应用场景：系统绝对并发量上来了，并且可以抽象出单独的业务模块。</li>
+<li>分析：到这一步，基本上就可以服务化了。例如：随着业务的发展一些公用的配置表、字典表等越来越多，这时可以将这些表拆到单独的库中，甚至可以服务化。再有，随着业务的发展孵化出了一套业务模式，这时可以将相关的表拆到单独的库中，甚至可以服务化。</li>
+</ul>
+<h4 id="⑤垂直分表（拆分列）"><a href="#⑤垂直分表（拆分列）" class="headerlink" title="⑤垂直分表（拆分列）"></a>⑤垂直分表（拆分列）</h4><p><img src="./1596688008001.png" alt="Alt text"></p>
+<ul>
+<li>概念：以字段为依据，按照字段的活跃性，将表中字段拆到不同的表（主表和扩展表）中。</li>
+<li>结果：<ul>
+<li>每个表的结构都不一样</li>
+<li>每个表的数据也不一样，一般来说，每个表的字段至少有一列交集，一般是主键，用于关联数据。</li>
+<li>所有表的并集是全量数据</li>
+</ul>
+</li>
+<li>应用场景：系统绝对并发量并没有上来，表的记录并不多，但是字段多，并且热点数据和非热点数据在一起，单行数据所需的存储空间较大。以至于数据库缓存的数据行减少，查询时会去读磁盘数据产生大量的随机读 IO，产生 IO 瓶颈。</li>
+<li>分析：可以用列表页和详情页来帮助理解。垂直分表的拆分原则是将热点数据（经常一起查询的数据）放在一起作为主表，非热点数据放在一起作为扩展表。这样更多的热点数据就能被缓存下来，进而减少了随机读 IO。拆了之后，要想获得全部数据就需要关联两个表来取数据。但记住，千万别用 JOIN，因为 JOIN 不仅会增加 CPU 负担并且会将两个表耦合在一起（必须在一个数据库实例上）。关联数据，应该在业务 Service 层做文章，分别获取主表和扩展表数据然后用关联字段关联得到全部数据。</li>
+</ul>
+<h4 id="⑥分库分表步骤"><a href="#⑥分库分表步骤" class="headerlink" title="⑥分库分表步骤"></a>⑥分库分表步骤</h4><ol>
+<li>根据容量（当前容量和增长量）评估分库或分表个数</li>
+<li>选 key（均匀）</li>
+<li>分表规则（hash 或 range 等）</li>
+<li>执行（一般双写）</li>
+<li>扩容问题（尽量减少数据的移动）</li>
+</ol>
+<h4 id="⑦分库分表方案"><a href="#⑦分库分表方案" class="headerlink" title="⑦分库分表方案"></a>⑦分库分表方案</h4><h5 id="a-hash-取模方案"><a href="#a-hash-取模方案" class="headerlink" title="a.hash 取模方案"></a>a.hash 取模方案</h5><p><img src="./1596694928605.png" alt="Alt text"></p>
+<ul>
+<li>概念：hash 的方案就是对指定的路由key（如：id）对分表总数进行取模。</li>
+<li>具体做法：上图中，id = 12 的订单，对 4 进行取模会得到 0，那此订单会放到 0 表中。id = 13 的订单，取模会得到 1，那此订单会放到 1 表中。为什么对 4 取模，是因为分表总数是4。</li>
+<li>优点：没有热点问题</li>
+<li>缺点：扩容迁移数据痛苦（增加分表数后需要重新划分数据）</li>
+</ul>
+<blockquote>
+<p>热点的含义：热点的意思就是对订单进行操作集中到1个表中，其他表的操作很少。<br>订单有个特点就是时间属性，一般用户操作订单数据，都会集中到这段时间产生的订单。如果这段时间产生的订单 都在同一张订单表中，那就会形成热点，那张表的压力会比较大。</p>
+</blockquote>
+<h5 id="b-range-范围方案"><a href="#b-range-范围方案" class="headerlink" title="b.range 范围方案"></a>b.range 范围方案</h5><p><img src="./1596695164218.png" alt="Alt text"></p>
+<ul>
+<li>概念：以范围进行拆分数据。</li>
+<li>具体做法：上图中，id = 12 放到 0 表中，id = 1300 万放到 1 表中。设计这个方案时需要前期把表的范围设计好，之后通过 ID 进行路由存放。</li>
+<li>优点：不需要迁移数据，利于扩容。</li>
+<li>缺点：有热点问题（某段时间产生的订单会集中到某表中，会导致某表过热，压力过大，而其他表没有什么压力。）</li>
+</ul>
+<h5 id="c-总结"><a href="#c-总结" class="headerlink" title="c.总结"></a>c.总结</h5><p>hash 可以解决数据均匀问题，range 可以解决数据迁移问题，我们可以将两者结合起来。</p>
+<p><img src="./1596701565342.png" alt="Alt text"><br><img src="./1596701582953.png" alt="Alt text"></p>
+<h4 id="⑧分库分表后面临的问题"><a href="#⑧分库分表后面临的问题" class="headerlink" title="⑧分库分表后面临的问题"></a>⑧分库分表后面临的问题</h4><h5 id="a-事务问题"><a href="#a-事务问题" class="headerlink" title="a.事务问题"></a>a.事务问题</h5><ul>
+<li>解决事务问题目前有两种可行的方案：分布式事务和通过应用程序与数据库共同控制实现事务。</li>
+<li>方案一：使用分布式事务<ul>
+<li>优点：交由数据库管理，简单有效。</li>
+<li>缺点： 性能代价高，特别是 shard 越来越多时。</li>
+</ul>
+</li>
+<li>方案二：由应用程序和数据库共同控制<ul>
+<li>原理：将一个跨多个数据库的分布式事务分拆成多个仅处于单个数据库上面的小事务，并通过应用程序来总控各个小事务。</li>
+<li>优点：性能上有优势</li>
+<li>缺点： 需要应用程序在事务控制上做灵活设计。如果使用 了 Spring 的事务管理，改动起来会面临一定的困难。</li>
+</ul>
+</li>
+</ul>
+<h5 id="b-跨节点-JOIN"><a href="#b-跨节点-JOIN" class="headerlink" title="b.跨节点 JOIN"></a>b.跨节点 JOIN</h5><ul>
+<li>只要是进行切分，跨节点 JOIN 的问题是不可避免的。但是良好的设计和切分却可以减少此类情况的发生。</li>
+<li>解决方案：普遍做法是分两次查询实现。在第一次查询的结果集中找出关联数据的 ID，根据这些 ID 发起第二次请求得到关联数据。 </li>
+</ul>
+<h5 id="c-跨节点的-COUNT、ORDER-BY、GROUP-BY-以及聚合函数等问题"><a href="#c-跨节点的-COUNT、ORDER-BY、GROUP-BY-以及聚合函数等问题" class="headerlink" title="c.跨节点的 COUNT、ORDER BY、GROUP BY 以及聚合函数等问题"></a>c.跨节点的 COUNT、ORDER BY、GROUP BY 以及聚合函数等问题</h5><ul>
+<li>这些是一类问题，因为它们都需要基于全部数据集合进行计算。多数的代理都不会自动处理合并工作。</li>
+<li>解决方案：与解决跨节点 JOIN 问题类似，分别在各个节点上得到结果后在应用程序端进行合并。</li>
+<li>优点：和跨节点 JOIN 不同的是每个结点的查询可以并行执行，因此很多时候它的速度要比单一表快很多。</li>
+<li>缺点：如果结果集很大，对应用程序内存的消耗是一个问题。</li>
+</ul>
+<h5 id="d-数据迁移，容量规划，扩容等问题"><a href="#d-数据迁移，容量规划，扩容等问题" class="headerlink" title="d.数据迁移，容量规划，扩容等问题"></a>d.数据迁移，容量规划，扩容等问题</h5><ul>
+<li>来自淘宝综合业务平台团队，它利用对 2 的倍数取余具有向前兼容的特性（如对 4 取余得 1 的数对 2 取余也是 1）来分配数据，避免了行级别的数据迁移，但是依然需要进行表级别的迁移，同时对扩容规模和分表数量都有限制。总得来说，这些方案都不是十分的理想，多多少少都存在一些缺点，这也从一个侧面反映出了 Sharding 扩容的难度。</li>
+</ul>
+<h5 id="e-ID-问题"><a href="#e-ID-问题" class="headerlink" title="e.ID 问题"></a>e.ID 问题</h5><ul>
+<li>具体见 <strong>4.主键 — ③分布式 ID</strong></li>
+</ul>
+<hr>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>我的个人博客：<a href="http:messi1002.top" target="_blank" rel="noopener">messi1002.top</a></li>
+<li>如有错误或疑惑之处 请联系 <a href="mailto:&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#115;&#105;&#x40;&#49;&#54;&#51;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener">&#x77;&#x6a;&#121;&#x6d;&#101;&#x73;&#115;&#105;&#x40;&#49;&#54;&#51;&#46;&#99;&#111;&#109;</a></li>
+</ul>
+
       
     </div>
     
@@ -579,8 +954,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -666,6 +1050,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">1.</span> <span class="nav-text">1.概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①数据库设计"><span class="nav-number">1.1.</span> <span class="nav-text">①数据库设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②你的数据库是怎么设计的？"><span class="nav-number">1.2.</span> <span class="nav-text">②你的数据库是怎么设计的？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#a-需求分析"><span class="nav-number">1.2.1.</span> <span class="nav-text">a.需求分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b-逻辑设计"><span class="nav-number">1.2.2.</span> <span class="nav-text">b.逻辑设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-物理设计"><span class="nav-number">1.2.3.</span> <span class="nav-text">c.物理设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d-维护优化"><span class="nav-number">1.2.4.</span> <span class="nav-text">d.维护优化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③为什么要进行数据库的设计？"><span class="nav-number">1.3.</span> <span class="nav-text">③为什么要进行数据库的设计？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④如何选择合适的数据存储方案-？"><span class="nav-number">1.4.</span> <span class="nav-text">④如何选择合适的数据存储方案 ？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤数据库的架构"><span class="nav-number">1.5.</span> <span class="nav-text">⑤数据库的架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑥数据库的三大范式"><span class="nav-number">1.6.</span> <span class="nav-text">⑥数据库的三大范式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑦反范式化表设计"><span class="nav-number">1.7.</span> <span class="nav-text">⑦反范式化表设计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-物理设计"><span class="nav-number">2.</span> <span class="nav-text">2.物理设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①概念"><span class="nav-number">2.1.</span> <span class="nav-text">①概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②表及字段的命名规则"><span class="nav-number">2.2.</span> <span class="nav-text">②表及字段的命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③字段类型的选择原则"><span class="nav-number">2.3.</span> <span class="nav-text">③字段类型的选择原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④其它注意事项"><span class="nav-number">2.4.</span> <span class="nav-text">④其它注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-维护优化"><span class="nav-number">3.</span> <span class="nav-text">3.维护优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①如何维护数据字典"><span class="nav-number">3.1.</span> <span class="nav-text">①如何维护数据字典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②如何维护索引"><span class="nav-number">3.2.</span> <span class="nav-text">②如何维护索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③如何维护表结构"><span class="nav-number">3.3.</span> <span class="nav-text">③如何维护表结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④数据库中适合的操作"><span class="nav-number">3.4.</span> <span class="nav-text">④数据库中适合的操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-主键"><span class="nav-number">4.</span> <span class="nav-text">4.主键</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①为什么要尽量设定一个主键"><span class="nav-number">4.1.</span> <span class="nav-text">①为什么要尽量设定一个主键?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②主键使用自增-ID-还是-UUID"><span class="nav-number">4.2.</span> <span class="nav-text">②主键使用自增 ID 还是 UUID?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③分布式-ID"><span class="nav-number">4.3.</span> <span class="nav-text">③分布式 ID</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#a-UUID"><span class="nav-number">4.3.1.</span> <span class="nav-text">a.UUID</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b-MySQL-主键自增"><span class="nav-number">4.3.2.</span> <span class="nav-text">b.MySQL 主键自增</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-MySQL-多实例主键自增"><span class="nav-number">4.3.3.</span> <span class="nav-text">c.MySQL 多实例主键自增</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d-基于数据库的号段模式"><span class="nav-number">4.3.4.</span> <span class="nav-text">d.基于数据库的号段模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#e-Redis-生成方案"><span class="nav-number">4.3.5.</span> <span class="nav-text">e.Redis 生成方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#f-雪花-snowflake-算法"><span class="nav-number">4.3.6.</span> <span class="nav-text">f.雪花 snowflake 算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#g-百度-UidGenerator"><span class="nav-number">4.3.7.</span> <span class="nav-text">g.百度 UidGenerator</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#h-美团-Leaf"><span class="nav-number">4.3.8.</span> <span class="nav-text">h.美团 Leaf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#i-滴滴-Tinyid"><span class="nav-number">4.3.9.</span> <span class="nav-text">i.滴滴 Tinyid</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-分库分表"><span class="nav-number">5.</span> <span class="nav-text">5.分库分表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#①数据库瓶颈"><span class="nav-number">5.1.</span> <span class="nav-text">①数据库瓶颈</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#a-IO-瓶颈"><span class="nav-number">5.1.1.</span> <span class="nav-text">a.IO 瓶颈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b-CPU-瓶颈"><span class="nav-number">5.1.2.</span> <span class="nav-text">b.CPU 瓶颈</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#②水平分库（拆分表中记录）"><span class="nav-number">5.2.</span> <span class="nav-text">②水平分库（拆分表中记录）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#③水平分表（拆分表中记录）"><span class="nav-number">5.3.</span> <span class="nav-text">③水平分表（拆分表中记录）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#④垂直分库（拆分表）"><span class="nav-number">5.4.</span> <span class="nav-text">④垂直分库（拆分表）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑤垂直分表（拆分列）"><span class="nav-number">5.5.</span> <span class="nav-text">⑤垂直分表（拆分列）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑥分库分表步骤"><span class="nav-number">5.6.</span> <span class="nav-text">⑥分库分表步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑦分库分表方案"><span class="nav-number">5.7.</span> <span class="nav-text">⑦分库分表方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#a-hash-取模方案"><span class="nav-number">5.7.1.</span> <span class="nav-text">a.hash 取模方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b-range-范围方案"><span class="nav-number">5.7.2.</span> <span class="nav-text">b.range 范围方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-总结"><span class="nav-number">5.7.3.</span> <span class="nav-text">c.总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⑧分库分表后面临的问题"><span class="nav-number">5.8.</span> <span class="nav-text">⑧分库分表后面临的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#a-事务问题"><span class="nav-number">5.8.1.</span> <span class="nav-text">a.事务问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#b-跨节点-JOIN"><span class="nav-number">5.8.2.</span> <span class="nav-text">b.跨节点 JOIN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-跨节点的-COUNT、ORDER-BY、GROUP-BY-以及聚合函数等问题"><span class="nav-number">5.8.3.</span> <span class="nav-text">c.跨节点的 COUNT、ORDER BY、GROUP BY 以及聚合函数等问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#d-数据迁移，容量规划，扩容等问题"><span class="nav-number">5.8.4.</span> <span class="nav-text">d.数据迁移，容量规划，扩容等问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#e-ID-问题"><span class="nav-number">5.8.5.</span> <span class="nav-text">e.ID 问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">6.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -690,7 +1090,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共105.3k字</span>
+  <span class="post-count">博客全站共114.3k字</span>
 </div>
 <!-- 
 
